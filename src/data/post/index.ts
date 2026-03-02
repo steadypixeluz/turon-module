@@ -1,0 +1,5 @@
+export {ModelPostCategory,ModelPostCategorySchema} from './schema/post-category.schema'
+export {ModelPostDocument,ModelPostDocumentSchema} from './schema/post-document.schema'
+export {ModelPostImage,ModelPostImageSchema} from './schema/post-image.schema'
+export {ModelPostVideo,ModelPostVideoSchema} from './schema/post-video.schema'
+export {ModelPost,ModelPostSchema} from './schema/post.schema'

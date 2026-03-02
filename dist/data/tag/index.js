@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelTagSchema = exports.ModelTag = exports.UpdateTagDto = exports.CreateTagDto = void 0;
+var create_tag_dto_1 = require("./dto/create-tag.dto");
+Object.defineProperty(exports, "CreateTagDto", { enumerable: true, get: function () { return create_tag_dto_1.CreateTagDto; } });
+var update_tag_dto_1 = require("./dto/update-tag.dto");
+Object.defineProperty(exports, "UpdateTagDto", { enumerable: true, get: function () { return update_tag_dto_1.UpdateTagDto; } });
+var tag_schema_1 = require("./schemas/tag.schema");
+Object.defineProperty(exports, "ModelTag", { enumerable: true, get: function () { return tag_schema_1.ModelTag; } });
+Object.defineProperty(exports, "ModelTagSchema", { enumerable: true, get: function () { return tag_schema_1.ModelTagSchema; } });

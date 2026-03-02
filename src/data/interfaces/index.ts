@@ -1,0 +1,1 @@
+export {Lang,LangObj,PhoneAndEmail,Social,User,Address,Work} from './lang'

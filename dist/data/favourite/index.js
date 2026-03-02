@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelFauriteSchema = exports.ModelFaurite = exports.UpdateFavouriteDto = exports.CreateFavouriteDto = void 0;
+var create_favourite_dto_1 = require("./dto/create-favourite.dto");
+Object.defineProperty(exports, "CreateFavouriteDto", { enumerable: true, get: function () { return create_favourite_dto_1.CreateFavouriteDto; } });
+var update_favourite_dto_1 = require("./dto/update-favourite.dto");
+Object.defineProperty(exports, "UpdateFavouriteDto", { enumerable: true, get: function () { return update_favourite_dto_1.UpdateFavouriteDto; } });
+var favourite_schema_1 = require("./schemas/favourite.schema");
+Object.defineProperty(exports, "ModelFaurite", { enumerable: true, get: function () { return favourite_schema_1.ModelFaurite; } });
+Object.defineProperty(exports, "ModelFauriteSchema", { enumerable: true, get: function () { return favourite_schema_1.ModelFauriteSchema; } });

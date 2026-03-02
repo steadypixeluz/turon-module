@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelAddressSchema = exports.ModelAddress = exports.CreateAddressDto = exports.UpdateAddressDto = void 0;
+var update_address_dto_1 = require("./dto/update-address.dto");
+Object.defineProperty(exports, "UpdateAddressDto", { enumerable: true, get: function () { return update_address_dto_1.UpdateAddressDto; } });
+var create_address_dto_1 = require("./dto/create-address.dto");
+Object.defineProperty(exports, "CreateAddressDto", { enumerable: true, get: function () { return create_address_dto_1.CreateAddressDto; } });
+var address_schema_1 = require("./schemas/address.schema");
+Object.defineProperty(exports, "ModelAddress", { enumerable: true, get: function () { return address_schema_1.ModelAddress; } });
+Object.defineProperty(exports, "ModelAddressSchema", { enumerable: true, get: function () { return address_schema_1.ModelAddressSchema; } });

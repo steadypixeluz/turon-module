@@ -1,0 +1,1 @@
+export {ModelBrand,ModelParetnerSchema} from './schemas/brand.schema'

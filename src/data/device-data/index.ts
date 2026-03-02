@@ -1,0 +1,1 @@
+export {ModelDeviceData,ModelDeviceDataSchema} from './schemas/device-data.schema'

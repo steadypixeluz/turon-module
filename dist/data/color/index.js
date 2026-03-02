@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelColorSchema = exports.ModelColor = exports.UpdateColorDto = exports.CreateColorDto = void 0;
+var create_color_dto_1 = require("./dto/create-color.dto");
+Object.defineProperty(exports, "CreateColorDto", { enumerable: true, get: function () { return create_color_dto_1.CreateColorDto; } });
+var update_color_dto_1 = require("./dto/update-color.dto");
+Object.defineProperty(exports, "UpdateColorDto", { enumerable: true, get: function () { return update_color_dto_1.UpdateColorDto; } });
+var color_schema_1 = require("./schemas/color.schema");
+Object.defineProperty(exports, "ModelColor", { enumerable: true, get: function () { return color_schema_1.ModelColor; } });
+Object.defineProperty(exports, "ModelColorSchema", { enumerable: true, get: function () { return color_schema_1.ModelColorSchema; } });

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelProductVideoSchema = exports.ModelProductVideo = exports.UpdateProductVideoDto = exports.CreateProductVideoDto = void 0;
+var create_product_video_dto_1 = require("./dto/create-product-video.dto");
+Object.defineProperty(exports, "CreateProductVideoDto", { enumerable: true, get: function () { return create_product_video_dto_1.CreateProductVideoDto; } });
+var update_product_video_dto_1 = require("./dto/update-product-video.dto");
+Object.defineProperty(exports, "UpdateProductVideoDto", { enumerable: true, get: function () { return update_product_video_dto_1.UpdateProductVideoDto; } });
+var product_video_schema_1 = require("./schemas/product-video.schema");
+Object.defineProperty(exports, "ModelProductVideo", { enumerable: true, get: function () { return product_video_schema_1.ModelProductVideo; } });
+Object.defineProperty(exports, "ModelProductVideoSchema", { enumerable: true, get: function () { return product_video_schema_1.ModelProductVideoSchema; } });

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelContactSchema = exports.ModelContact = exports.UpdateContactDto = exports.CreateContactDto = void 0;
+var create_contact_dto_1 = require("./dto/create-contact.dto");
+Object.defineProperty(exports, "CreateContactDto", { enumerable: true, get: function () { return create_contact_dto_1.CreateContactDto; } });
+var update_contact_dto_1 = require("./dto/update-contact.dto");
+Object.defineProperty(exports, "UpdateContactDto", { enumerable: true, get: function () { return update_contact_dto_1.UpdateContactDto; } });
+var contact_schema_1 = require("./schemas/contact.schema");
+Object.defineProperty(exports, "ModelContact", { enumerable: true, get: function () { return contact_schema_1.ModelContact; } });
+Object.defineProperty(exports, "ModelContactSchema", { enumerable: true, get: function () { return contact_schema_1.ModelContactSchema; } });

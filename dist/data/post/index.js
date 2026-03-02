@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelPostSchema = exports.ModelPost = exports.ModelPostVideoSchema = exports.ModelPostVideo = exports.ModelPostImageSchema = exports.ModelPostImage = exports.ModelPostDocumentSchema = exports.ModelPostDocument = exports.ModelPostCategorySchema = exports.ModelPostCategory = void 0;
+var post_category_schema_1 = require("./schema/post-category.schema");
+Object.defineProperty(exports, "ModelPostCategory", { enumerable: true, get: function () { return post_category_schema_1.ModelPostCategory; } });
+Object.defineProperty(exports, "ModelPostCategorySchema", { enumerable: true, get: function () { return post_category_schema_1.ModelPostCategorySchema; } });
+var post_document_schema_1 = require("./schema/post-document.schema");
+Object.defineProperty(exports, "ModelPostDocument", { enumerable: true, get: function () { return post_document_schema_1.ModelPostDocument; } });
+Object.defineProperty(exports, "ModelPostDocumentSchema", { enumerable: true, get: function () { return post_document_schema_1.ModelPostDocumentSchema; } });
+var post_image_schema_1 = require("./schema/post-image.schema");
+Object.defineProperty(exports, "ModelPostImage", { enumerable: true, get: function () { return post_image_schema_1.ModelPostImage; } });
+Object.defineProperty(exports, "ModelPostImageSchema", { enumerable: true, get: function () { return post_image_schema_1.ModelPostImageSchema; } });
+var post_video_schema_1 = require("./schema/post-video.schema");
+Object.defineProperty(exports, "ModelPostVideo", { enumerable: true, get: function () { return post_video_schema_1.ModelPostVideo; } });
+Object.defineProperty(exports, "ModelPostVideoSchema", { enumerable: true, get: function () { return post_video_schema_1.ModelPostVideoSchema; } });
+var post_schema_1 = require("./schema/post.schema");
+Object.defineProperty(exports, "ModelPost", { enumerable: true, get: function () { return post_schema_1.ModelPost; } });
+Object.defineProperty(exports, "ModelPostSchema", { enumerable: true, get: function () { return post_schema_1.ModelPostSchema; } });

@@ -1,0 +1,1 @@
+export {ModelBanner,ModelBannerSchema} from './schemas/banner.schema'

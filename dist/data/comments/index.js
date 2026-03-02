@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelCommentsSchema = exports.ModelComments = exports.UpdateCommentDto = exports.CreateCommentDto = void 0;
+var create_comment_dto_1 = require("./dto/create-comment.dto");
+Object.defineProperty(exports, "CreateCommentDto", { enumerable: true, get: function () { return create_comment_dto_1.CreateCommentDto; } });
+var update_comment_dto_1 = require("./dto/update-comment.dto");
+Object.defineProperty(exports, "UpdateCommentDto", { enumerable: true, get: function () { return update_comment_dto_1.UpdateCommentDto; } });
+var comments_schema_1 = require("./schemas/comments.schema");
+Object.defineProperty(exports, "ModelComments", { enumerable: true, get: function () { return comments_schema_1.ModelComments; } });
+Object.defineProperty(exports, "ModelCommentsSchema", { enumerable: true, get: function () { return comments_schema_1.ModelCommentsSchema; } });

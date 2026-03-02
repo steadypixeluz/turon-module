@@ -1,0 +1,1 @@
+export {ModelRegion,ModelRegionSchema} from './schemas/region.schema'

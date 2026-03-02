@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelProductImageSchema = exports.ModelProductImage = exports.UpdateProductImageDto = exports.CreateProductImageDto = void 0;
+var create_product_image_dto_1 = require("./dto/create-product-image.dto");
+Object.defineProperty(exports, "CreateProductImageDto", { enumerable: true, get: function () { return create_product_image_dto_1.CreateProductImageDto; } });
+var update_product_image_dto_1 = require("./dto/update-product-image.dto");
+Object.defineProperty(exports, "UpdateProductImageDto", { enumerable: true, get: function () { return update_product_image_dto_1.UpdateProductImageDto; } });
+var product_image_schema_1 = require("./schemas/product-image.schema");
+Object.defineProperty(exports, "ModelProductImage", { enumerable: true, get: function () { return product_image_schema_1.ModelProductImage; } });
+Object.defineProperty(exports, "ModelProductImageSchema", { enumerable: true, get: function () { return product_image_schema_1.ModelProductImageSchema; } });

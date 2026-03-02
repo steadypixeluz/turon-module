@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelFAQCategorySchema = exports.ModelFAQCategory = exports.UpdateFaqCategoryDto = exports.CreateFaqCategoryDto = void 0;
+var create_faq_category_dto_1 = require("./dto/create-faq-category.dto");
+Object.defineProperty(exports, "CreateFaqCategoryDto", { enumerable: true, get: function () { return create_faq_category_dto_1.CreateFaqCategoryDto; } });
+var update_faq_category_dto_1 = require("./dto/update-faq-category.dto");
+Object.defineProperty(exports, "UpdateFaqCategoryDto", { enumerable: true, get: function () { return update_faq_category_dto_1.UpdateFaqCategoryDto; } });
+var faq_category_shcema_1 = require("./schemas/faq-category.shcema");
+Object.defineProperty(exports, "ModelFAQCategory", { enumerable: true, get: function () { return faq_category_shcema_1.ModelFAQCategory; } });
+Object.defineProperty(exports, "ModelFAQCategorySchema", { enumerable: true, get: function () { return faq_category_shcema_1.ModelFAQCategorySchema; } });

@@ -1,0 +1,1 @@
+export {ModelPickupPoint,ModelPickupPointSchema} from './schemas/pickup-point.schema'

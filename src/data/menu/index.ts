@@ -1,0 +1,1 @@
+export {ModelMenu,ModelMenuSchema} from './schemas/menu.schema'

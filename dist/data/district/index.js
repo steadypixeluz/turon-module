@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelDistrictsSchema = exports.ModelDistricts = exports.UpdateDistrictDto = exports.CreateDistrictDto = void 0;
+var create_district_dto_1 = require("./dto/create-district.dto");
+Object.defineProperty(exports, "CreateDistrictDto", { enumerable: true, get: function () { return create_district_dto_1.CreateDistrictDto; } });
+var update_district_dto_1 = require("./dto/update-district.dto");
+Object.defineProperty(exports, "UpdateDistrictDto", { enumerable: true, get: function () { return update_district_dto_1.UpdateDistrictDto; } });
+var districts_schema_1 = require("./schemas/districts.schema");
+Object.defineProperty(exports, "ModelDistricts", { enumerable: true, get: function () { return districts_schema_1.ModelDistricts; } });
+Object.defineProperty(exports, "ModelDistrictsSchema", { enumerable: true, get: function () { return districts_schema_1.ModelDistrictsSchema; } });

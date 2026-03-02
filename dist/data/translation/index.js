@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelTranslationSchema = exports.ModelTranslation = exports.UpdateTranslationDto = exports.CreateTranslationDto = void 0;
+var create_translation_dto_1 = require("./dto/create-translation.dto");
+Object.defineProperty(exports, "CreateTranslationDto", { enumerable: true, get: function () { return create_translation_dto_1.CreateTranslationDto; } });
+var update_translation_dto_1 = require("./dto/update-translation.dto");
+Object.defineProperty(exports, "UpdateTranslationDto", { enumerable: true, get: function () { return update_translation_dto_1.UpdateTranslationDto; } });
+var translation_schema_1 = require("./schemas/translation.schema");
+Object.defineProperty(exports, "ModelTranslation", { enumerable: true, get: function () { return translation_schema_1.ModelTranslation; } });
+Object.defineProperty(exports, "ModelTranslationSchema", { enumerable: true, get: function () { return translation_schema_1.ModelTranslationSchema; } });

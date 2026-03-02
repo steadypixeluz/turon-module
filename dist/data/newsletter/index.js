@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNewsletterDto = exports.SendNewsletterDto = exports.GetMessages = exports.CreateNewsletterDto = void 0;
+var create_newsletter_dto_1 = require("./dto/create-newsletter.dto");
+Object.defineProperty(exports, "CreateNewsletterDto", { enumerable: true, get: function () { return create_newsletter_dto_1.CreateNewsletterDto; } });
+var get_dto_1 = require("./dto/get.dto");
+Object.defineProperty(exports, "GetMessages", { enumerable: true, get: function () { return get_dto_1.GetMessages; } });
+var send_newsletter_dto_1 = require("./dto/send-newsletter.dto");
+Object.defineProperty(exports, "SendNewsletterDto", { enumerable: true, get: function () { return send_newsletter_dto_1.SendNewsletterDto; } });
+var update_newsletter_dto_1 = require("./dto/update-newsletter.dto");
+Object.defineProperty(exports, "UpdateNewsletterDto", { enumerable: true, get: function () { return update_newsletter_dto_1.UpdateNewsletterDto; } });

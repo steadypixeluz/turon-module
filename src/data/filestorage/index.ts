@@ -1,0 +1,1 @@
+export {ModelFileStorage,ModelFileStorageSchema} from './schemas/filestorage.schema'

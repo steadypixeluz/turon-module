@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelFAQSchema = exports.ModelFAQ = exports.UpdateFaqDto = exports.CreateFaqDto = void 0;
+var create_faq_dto_1 = require("./dto/create-faq.dto");
+Object.defineProperty(exports, "CreateFaqDto", { enumerable: true, get: function () { return create_faq_dto_1.CreateFaqDto; } });
+var update_faq_dto_1 = require("./dto/update-faq.dto");
+Object.defineProperty(exports, "UpdateFaqDto", { enumerable: true, get: function () { return update_faq_dto_1.UpdateFaqDto; } });
+var faq_schema_1 = require("./schemas/faq.schema");
+Object.defineProperty(exports, "ModelFAQ", { enumerable: true, get: function () { return faq_schema_1.ModelFAQ; } });
+Object.defineProperty(exports, "ModelFAQSchema", { enumerable: true, get: function () { return faq_schema_1.ModelFAQSchema; } });

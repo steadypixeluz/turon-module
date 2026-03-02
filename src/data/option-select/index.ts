@@ -1,0 +1,1 @@
+export {ModelOptionSelect,ModelOptionSelectSchema} from './schemas/option-select.schema'

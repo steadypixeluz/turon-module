@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelOrderWholesaleSchema = exports.ModelOrderWholesale = exports.UpdateOrderWholesaleDto = exports.CreateOrderWholesaleDto = void 0;
+var create_dto_1 = require("./dto/create.dto");
+Object.defineProperty(exports, "CreateOrderWholesaleDto", { enumerable: true, get: function () { return create_dto_1.CreateOrderWholesaleDto; } });
+var update_dto_1 = require("./dto/update.dto");
+Object.defineProperty(exports, "UpdateOrderWholesaleDto", { enumerable: true, get: function () { return update_dto_1.UpdateOrderWholesaleDto; } });
+var order_wholesale_schema_1 = require("./schemas/order-wholesale.schema");
+Object.defineProperty(exports, "ModelOrderWholesale", { enumerable: true, get: function () { return order_wholesale_schema_1.ModelOrderWholesale; } });
+Object.defineProperty(exports, "ModelOrderWholesaleSchema", { enumerable: true, get: function () { return order_wholesale_schema_1.ModelOrderWholesaleSchema; } });

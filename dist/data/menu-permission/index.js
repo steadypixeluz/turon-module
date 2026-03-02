@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelMenuPermissionSchema = exports.ModelMenuPermission = exports.UpdateMenuPermissionDto = exports.CreateMenuPermissionDto = void 0;
+var create_menu_permission_dto_1 = require("./dto/create-menu-permission.dto");
+Object.defineProperty(exports, "CreateMenuPermissionDto", { enumerable: true, get: function () { return create_menu_permission_dto_1.CreateMenuPermissionDto; } });
+var update_menu_permission_dto_1 = require("./dto/update-menu-permission.dto");
+Object.defineProperty(exports, "UpdateMenuPermissionDto", { enumerable: true, get: function () { return update_menu_permission_dto_1.UpdateMenuPermissionDto; } });
+var menu_permission_schema_1 = require("./schemas/menu.permission.schema");
+Object.defineProperty(exports, "ModelMenuPermission", { enumerable: true, get: function () { return menu_permission_schema_1.ModelMenuPermission; } });
+Object.defineProperty(exports, "ModelMenuPermissionSchema", { enumerable: true, get: function () { return menu_permission_schema_1.ModelMenuPermissionSchema; } });

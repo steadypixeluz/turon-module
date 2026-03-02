@@ -1,0 +1,1 @@
+export {ModelAsGift,ModelAsGiftSchema} from './schemas/as-gist.schema'

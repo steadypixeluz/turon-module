@@ -1,0 +1,1 @@
+export {ModelWholesaleSliderCollection,ModelWholesaleSliderCollectionSchema} from './schemas/slider-collection.schema'
