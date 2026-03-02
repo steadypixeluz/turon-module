@@ -237,4 +237,6 @@ export {
   ModelWholesaleSliderCollectionSchema,
   ModelRetailSliderCollection,
   ModelRetailSliderCollectionSchema,
+  ModelPromoCollection,
+  ModelPromoCollectionSchema,
 } from "./data";
