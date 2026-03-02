@@ -29,3 +29,4 @@ export class ModelWholesaleCollection {
 export const ModelWholesaleCollectionSchema = SchemaFactory.createForClass(
   ModelWholesaleCollection,
 );
+

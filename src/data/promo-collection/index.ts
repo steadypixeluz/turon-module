@@ -1,1 +1,1 @@
-export {ModelPromoCollection,ModelPromoCollectionSchema} from './schemas/promo-collection.schema'
+export {ModelPromoCollection,ModelPromoCollectionSchema,ModelPromoWholeSaleCollection,ModelPromoWholeSaleCollectionSchema} from './schemas/promo-collection.schema'

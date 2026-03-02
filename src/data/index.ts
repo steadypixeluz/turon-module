@@ -131,6 +131,6 @@ export {ModelVariationSelect,ModelVariationSelectSchema} from "./variation-selec
 export {ModelWholesaleCollection,ModelWholesaleCollectionSchema} from "./wholesale-collection";
 export {ModelWholesaleSliderCollection,ModelWholesaleSliderCollectionSchema} from "./wholesale-slider-collection";
 export {ModelRetailSliderCollection,ModelRetailSliderCollectionSchema} from "./slider-collection";
-export {ModelPromoCollection,ModelPromoCollectionSchema} from './promo-collection'
+export {ModelPromoCollection,ModelPromoCollectionSchema,ModelPromoWholeSaleCollection,ModelPromoWholeSaleCollectionSchema} from './promo-collection'
 
 export {} from "./";

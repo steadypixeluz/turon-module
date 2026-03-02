@@ -23,3 +23,24 @@ export class ModelPromoCollection {
 export const ModelPromoCollectionSchema =
   SchemaFactory.createForClass(ModelPromoCollection);
 
+
+@Schema({ collection: 'promo-wholesale-collections', timestamps: true })
+export class ModelPromoWholeSaleCollection {
+  @Prop({ type: Object })
+  title: Lang;
+  @Prop({ type: 'string', enum: ['feed', 'category'], default: 'feed' })
+  type: string;
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Menu' })
+  menu: ModelMenu;
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Product' })
+  products: ModelProduct;
+  @Prop()
+  position: number;
+  @Prop({ default: true })
+  is_active?: boolean;
+}
+
+export const ModelPromoWholeSaleCollectionSchema = SchemaFactory.createForClass(
+  ModelPromoWholeSaleCollection,
+);
+
