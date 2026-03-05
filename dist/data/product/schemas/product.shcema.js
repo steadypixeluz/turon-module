@@ -123,7 +123,7 @@ __decorate([
     __metadata("design:type", menu_1.ModelMenu)
 ], ModelProductInfo.prototype, "menu", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: data_1.ModelBrand.name }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Brand' }),
     __metadata("design:type", data_1.ModelBrand)
 ], ModelProductInfo.prototype, "brand", void 0);
 __decorate([
