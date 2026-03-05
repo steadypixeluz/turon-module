@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelPostVideoSchema = exports.ModelPostVideo = exports.UpdatePostVideoDto = exports.CreatePostVideoDto = void 0;
+var create_post_video_dto_1 = require("./dto/create-post-video.dto");
+Object.defineProperty(exports, "CreatePostVideoDto", { enumerable: true, get: function () { return create_post_video_dto_1.CreatePostVideoDto; } });
+var update_post_video_dto_1 = require("./dto/update-post-video.dto");
+Object.defineProperty(exports, "UpdatePostVideoDto", { enumerable: true, get: function () { return update_post_video_dto_1.UpdatePostVideoDto; } });
+var post_video_schema_1 = require("./schema/post-video.schema");
+Object.defineProperty(exports, "ModelPostVideo", { enumerable: true, get: function () { return post_video_schema_1.ModelPostVideo; } });
+Object.defineProperty(exports, "ModelPostVideoSchema", { enumerable: true, get: function () { return post_video_schema_1.ModelPostVideoSchema; } });

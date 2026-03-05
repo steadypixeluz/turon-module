@@ -21,8 +21,8 @@ const country_1 = require("../../country");
 const customer_company_1 = require("../../customer-company");
 const menu_1 = require("../../menu");
 const tag_1 = require("../../tag");
-const variation_1 = require("../../variation");
 const variation_select_1 = require("../../variation-select");
+const data_1 = require("../../../data");
 let ModelProductInfo = class ModelProductInfo {
 };
 exports.ModelProductInfo = ModelProductInfo;
@@ -30,10 +30,6 @@ __decorate([
     (0, mongoose_1.Prop)({ unique: true }),
     __metadata("design:type", Number)
 ], ModelProductInfo.prototype, "uid", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: ['external', 'internal'], default: 'internal' }),
-    __metadata("design:type", String)
-], ModelProductInfo.prototype, "delivery_origin_type", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
@@ -46,10 +42,6 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], ModelProductInfo.prototype, "short_content", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelProductInfo.prototype, "min_unit", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
@@ -71,6 +63,46 @@ __decorate([
     __metadata("design:type", String)
 ], ModelProductInfo.prototype, "price_type", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelProductInfo.prototype, "min_unit", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelProductInfo.prototype, "weight", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelProductInfo.prototype, "box_width", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelProductInfo.prototype, "box_length", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelProductInfo.prototype, "box_height", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "psic", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: 0 }),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "vat_percent", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "package_code", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "status_description", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.StatusType }),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "status", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.ProductType, default: enums_1.ProductType.retail }),
     __metadata("design:type", String)
 ], ModelProductInfo.prototype, "showcase", void 0);
@@ -87,13 +119,13 @@ __decorate([
     __metadata("design:type", Array)
 ], ModelProductInfo.prototype, "images", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.StatusType }),
-    __metadata("design:type", String)
-], ModelProductInfo.prototype, "status", void 0);
-__decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Menu' }),
     __metadata("design:type", menu_1.ModelMenu)
 ], ModelProductInfo.prototype, "menu", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: data_1.ModelBrand.name }),
+    __metadata("design:type", data_1.ModelBrand)
+], ModelProductInfo.prototype, "brand", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Tag' }),
     __metadata("design:type", tag_1.ModelTag)
@@ -108,24 +140,12 @@ __decorate([
 ], ModelProductInfo.prototype, "country", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelProductInfo.prototype, "box_width", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelProductInfo.prototype, "box_length", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelProductInfo.prototype, "box_height", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelProductInfo.prototype, "weight", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelProductInfo.prototype, "menu_uid", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: 'string', enum: ['external', 'internal'], default: 'internal' }),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "delivery_origin_type", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
@@ -138,6 +158,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelProductInfo.prototype, "is_deleted", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: null }),
+    __metadata("design:type", String)
+], ModelProductInfo.prototype, "deleted_at", void 0);
 exports.ModelProductInfo = ModelProductInfo = __decorate([
     (0, mongoose_1.Schema)({ collection: 'product-info', timestamps: true })
 ], ModelProductInfo);
@@ -156,19 +180,15 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
-], ModelProduct.prototype, "min_price", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
 ], ModelProduct.prototype, "price", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
-], ModelProduct.prototype, "sale", void 0);
+], ModelProduct.prototype, "sale_price", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: 5 }),
+    (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
-], ModelProduct.prototype, "rating", void 0);
+], ModelProduct.prototype, "sale", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.SaleType }),
     __metadata("design:type", String)
@@ -190,17 +210,13 @@ __decorate([
     __metadata("design:type", ModelProductInfo)
 ], ModelProduct.prototype, "product_info", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Parameters' }),
-    __metadata("design:type", variation_1.ModelVariation)
-], ModelProduct.prototype, "parameters", void 0);
+    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.StatusType }),
+    __metadata("design:type", String)
+], ModelProduct.prototype, "status", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'country' }),
     __metadata("design:type", country_1.ModelCountry)
 ], ModelProduct.prototype, "country", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.StatusType }),
-    __metadata("design:type", String)
-], ModelProduct.prototype, "status", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
@@ -209,6 +225,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelProduct.prototype, "is_deleted", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: null }),
+    __metadata("design:type", String)
+], ModelProduct.prototype, "deleted_at", void 0);
 exports.ModelProduct = ModelProduct = __decorate([
     (0, mongoose_1.Schema)({ collection: 'product', timestamps: true })
 ], ModelProduct);
@@ -237,6 +257,18 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelSubProduct.prototype, "sale_price", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelSubProduct.prototype, "psic", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelSubProduct.prototype, "vat_percent", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelSubProduct.prototype, "package_code", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.SaleType }),
     __metadata("design:type", String)
 ], ModelSubProduct.prototype, "sale_type", void 0);
@@ -245,11 +277,27 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelSubProduct.prototype, "is_active", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelSubProduct.prototype, "weight", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelSubProduct.prototype, "box_width", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelSubProduct.prototype, "box_length", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelSubProduct.prototype, "box_height", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Product' }),
     __metadata("design:type", ModelProduct)
 ], ModelSubProduct.prototype, "product", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'option-select' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'variations' }),
     __metadata("design:type", variation_select_1.ModelVariationSelect)
 ], ModelSubProduct.prototype, "variations", void 0);
 __decorate([
@@ -260,6 +308,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelSubProduct.prototype, "is_deleted", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: null }),
+    __metadata("design:type", String)
+], ModelSubProduct.prototype, "deleted_at", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)

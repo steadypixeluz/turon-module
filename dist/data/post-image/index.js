@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelPostImageSchema = exports.ModelPostImage = exports.UpdatePostImageDto = exports.CreatePostImageDto = void 0;
+var create_post_image_dto_1 = require("./dto/create-post-image.dto");
+Object.defineProperty(exports, "CreatePostImageDto", { enumerable: true, get: function () { return create_post_image_dto_1.CreatePostImageDto; } });
+var update_post_image_dto_1 = require("./dto/update-post-image.dto");
+Object.defineProperty(exports, "UpdatePostImageDto", { enumerable: true, get: function () { return update_post_image_dto_1.UpdatePostImageDto; } });
+var post_image_schema_1 = require("./schema/post-image.schema");
+Object.defineProperty(exports, "ModelPostImage", { enumerable: true, get: function () { return post_image_schema_1.ModelPostImage; } });
+Object.defineProperty(exports, "ModelPostImageSchema", { enumerable: true, get: function () { return post_image_schema_1.ModelPostImageSchema; } });

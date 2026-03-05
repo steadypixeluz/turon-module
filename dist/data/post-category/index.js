@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelPostCategorySchema = exports.ModelPostCategory = exports.UpdatePostCategoryDto = exports.CreatePostCategoryDto = void 0;
+var create_post_category_dto_1 = require("./dto/create-post-category.dto");
+Object.defineProperty(exports, "CreatePostCategoryDto", { enumerable: true, get: function () { return create_post_category_dto_1.CreatePostCategoryDto; } });
+var update_post_category_dto_1 = require("./dto/update-post-category.dto");
+Object.defineProperty(exports, "UpdatePostCategoryDto", { enumerable: true, get: function () { return update_post_category_dto_1.UpdatePostCategoryDto; } });
+var post_category_schema_1 = require("./schema/post-category.schema");
+Object.defineProperty(exports, "ModelPostCategory", { enumerable: true, get: function () { return post_category_schema_1.ModelPostCategory; } });
+Object.defineProperty(exports, "ModelPostCategorySchema", { enumerable: true, get: function () { return post_category_schema_1.ModelPostCategorySchema; } });
