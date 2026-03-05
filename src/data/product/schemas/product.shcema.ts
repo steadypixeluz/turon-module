@@ -7,7 +7,6 @@ import { ModelCustomerCompany } from '../../customer-company';
 import { Lang } from '../../interfaces';
 import { ModelMenu } from '../../menu';
 import { ModelTag } from '../../tag';
-import { ModelVariation } from '../../variation';
 import { ModelVariationSelect } from '../../variation-select';
 import { ModelBrand } from '../../../data';
 @Schema({ collection: 'product-info', timestamps: true })
@@ -60,7 +59,7 @@ export class ModelProductInfo {
   images: string[];
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu' })
   menu: ModelMenu;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: ModelBrand.name })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Brand' })
   brand: ModelBrand;
   @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Tag' })
   tags: ModelTag;
