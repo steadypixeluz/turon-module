@@ -283,4 +283,4 @@ export { CreatePostDocumentDto, UpdatePostDocumentDto } from "./post-document";
 export { CreatePostImageDto, UpdatePostImageDto } from "./post-image";
 export { CreatePostVideoDto, UpdatePostVideoDto } from "./post-video";
 
-export {ModelMenuVariationSchema} from "./menu-variation/schema/menu-variation.schema";
+export {ModelMenuVariationSchema,ModelMenuVariation} from "./menu-variation/schema/menu-variation.schema";

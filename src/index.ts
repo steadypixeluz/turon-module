@@ -261,5 +261,6 @@ export {
   UpdatePostImageDto,
   CreatePostVideoDto,
   UpdatePostVideoDto,
+  ModelMenuVariation,
   ModelMenuVariationSchema
 } from "./data";
