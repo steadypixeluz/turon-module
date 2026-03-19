@@ -16,12 +16,12 @@ export class ModelOrder {
   order_info_id: ModelOrderInfo;
   @Prop()
   order_id: string;
-   @Prop()
-  origin_type:string
+  @Prop()
+  origin_type: string
   @Prop({ type: Object })
   emu_order_id: {};
   @Prop()
-  emu_order_status:number;
+  emu_order_status: number;
   @Prop({ type: Object })
   delivery_home_days: {};
   @Prop({ type: Object })
