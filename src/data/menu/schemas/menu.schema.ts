@@ -24,11 +24,11 @@ export class ModelMenu {
   svg_icon: string;
   @Prop({ type: 'string', enum: MenuType })
   type: string;
-  @Prop({ type: [String], enum: MenuDataType })
+  @Prop({ type: [String], enum: MenuDataType, index: true })
   datatype: MenuDataType[];
   @Prop()
   group: string;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu', index: true })
   menu: ModelMenu;
   @Prop()
   photo: string;
@@ -36,17 +36,17 @@ export class ModelMenu {
   on_header: boolean;
   @Prop({ default: false })
   on_footer: boolean;
-    @Prop({ default: false })
+  @Prop({ default: false })
   on_slider: boolean;
-  @Prop({ default: true })
+  @Prop({ default: true, index: true })
   is_active: boolean;
   @Prop({ default: true })
   is_category: boolean;
-  @Prop({ default: false })
+  @Prop({ default: false, index: true })
   is_admin: boolean;
   @Prop({ default: false })
   has_category: boolean;
-  @Prop({ default: false })
+  @Prop({ default: false, index: true })
   is_deleted: boolean;
 }
 
