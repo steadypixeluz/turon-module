@@ -24,15 +24,15 @@ let ModelAddress = class ModelAddress {
 };
 exports.ModelAddress = ModelAddress;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'country' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "country" }),
     __metadata("design:type", country_1.ModelCountry)
 ], ModelAddress.prototype, "country", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'regions' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "regions" }),
     __metadata("design:type", region_1.ModelRegion)
 ], ModelAddress.prototype, "region", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'districts' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "districts" }),
     __metadata("design:type", district_1.ModelDistricts)
 ], ModelAddress.prototype, "district", void 0);
 __decorate([
@@ -84,10 +84,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelAddress.prototype, "description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customer' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customer" }),
     __metadata("design:type", customer_1.ModelCustomers)
 ], ModelAddress.prototype, "customer", void 0);
 exports.ModelAddress = ModelAddress = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'address', timestamps: true })
+    (0, mongoose_1.Schema)({ timestamps: true })
 ], ModelAddress);
 exports.ModelAddressSchema = mongoose_1.SchemaFactory.createForClass(ModelAddress);

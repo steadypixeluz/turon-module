@@ -51,15 +51,15 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "origin_longitude", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Country' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Country" }),
     __metadata("design:type", country_1.ModelCountry)
 ], ModelCustomerCompany.prototype, "company_country", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Regions' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Regions" }),
     __metadata("design:type", region_1.ModelRegion)
 ], ModelCustomerCompany.prototype, "company_region", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Districts' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Districts" }),
     __metadata("design:type", district_1.ModelDistricts)
 ], ModelCustomerCompany.prototype, "company_district", void 0);
 __decorate([
@@ -95,11 +95,15 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "company_bank_id", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.CustomerCompanyStatus, default: enums_1.CustomerCompanyStatus.new }),
+    (0, mongoose_1.Prop)({
+        type: "string",
+        enum: enums_1.CustomerCompanyStatus,
+        default: enums_1.CustomerCompanyStatus.new,
+    }),
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "status", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Customer' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Customer" }),
     __metadata("design:type", Array)
 ], ModelCustomerCompany.prototype, "customers", void 0);
 __decorate([
@@ -110,6 +114,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "logo", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: 0 }),
+    __metadata("design:type", Number)
+], ModelCustomerCompany.prototype, "balans", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
@@ -123,6 +131,6 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "deleted_at", void 0);
 exports.ModelCustomerCompany = ModelCustomerCompany = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'customers-company', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "customers-company", timestamps: true })
 ], ModelCustomerCompany);
 exports.ModelCustomerCompanySchema = mongoose_1.SchemaFactory.createForClass(ModelCustomerCompany);

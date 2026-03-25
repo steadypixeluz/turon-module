@@ -40,11 +40,11 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelAppSetting.prototype, "head_description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.Status, default: enums_1.Status.on }),
+    (0, mongoose_1.Prop)({ type: "string", enum: enums_1.Status, default: enums_1.Status.on }),
     __metadata("design:type", String)
 ], ModelAppSetting.prototype, "site_status", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.Status, default: enums_1.Status.on }),
+    (0, mongoose_1.Prop)({ type: "string", enum: enums_1.Status, default: enums_1.Status.on }),
     __metadata("design:type", String)
 ], ModelAppSetting.prototype, "mobile_status", void 0);
 __decorate([
@@ -53,12 +53,20 @@ __decorate([
 ], ModelAppSetting.prototype, "head_image", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelAppSetting.prototype, "last_version", void 0);
+    __metadata("design:type", String)
+], ModelAppSetting.prototype, "min_ios_version", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelAppSetting.prototype, "min_version", void 0);
+    __metadata("design:type", String)
+], ModelAppSetting.prototype, "min_android_version", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelAppSetting.prototype, "last_ios_version", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelAppSetting.prototype, "last_android_version", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
@@ -96,6 +104,6 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelAppSetting.prototype, "test_mode", void 0);
 exports.ModelAppSetting = ModelAppSetting = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'app-setting', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "app-setting", timestamps: true })
 ], ModelAppSetting);
 exports.ModelAppSettingSchema = mongoose_1.SchemaFactory.createForClass(ModelAppSetting);

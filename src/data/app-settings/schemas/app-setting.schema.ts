@@ -1,8 +1,7 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Status } from '../../../enums';
-import { Lang } from '../../interfaces';
-
-@Schema({ collection: 'app-setting', timestamps: true })
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Status } from "../../../enums";
+import { Lang } from "../../interfaces";
+@Schema({ collection: "app-setting", timestamps: true })
 export class ModelAppSetting {
   @Prop({ type: Object })
   head_title: Lang;
@@ -16,16 +15,20 @@ export class ModelAppSetting {
   mobile_description: Lang;
   @Prop({ type: Object })
   head_description: Lang;
-  @Prop({ type: 'string', enum: Status, default: Status.on })
+  @Prop({ type: "string", enum: Status, default: Status.on })
   site_status: string;
-  @Prop({ type: 'string', enum: Status, default: Status.on })
+  @Prop({ type: "string", enum: Status, default: Status.on })
   mobile_status: string;
   @Prop()
   head_image: string;
   @Prop()
-  last_version: number;
+  min_ios_version: string;
   @Prop()
-  min_version: number;
+  min_android_version: string;
+  @Prop()
+  last_ios_version: string;
+  @Prop()
+  last_android_version: string;
   @Prop()
   admin_logo: string;
   @Prop()
@@ -47,6 +50,5 @@ export class ModelAppSetting {
   @Prop({ default: true })
   test_mode: boolean;
 }
+export const ModelAppSettingSchema = SchemaFactory.createForClass(ModelAppSetting);
 
-export const ModelAppSettingSchema =
-  SchemaFactory.createForClass(ModelAppSetting);

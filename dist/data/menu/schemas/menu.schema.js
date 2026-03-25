@@ -52,7 +52,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMenu.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [String], enum: enums_1.MenuDataType }),
+    (0, mongoose_1.Prop)({ type: [String], enum: enums_1.MenuDataType, index: true }),
     __metadata("design:type", Array)
 ], ModelMenu.prototype, "datatype", void 0);
 __decorate([
@@ -60,7 +60,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMenu.prototype, "group", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Menu' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Menu', index: true }),
     __metadata("design:type", ModelMenu)
 ], ModelMenu.prototype, "menu", void 0);
 __decorate([
@@ -80,7 +80,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "on_slider", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: true }),
+    (0, mongoose_1.Prop)({ default: true, index: true }),
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "is_active", void 0);
 __decorate([
@@ -88,7 +88,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "is_category", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: false }),
+    (0, mongoose_1.Prop)({ default: false, index: true }),
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "is_admin", void 0);
 __decorate([
@@ -96,7 +96,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "has_category", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: false }),
+    (0, mongoose_1.Prop)({ default: false, index: true }),
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "is_deleted", void 0);
 exports.ModelMenu = ModelMenu = __decorate([
