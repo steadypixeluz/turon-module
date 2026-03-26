@@ -262,5 +262,6 @@ export {
   CreatePostVideoDto,
   UpdatePostVideoDto,
   ModelMenuVariation,
-  ModelMenuVariationSchema
+  ModelMenuVariationSchema,
+  ModelCustomerPermission,ModelCustomerPermissionSchema
 } from "./data";

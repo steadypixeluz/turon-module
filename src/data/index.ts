@@ -282,5 +282,5 @@ export { CreatePostCategoryDto, UpdatePostCategoryDto } from "./post-category";
 export { CreatePostDocumentDto, UpdatePostDocumentDto } from "./post-document";
 export { CreatePostImageDto, UpdatePostImageDto } from "./post-image";
 export { CreatePostVideoDto, UpdatePostVideoDto } from "./post-video";
-
+export {ModelCustomerPermission,ModelCustomerPermissionSchema} from './customer-permission'
 export {ModelMenuVariationSchema,ModelMenuVariation} from "./menu-variation/schema/menu-variation.schema";

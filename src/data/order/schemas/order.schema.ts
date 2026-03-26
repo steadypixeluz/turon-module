@@ -50,13 +50,10 @@ export class ModelOrderProduct {
   showcase: string;
   @Prop()
   product_image: string;
-
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order' })
   order: ModelOrder;
-
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order-wholesale' })
   order_wholesale: ModelOrderWholesale;
-
   @Prop()
   sale_price: number;
   @Prop()
@@ -65,7 +62,6 @@ export class ModelOrderProduct {
   is_deleted: boolean;
   @Prop({ default: false })
   is_comment: boolean;
-
   @Prop({
     type: 'string',
     enum: OrderProductStatus,

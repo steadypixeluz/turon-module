@@ -1,0 +1,1 @@
+export {ModelCustomerPermission,ModelCustomerPermissionSchema} from './schemas/customer-permission.schema'
