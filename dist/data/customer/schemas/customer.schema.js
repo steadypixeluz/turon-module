@@ -33,6 +33,10 @@ __decorate([
 ], ModelCustomers.prototype, "coin", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelCustomers.prototype, "tes_balance", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "phone_number", void 0);
 __decorate([
@@ -60,11 +64,11 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "email", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Country' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Country" }),
     __metadata("design:type", country_1.ModelCountry)
 ], ModelCustomers.prototype, "country", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'referrer' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "referrer" }),
     __metadata("design:type", ModelCustomers)
 ], ModelCustomers.prototype, "referrer", void 0);
 __decorate([
@@ -96,7 +100,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "register_by", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: 'customer' }),
+    (0, mongoose_1.Prop)({ default: "customer" }),
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "role", void 0);
 __decorate([
@@ -120,14 +124,14 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "deleted_at", void 0);
 exports.ModelCustomers = ModelCustomers = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'customers', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "customers", timestamps: true })
 ], ModelCustomers);
 exports.ModelCustomersSchema = mongoose_1.SchemaFactory.createForClass(ModelCustomers);
 let ModelRecommentProducts = class ModelRecommentProducts {
 };
 exports.ModelRecommentProducts = ModelRecommentProducts;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers" }),
     __metadata("design:type", ModelCustomers)
 ], ModelRecommentProducts.prototype, "customer", void 0);
 __decorate([
@@ -136,20 +140,20 @@ __decorate([
 ], ModelRecommentProducts.prototype, "showcase", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: [{ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Menu' }],
+        type: [{ type: mongoose_2.default.Schema.Types.ObjectId, ref: "Menu" }],
         default: [],
     }),
     __metadata("design:type", Array)
 ], ModelRecommentProducts.prototype, "menu", void 0);
 exports.ModelRecommentProducts = ModelRecommentProducts = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'recomment-products', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "recomment-products", timestamps: true })
 ], ModelRecommentProducts);
 exports.ModelRecommentProductsSchema = mongoose_1.SchemaFactory.createForClass(ModelRecommentProducts);
 let ModelPhotoSearchProducts = class ModelPhotoSearchProducts {
 };
 exports.ModelPhotoSearchProducts = ModelPhotoSearchProducts;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers" }),
     __metadata("design:type", ModelCustomers)
 ], ModelPhotoSearchProducts.prototype, "customer", void 0);
 __decorate([
@@ -158,7 +162,7 @@ __decorate([
 ], ModelPhotoSearchProducts.prototype, "showcase", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: [{ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'products' }],
+        type: [{ type: mongoose_2.default.Schema.Types.ObjectId, ref: "products" }],
         default: [],
     }),
     __metadata("design:type", Array)
@@ -170,6 +174,6 @@ __decorate([
     __metadata("design:type", Array)
 ], ModelPhotoSearchProducts.prototype, "ai_response", void 0);
 exports.ModelPhotoSearchProducts = ModelPhotoSearchProducts = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'photo-search-products', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "photo-search-products", timestamps: true })
 ], ModelPhotoSearchProducts);
 exports.ModelPhotoSearchProductsSchema = mongoose_1.SchemaFactory.createForClass(ModelPhotoSearchProducts);

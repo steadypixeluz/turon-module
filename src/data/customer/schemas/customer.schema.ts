@@ -1,10 +1,10 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { ModelCountry } from '../../country';
-import { ModelMenu } from '../../menu';
-import { ModelProduct } from '../../product';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { ModelCountry } from "../../country";
+import { ModelMenu } from "../../menu";
+import { ModelProduct } from "../../product";
 
-@Schema({ collection: 'customers', timestamps: true })
+@Schema({ collection: "customers", timestamps: true })
 export class ModelCustomers {
   @Prop()
   password?: string;
@@ -12,6 +12,8 @@ export class ModelCustomers {
   password_length?: number;
   @Prop()
   coin?: number;
+  @Prop()
+  tes_balance?: number;
   @Prop()
   phone_number: string;
   @Prop({ unique: true })
@@ -26,9 +28,9 @@ export class ModelCustomers {
   wallet: number;
   @Prop()
   email: string;
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Country' })
+  @Prop({ type: mongoose.Types.ObjectId, ref: "Country" })
   country: ModelCountry;
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'referrer' })
+  @Prop({ type: mongoose.Types.ObjectId, ref: "referrer" })
   referrer: ModelCustomers;
   @Prop()
   birth_date: string;
@@ -44,7 +46,7 @@ export class ModelCustomers {
   fbToken: string;
   @Prop()
   register_by: string;
-  @Prop({ default: 'customer' })
+  @Prop({ default: "customer" })
   role: string;
 
   @Prop({ default: true })
@@ -65,14 +67,14 @@ export class ModelCustomers {
 export const ModelCustomersSchema =
   SchemaFactory.createForClass(ModelCustomers);
 
-@Schema({ collection: 'recomment-products', timestamps: true })
+@Schema({ collection: "recomment-products", timestamps: true })
 export class ModelRecommentProducts {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })
   customer: ModelCustomers;
   @Prop()
   showcase: string;
   @Prop({
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Menu' }],
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: "Menu" }],
     default: [],
   })
   menu: ModelMenu[];
@@ -82,14 +84,14 @@ export const ModelRecommentProductsSchema = SchemaFactory.createForClass(
   ModelRecommentProducts,
 );
 
-@Schema({ collection: 'photo-search-products', timestamps: true })
+@Schema({ collection: "photo-search-products", timestamps: true })
 export class ModelPhotoSearchProducts {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })
   customer: ModelCustomers;
   @Prop()
   showcase: string;
   @Prop({
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'products' }],
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: "products" }],
     default: [],
   })
   products: ModelProduct[];
