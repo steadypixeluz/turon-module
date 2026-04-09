@@ -10,5 +10,4 @@ export enum CoinHistoryInReason {
   REGISTER='register',
   GIFT='gift',
   GIFT_PRODUCT='gift_product'
-
 }

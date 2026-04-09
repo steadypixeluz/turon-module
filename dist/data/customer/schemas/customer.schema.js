@@ -34,7 +34,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
-], ModelCustomers.prototype, "tes_balance", void 0);
+], ModelCustomers.prototype, "tesx_balance", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)

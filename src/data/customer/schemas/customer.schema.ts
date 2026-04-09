@@ -13,7 +13,7 @@ export class ModelCustomers {
   @Prop()
   coin?: number;
   @Prop()
-  tes_balance?: number;
+  tesx_balance?: number;
   @Prop()
   phone_number: string;
   @Prop({ unique: true })
