@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchVehicleDto = exports.UpdateVehicleDto = exports.CreateVehicleDto = exports.CompanyDto = exports.RouteDto = exports.RateDto = exports.BodyDimensionsDto = exports.VehicleSchema = exports.Vehicle = void 0;
+var schema_1 = require("./schema");
+Object.defineProperty(exports, "Vehicle", { enumerable: true, get: function () { return schema_1.Vehicle; } });
+Object.defineProperty(exports, "VehicleSchema", { enumerable: true, get: function () { return schema_1.VehicleSchema; } });
+var dto_1 = require("./dto");
+Object.defineProperty(exports, "BodyDimensionsDto", { enumerable: true, get: function () { return dto_1.BodyDimensionsDto; } });
+Object.defineProperty(exports, "RateDto", { enumerable: true, get: function () { return dto_1.RateDto; } });
+Object.defineProperty(exports, "RouteDto", { enumerable: true, get: function () { return dto_1.RouteDto; } });
+Object.defineProperty(exports, "CompanyDto", { enumerable: true, get: function () { return dto_1.CompanyDto; } });
+Object.defineProperty(exports, "CreateVehicleDto", { enumerable: true, get: function () { return dto_1.CreateVehicleDto; } });
+Object.defineProperty(exports, "UpdateVehicleDto", { enumerable: true, get: function () { return dto_1.UpdateVehicleDto; } });
+Object.defineProperty(exports, "SearchVehicleDto", { enumerable: true, get: function () { return dto_1.SearchVehicleDto; } });

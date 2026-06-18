@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendMessageDto = exports.CreateChatDto = exports.ModelMessageSchema = exports.ModelMessage = exports.ModelChatSchema = exports.ModelChat = void 0;
+var chat_schemas_1 = require("./chat.schemas");
+Object.defineProperty(exports, "ModelChat", { enumerable: true, get: function () { return chat_schemas_1.ModelChat; } });
+Object.defineProperty(exports, "ModelChatSchema", { enumerable: true, get: function () { return chat_schemas_1.ModelChatSchema; } });
+var message_schema_1 = require("./message.schema");
+Object.defineProperty(exports, "ModelMessage", { enumerable: true, get: function () { return message_schema_1.ModelMessage; } });
+Object.defineProperty(exports, "ModelMessageSchema", { enumerable: true, get: function () { return message_schema_1.ModelMessageSchema; } });
+var create_chat_dto_1 = require("./dto/create-chat.dto");
+Object.defineProperty(exports, "CreateChatDto", { enumerable: true, get: function () { return create_chat_dto_1.CreateChatDto; } });
+var send_message_1 = require("./dto/send-message");
+Object.defineProperty(exports, "SendMessageDto", { enumerable: true, get: function () { return send_message_1.SendMessageDto; } });

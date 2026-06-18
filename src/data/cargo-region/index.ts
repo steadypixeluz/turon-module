@@ -1,0 +1,1 @@
+export {ModelCargoRegion,ModelCargoRegionSchema} from './schema'
