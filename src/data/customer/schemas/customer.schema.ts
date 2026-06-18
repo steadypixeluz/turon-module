@@ -16,7 +16,11 @@ export class ModelCustomers {
   tesx_balance?: number;
   @Prop()
   phone_number: string;
-  @Prop({ unique: true })
+  @Prop({
+    unique: true,
+    sparse: true,
+    partialFilterExpression: { promo_code: { $type: "string" } }
+  })
   promo_code: string;
   @Prop()
   first_name: string;
