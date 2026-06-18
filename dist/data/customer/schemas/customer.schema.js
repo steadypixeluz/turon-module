@@ -40,7 +40,11 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "phone_number", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ unique: true }),
+    (0, mongoose_1.Prop)({
+        unique: true,
+        sparse: true,
+        partialFilterExpression: { promo_code: { $type: "string" } }
+    }),
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "promo_code", void 0);
 __decorate([
