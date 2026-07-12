@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Types } from 'mongoose';
-import { ModelCargoCountry, ModelCargoRegion } from 'src/index';
+import { ModelCargoCountry } from '../cargo-country';
+import { ModelCargoRegion } from '../cargo-region';
 
 @Schema({ _id: false })
 export class Rate {

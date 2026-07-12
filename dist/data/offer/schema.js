@@ -45,7 +45,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelOfferSchema = exports.ModelOffer = exports.CargoWeight = exports.UnloadingPoint = exports.LoadingPoint = exports.GeoPoint = exports.PaymentTerms = exports.Rate = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importStar(require("mongoose"));
-const index_1 = require("src/index");
+const cargo_country_1 = require("../cargo-country");
+const cargo_region_1 = require("../cargo-region");
 let Rate = class Rate {
 };
 exports.Rate = Rate;
@@ -113,11 +114,11 @@ class LoadingPoint {
 exports.LoadingPoint = LoadingPoint;
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Country' }),
-    __metadata("design:type", index_1.ModelCargoCountry)
+    __metadata("design:type", cargo_country_1.ModelCargoCountry)
 ], LoadingPoint.prototype, "country", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Region' }),
-    __metadata("design:type", index_1.ModelCargoRegion)
+    __metadata("design:type", cargo_region_1.ModelCargoRegion)
 ], LoadingPoint.prototype, "region", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: GeoPoint }),
@@ -140,11 +141,11 @@ let UnloadingPoint = class UnloadingPoint {
 exports.UnloadingPoint = UnloadingPoint;
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Country' }),
-    __metadata("design:type", index_1.ModelCargoCountry)
+    __metadata("design:type", cargo_country_1.ModelCargoCountry)
 ], UnloadingPoint.prototype, "country", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Region' }),
-    __metadata("design:type", index_1.ModelCargoRegion)
+    __metadata("design:type", cargo_region_1.ModelCargoRegion)
 ], UnloadingPoint.prototype, "region", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String }),
