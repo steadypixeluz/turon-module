@@ -179,7 +179,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({
         type: String,
-        // enum: ['workingDays', 'everyDay'],
+        enum: ['workingDays', 'everyDay'],
     }),
     __metadata("design:type", String)
 ], Vehicle.prototype, "constantlyType", void 0);

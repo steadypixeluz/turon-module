@@ -291,4 +291,5 @@ export {
   DictionarySchema,
   CreateDictionaryDto,
   DICTIONARY_SEED,
+  ModelOffer,ModelOfferSchema
 } from "./data";

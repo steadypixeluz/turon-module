@@ -1,0 +1,1 @@
+export {ModelOffer,ModelOfferSchema} from './schema'

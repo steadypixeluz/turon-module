@@ -103,7 +103,7 @@ export class Vehicle {
   cargoType: string;
   @Prop({
     type: String,
-    // enum: ['workingDays', 'everyDay'],
+    enum: ['workingDays', 'everyDay'],
   })
   constantlyType: string;
   @Prop({ type: Date })
