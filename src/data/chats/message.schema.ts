@@ -8,7 +8,7 @@ export class ModelMessage {
   chatId: ModelChat;
   @Prop({ type: mongoose.Schema.Types.ObjectId, required: true })
   senderId: string; // Customer ID
-  @Prop({ enum: ["text", "image", "multiple"], default: "text" })
+  @Prop({ enum: ["text", "image", "multiple",'audio'], default: "text" })
   type: string;
   @Prop({ default: "" })
   content: string;

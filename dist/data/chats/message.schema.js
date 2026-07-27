@@ -28,7 +28,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMessage.prototype, "senderId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple"], default: "text" }),
+    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple", 'audio'], default: "text" }),
     __metadata("design:type", String)
 ], ModelMessage.prototype, "type", void 0);
 __decorate([
