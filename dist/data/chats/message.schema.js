@@ -20,7 +20,7 @@ let ModelMessage = class ModelMessage {
 };
 exports.ModelMessage = ModelMessage;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Chat', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "Chat", required: true }),
     __metadata("design:type", chat_schemas_1.ModelChat)
 ], ModelMessage.prototype, "chatId", void 0);
 __decorate([
@@ -28,17 +28,21 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMessage.prototype, "senderId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ enum: ['text', 'image', 'multiple'], default: 'text' }),
+    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple"], default: "text" }),
     __metadata("design:type", String)
 ], ModelMessage.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ default: '' }),
+    (0, mongoose_1.Prop)({ default: "" }),
     __metadata("design:type", String)
 ], ModelMessage.prototype, "content", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
 ], ModelMessage.prototype, "images", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Array)
+], ModelMessage.prototype, "audios", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
