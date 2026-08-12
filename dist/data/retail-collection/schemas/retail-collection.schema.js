@@ -52,3 +52,9 @@ exports.ModelRetailCollection = ModelRetailCollection = __decorate([
     (0, mongoose_1.Schema)({ collection: 'retail-collections', timestamps: true })
 ], ModelRetailCollection);
 exports.ModelRetailCollectionSchema = mongoose_1.SchemaFactory.createForClass(ModelRetailCollection);
+exports.ModelRetailCollectionSchema.index({
+    is_active: 1,
+    device: 1,
+    position: 1,
+    createdAt: -1,
+});

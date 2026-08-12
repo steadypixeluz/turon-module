@@ -153,6 +153,7 @@ exports.ModelRecommentProducts = ModelRecommentProducts = __decorate([
     (0, mongoose_1.Schema)({ collection: "recomment-products", timestamps: true })
 ], ModelRecommentProducts);
 exports.ModelRecommentProductsSchema = mongoose_1.SchemaFactory.createForClass(ModelRecommentProducts);
+exports.ModelRecommentProductsSchema.index({ customer: 1, showcase: 1 }, { unique: true });
 let ModelPhotoSearchProducts = class ModelPhotoSearchProducts {
 };
 exports.ModelPhotoSearchProducts = ModelPhotoSearchProducts;

@@ -166,6 +166,7 @@ exports.ModelProductInfo = ModelProductInfo = __decorate([
     (0, mongoose_1.Schema)({ collection: 'product-info', timestamps: true })
 ], ModelProductInfo);
 exports.ModelProductInfoSchema = mongoose_1.SchemaFactory.createForClass(ModelProductInfo);
+exports.ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase: 1 });
 let ModelProduct = class ModelProduct {
 };
 exports.ModelProduct = ModelProduct;
@@ -233,6 +234,15 @@ exports.ModelProduct = ModelProduct = __decorate([
     (0, mongoose_1.Schema)({ collection: 'product', timestamps: true })
 ], ModelProduct);
 exports.ModelProductSchema = mongoose_1.SchemaFactory.createForClass(ModelProduct);
+exports.ModelProductSchema.index({
+    is_deleted: 1,
+    is_active: 1,
+    status: 1,
+    menu: 1,
+    is_main: 1,
+    createdAt: -1,
+});
+exports.ModelProductSchema.index({ is_deleted: 1, is_active: 1, status: 1, product_info: 1 });
 let ModelSubProduct = class ModelSubProduct {
 };
 exports.ModelSubProduct = ModelSubProduct;

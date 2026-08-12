@@ -36,3 +36,4 @@ exports.ModelMenuOption = ModelMenuOption = __decorate([
     (0, mongoose_1.Schema)({ collection: 'menu-option', timestamps: true })
 ], ModelMenuOption);
 exports.ModelMenuOptionSchema = mongoose_1.SchemaFactory.createForClass(ModelMenuOption);
+exports.ModelMenuOptionSchema.index({ menu: 1, on_filter: 1 });

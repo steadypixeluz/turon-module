@@ -60,3 +60,10 @@ exports.ModelWholesaleCollection = ModelWholesaleCollection = __decorate([
     (0, mongoose_1.Schema)({ collection: 'wholesale-collections', timestamps: true })
 ], ModelWholesaleCollection);
 exports.ModelWholesaleCollectionSchema = mongoose_1.SchemaFactory.createForClass(ModelWholesaleCollection);
+exports.ModelWholesaleCollectionSchema.index({
+    is_active: 1,
+    device: 1,
+    position: 1,
+    createdAt: -1,
+});
+exports.ModelWholesaleCollectionSchema.index({ group: 1, position: 1, createdAt: -1 });
