@@ -84,6 +84,8 @@ export class ModelProductInfo {
 export const ModelProductInfoSchema =
   SchemaFactory.createForClass(ModelProductInfo);
 
+ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase: 1 });
+
 @Schema({ collection: 'product', timestamps: true })
 export class ModelProduct {
   @Prop({ unique: true })
@@ -120,6 +122,16 @@ export class ModelProduct {
 }
 
 export const ModelProductSchema = SchemaFactory.createForClass(ModelProduct);
+
+ModelProductSchema.index({
+  is_deleted: 1,
+  is_active: 1,
+  status: 1,
+  menu: 1,
+  is_main: 1,
+  createdAt: -1,
+});
+ModelProductSchema.index({ is_deleted: 1, is_active: 1, status: 1, product_info: 1 });
 
 @Schema({ collection: 'sub-product', timestamps: true })
 export class ModelSubProduct {

@@ -10,7 +10,7 @@ export class ModelRetailCollection {
   title: Lang;
   @Prop({ type: 'string', enum: ['slider', 'column'], default: 'slider' })
   view_type: string;
-   @Prop({ type: 'string', enum: ['feed','category'], default: 'feed' })
+  @Prop({ type: 'string', enum: ['feed', 'category'], default: 'feed' })
   type: string;
   @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Menu' })
   menu: ModelMenu;
@@ -25,3 +25,10 @@ export class ModelRetailCollection {
 export const ModelRetailCollectionSchema = SchemaFactory.createForClass(
   ModelRetailCollection,
 );
+
+ModelRetailCollectionSchema.index({
+  is_active: 1,
+  device: 1,
+  position: 1,
+  createdAt: -1,
+});

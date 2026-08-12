@@ -88,6 +88,8 @@ export const ModelRecommentProductsSchema = SchemaFactory.createForClass(
   ModelRecommentProducts,
 );
 
+ModelRecommentProductsSchema.index({ customer: 1, showcase: 1 }, { unique: true });
+
 @Schema({ collection: "photo-search-products", timestamps: true })
 export class ModelPhotoSearchProducts {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })

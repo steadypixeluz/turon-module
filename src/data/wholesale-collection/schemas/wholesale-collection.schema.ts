@@ -30,3 +30,11 @@ export const ModelWholesaleCollectionSchema = SchemaFactory.createForClass(
   ModelWholesaleCollection,
 );
 
+ModelWholesaleCollectionSchema.index({
+  is_active: 1,
+  device: 1,
+  position: 1,
+  createdAt: -1,
+});
+ModelWholesaleCollectionSchema.index({ group: 1, position: 1, createdAt: -1 });
+

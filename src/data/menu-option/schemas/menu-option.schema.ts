@@ -13,3 +13,5 @@ export class ModelMenuOption {
 }
 
 export const ModelMenuOptionSchema = SchemaFactory.createForClass(ModelMenuOption);
+
+ModelMenuOptionSchema.index({ menu: 1, on_filter: 1 });
