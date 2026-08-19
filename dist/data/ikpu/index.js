@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelIkpuSchema = exports.ModelIkpu = exports.UpdateIkpuDto = exports.CreateIkpuDto = void 0;
+var create_ikpu_dto_1 = require("./dto/create-ikpu.dto");
+Object.defineProperty(exports, "CreateIkpuDto", { enumerable: true, get: function () { return create_ikpu_dto_1.CreateIkpuDto; } });
+var update_ikpu_dto_1 = require("./dto/update-ikpu.dto");
+Object.defineProperty(exports, "UpdateIkpuDto", { enumerable: true, get: function () { return update_ikpu_dto_1.UpdateIkpuDto; } });
+var ikpu_schema_1 = require("./schemas/ikpu.schema");
+Object.defineProperty(exports, "ModelIkpu", { enumerable: true, get: function () { return ikpu_schema_1.ModelIkpu; } });
+Object.defineProperty(exports, "ModelIkpuSchema", { enumerable: true, get: function () { return ikpu_schema_1.ModelIkpuSchema; } });

@@ -291,5 +291,9 @@ export {
   DictionarySchema,
   CreateDictionaryDto,
   DICTIONARY_SEED,
-  ModelOffer,ModelOfferSchema
+  ModelOffer,ModelOfferSchema,
+  ModelIkpu,
+  ModelIkpuSchema,
+  CreateIkpuDto,
+  UpdateIkpuDto,
 } from "./data";

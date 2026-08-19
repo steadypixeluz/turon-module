@@ -292,3 +292,5 @@ export {ModelCargoRegion,ModelCargoRegionSchema} from './cargo-region'
 export {Dictionary,DictionarySchema,CreateDictionaryDto,DICTIONARY_SEED} from './dictionary'
 
 export {ModelOffer,ModelOfferSchema} from './offer'
+
+export {ModelIkpu,ModelIkpuSchema,CreateIkpuDto,UpdateIkpuDto} from './ikpu'
