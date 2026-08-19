@@ -296,4 +296,5 @@ export {
   ModelIkpuSchema,
   CreateIkpuDto,
   UpdateIkpuDto,
+  IkpuLangText,
 } from "./data";

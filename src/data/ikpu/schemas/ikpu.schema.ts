@@ -1,24 +1,29 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
+export interface IkpuLangText {
+  uz?: string;
+  ru?: string;
+}
+
 @Schema({ collection: 'ikpus', timestamps: true })
 export class ModelIkpu {
   @Prop({ type: String, required: true, unique: true, trim: true })
   ikpu: string;
 
-  @Prop({ type: String, required: true, trim: true })
-  ikpuName: string;
+  @Prop({ type: Object })
+  ikpuName: IkpuLangText;
 
-  @Prop({ type: String, required: true, trim: true })
-  groupName: string;
+  @Prop({ type: Object })
+  groupName: IkpuLangText;
 
-  @Prop({ type: String, required: true, trim: true })
-  className: string;
+  @Prop({ type: Object })
+  className: IkpuLangText;
 
-  @Prop({ type: String, required: true, trim: true })
-  positionName: string;
+  @Prop({ type: Object })
+  positionName: IkpuLangText;
 
-  @Prop({ type: String, required: true, trim: true })
-  subPositionName: string;
+  @Prop({ type: Object })
+  subPositionName: IkpuLangText;
 
   @Prop({ type: Boolean, default: true })
   isValidForCategory: boolean;
@@ -40,4 +45,3 @@ export const ModelIkpuSchema = SchemaFactory.createForClass(ModelIkpu);
 
 ModelIkpuSchema.index({ ikpu: 1 }, { unique: true });
 ModelIkpuSchema.index({ is_deleted: 1, is_active: 1 });
-ModelIkpuSchema.index({ ikpuName: 1 });

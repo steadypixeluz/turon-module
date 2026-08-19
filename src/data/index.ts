@@ -293,4 +293,4 @@ export {Dictionary,DictionarySchema,CreateDictionaryDto,DICTIONARY_SEED} from '.
 
 export {ModelOffer,ModelOfferSchema} from './offer'
 
-export {ModelIkpu,ModelIkpuSchema,CreateIkpuDto,UpdateIkpuDto} from './ikpu'
+export {ModelIkpu,ModelIkpuSchema,CreateIkpuDto,UpdateIkpuDto,IkpuLangText} from './ikpu'

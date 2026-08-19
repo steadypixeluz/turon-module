@@ -1,29 +1,30 @@
-import { IsBoolean, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsObject, IsOptional, IsString } from 'class-validator';
+import { IkpuLangText } from '../schemas/ikpu.schema';
 
 export class CreateIkpuDto {
   @IsNotEmpty()
   @IsString()
   ikpu: string;
 
-  @IsNotEmpty()
-  @IsString()
-  ikpuName: string;
+  @IsOptional()
+  @IsObject()
+  ikpuName?: IkpuLangText;
 
-  @IsNotEmpty()
-  @IsString()
-  groupName: string;
+  @IsOptional()
+  @IsObject()
+  groupName?: IkpuLangText;
 
-  @IsNotEmpty()
-  @IsString()
-  className: string;
+  @IsOptional()
+  @IsObject()
+  className?: IkpuLangText;
 
-  @IsNotEmpty()
-  @IsString()
-  positionName: string;
+  @IsOptional()
+  @IsObject()
+  positionName?: IkpuLangText;
 
-  @IsNotEmpty()
-  @IsString()
-  subPositionName: string;
+  @IsOptional()
+  @IsObject()
+  subPositionName?: IkpuLangText;
 
   @IsOptional()
   @IsBoolean()

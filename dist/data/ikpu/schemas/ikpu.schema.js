@@ -19,24 +19,24 @@ __decorate([
     __metadata("design:type", String)
 ], ModelIkpu.prototype, "ikpu", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, required: true, trim: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelIkpu.prototype, "ikpuName", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, required: true, trim: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelIkpu.prototype, "groupName", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, required: true, trim: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelIkpu.prototype, "className", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, required: true, trim: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelIkpu.prototype, "positionName", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, required: true, trim: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelIkpu.prototype, "subPositionName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Boolean, default: true }),
@@ -64,4 +64,3 @@ exports.ModelIkpu = ModelIkpu = __decorate([
 exports.ModelIkpuSchema = mongoose_1.SchemaFactory.createForClass(ModelIkpu);
 exports.ModelIkpuSchema.index({ ikpu: 1 }, { unique: true });
 exports.ModelIkpuSchema.index({ is_deleted: 1, is_active: 1 });
-exports.ModelIkpuSchema.index({ ikpuName: 1 });
