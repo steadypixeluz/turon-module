@@ -37,8 +37,8 @@ export class ModelIkpu {
   @Prop({ type: Boolean, default: false })
   is_deleted: boolean;
 
-  @Prop({ type: Date, default: null })
-  deleted_at: Date;
+  @Prop({ type: String, default: null })
+  deleted_at: string;
 }
 
 export const ModelIkpuSchema = SchemaFactory.createForClass(ModelIkpu);

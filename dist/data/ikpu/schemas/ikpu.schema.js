@@ -55,8 +55,8 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelIkpu.prototype, "is_deleted", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: Date, default: null }),
-    __metadata("design:type", Date)
+    (0, mongoose_1.Prop)({ type: String, default: null }),
+    __metadata("design:type", String)
 ], ModelIkpu.prototype, "deleted_at", void 0);
 exports.ModelIkpu = ModelIkpu = __decorate([
     (0, mongoose_1.Schema)({ collection: 'ikpus', timestamps: true })
