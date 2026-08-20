@@ -24,6 +24,7 @@ const tag_1 = require("../../tag");
 const variation_select_1 = require("../../variation-select");
 const data_1 = require("../../../data");
 const psic_1 = require("../../psic");
+const price_tier_schema_1 = require("./price-tier.schema");
 let ModelProductInfo = class ModelProductInfo {
 };
 exports.ModelProductInfo = ModelProductInfo;
@@ -184,6 +185,10 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelProduct.prototype, "price", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: [price_tier_schema_1.ModelPriceTierSchema], default: [] }),
+    __metadata("design:type", Array)
+], ModelProduct.prototype, "price_tiers", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
 ], ModelProduct.prototype, "sale_price", void 0);
@@ -259,6 +264,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
 ], ModelSubProduct.prototype, "price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: [price_tier_schema_1.ModelPriceTierSchema], default: [] }),
+    __metadata("design:type", Array)
+], ModelSubProduct.prototype, "price_tiers", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)

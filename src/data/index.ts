@@ -182,12 +182,15 @@ export {
   CreateProductDto,
   CreateSubProductDto,
   UpdateSubProductDto,
+  PriceTierDto,
   ModelProduct,
   ModelProductInfo,
   ModelProductInfoSchema,
   ModelSubProductSchema,
   ModelProductSchema,
   ModelSubProduct,
+  ModelPriceTier,
+  ModelPriceTierSchema,
 } from "./product";
 export {
   ModelProductImage,

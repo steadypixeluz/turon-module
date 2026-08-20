@@ -11,7 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateSubProductDto = void 0;
 const class_validator_1 = require("class-validator");
+const class_transformer_1 = require("class-transformer");
 const enums_1 = require("../../../enums");
+const price_tier_dto_1 = require("./price-tier.dto");
 class CreateSubProductDto {
 }
 exports.CreateSubProductDto = CreateSubProductDto;
@@ -29,6 +31,13 @@ __decorate([
     (0, class_validator_1.Min)(0),
     __metadata("design:type", Number)
 ], CreateSubProductDto.prototype, "price", void 0);
+__decorate([
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.ValidateNested)({ each: true }),
+    (0, class_transformer_1.Type)(() => price_tier_dto_1.PriceTierDto),
+    __metadata("design:type", Array)
+], CreateSubProductDto.prototype, "price_tiers", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.Min)(0),

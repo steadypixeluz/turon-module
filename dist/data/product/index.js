@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelSubProductSchema = exports.ModelSubProduct = exports.ModelProductSchema = exports.ModelProductInfoSchema = exports.ModelProductInfo = exports.ModelProduct = exports.UpdateSubProductDto = exports.CreateSubProductDto = exports.GenerateProductDto = exports.UpdateProductDto = exports.CreateProductDto = void 0;
+exports.ModelPriceTierSchema = exports.ModelPriceTier = exports.ModelSubProductSchema = exports.ModelSubProduct = exports.ModelProductSchema = exports.ModelProductInfoSchema = exports.ModelProductInfo = exports.ModelProduct = exports.PriceTierDto = exports.UpdateSubProductDto = exports.CreateSubProductDto = exports.GenerateProductDto = exports.UpdateProductDto = exports.CreateProductDto = void 0;
 var create_product_dto_1 = require("./dto/create-product.dto");
 Object.defineProperty(exports, "CreateProductDto", { enumerable: true, get: function () { return create_product_dto_1.CreateProductDto; } });
 var update_product_dto_1 = require("./dto/update-product.dto");
@@ -11,6 +11,8 @@ var create_dto_1 = require("./dto/create.dto");
 Object.defineProperty(exports, "CreateSubProductDto", { enumerable: true, get: function () { return create_dto_1.CreateSubProductDto; } });
 var update_dto_1 = require("./dto/update.dto");
 Object.defineProperty(exports, "UpdateSubProductDto", { enumerable: true, get: function () { return update_dto_1.UpdateSubProductDto; } });
+var price_tier_dto_1 = require("./dto/price-tier.dto");
+Object.defineProperty(exports, "PriceTierDto", { enumerable: true, get: function () { return price_tier_dto_1.PriceTierDto; } });
 var product_shcema_1 = require("./schemas/product.shcema");
 Object.defineProperty(exports, "ModelProduct", { enumerable: true, get: function () { return product_shcema_1.ModelProduct; } });
 Object.defineProperty(exports, "ModelProductInfo", { enumerable: true, get: function () { return product_shcema_1.ModelProductInfo; } });
@@ -18,3 +20,6 @@ Object.defineProperty(exports, "ModelProductInfoSchema", { enumerable: true, get
 Object.defineProperty(exports, "ModelProductSchema", { enumerable: true, get: function () { return product_shcema_1.ModelProductSchema; } });
 Object.defineProperty(exports, "ModelSubProduct", { enumerable: true, get: function () { return product_shcema_1.ModelSubProduct; } });
 Object.defineProperty(exports, "ModelSubProductSchema", { enumerable: true, get: function () { return product_shcema_1.ModelSubProductSchema; } });
+var price_tier_schema_1 = require("./schemas/price-tier.schema");
+Object.defineProperty(exports, "ModelPriceTier", { enumerable: true, get: function () { return price_tier_schema_1.ModelPriceTier; } });
+Object.defineProperty(exports, "ModelPriceTierSchema", { enumerable: true, get: function () { return price_tier_schema_1.ModelPriceTierSchema; } });

@@ -6,8 +6,11 @@ import {
   IsObject,
   IsNumber,
   isArray,
+  ValidateNested,
 } from 'class-validator';
+import { Type } from 'class-transformer';
 import { PRICE_TYPE, UNIT, SaleType } from '../../../enums';
+import { PriceTierDto } from './price-tier.dto';
 
 export class CreateProductDto {
   @IsObject()
@@ -40,6 +43,15 @@ export class CreateProductDto {
   @IsNumber()
   @IsOptional()
   price: number;
+
+  // Уровни цены по количеству. Если передан — бэкенд сам пересчитывает price
+  // как максимальное price среди price_tiers, любой присланный price игнорируется.
+  @IsArray()
+  @IsOptional()
+  @ValidateNested({ each: true })
+  @Type(() => PriceTierDto)
+  price_tiers?: PriceTierDto[];
+
   @IsNumber()
   @IsOptional()
   sale: number;

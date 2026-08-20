@@ -10,6 +10,7 @@ import { ModelTag } from '../../tag';
 import { ModelVariationSelect } from '../../variation-select';
 import { ModelBrand } from '../../../data';
 import { ModelPsic } from '../../psic';
+import { ModelPriceTier, ModelPriceTierSchema } from './price-tier.schema';
 
 @Schema({ collection: 'product-info', timestamps: true })
 export class ModelProductInfo {
@@ -96,6 +97,8 @@ export class ModelProduct {
   images: string[];
   @Prop()
   price: number;
+  @Prop({ type: [ModelPriceTierSchema], default: [] })
+  price_tiers: ModelPriceTier[];
   @Prop({ default: 0 })
   sale_price: number;
   @Prop({ default: 0 })
@@ -143,6 +146,9 @@ export class ModelSubProduct {
   count: number;
   @Prop({ default: 0 })
   price: number;
+  // Уровни цены по количеству — см. комментарий у ModelProduct.price_tiers выше.
+  @Prop({ type: [ModelPriceTierSchema], default: [] })
+  price_tiers: ModelPriceTier[];
   @Prop({ default: 0 })
   sale: number;
   @Prop({ default: 0 })
