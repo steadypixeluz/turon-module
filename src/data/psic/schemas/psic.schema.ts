@@ -44,4 +44,5 @@ export class ModelPsic {
 export const ModelPsicSchema = SchemaFactory.createForClass(ModelPsic);
 
 ModelPsicSchema.index({ psic: 1 }, { unique: true });
-ModelPsicSchema.index({ is_deleted: 1, is_active: 1 });
+ModelPsicSchema.index({ is_deleted: 1, createdAt: -1 });
+ModelPsicSchema.index({ is_deleted: 1, is_active: 1, createdAt: -1 });

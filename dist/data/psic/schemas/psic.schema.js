@@ -63,4 +63,5 @@ exports.ModelPsic = ModelPsic = __decorate([
 ], ModelPsic);
 exports.ModelPsicSchema = mongoose_1.SchemaFactory.createForClass(ModelPsic);
 exports.ModelPsicSchema.index({ psic: 1 }, { unique: true });
-exports.ModelPsicSchema.index({ is_deleted: 1, is_active: 1 });
+exports.ModelPsicSchema.index({ is_deleted: 1, createdAt: -1 });
+exports.ModelPsicSchema.index({ is_deleted: 1, is_active: 1, createdAt: -1 });
