@@ -1,29 +1,29 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
-export interface IkpuLangText {
+export interface PsicLangText {
   uz?: string;
   ru?: string;
 }
 
-@Schema({ collection: 'ikpus', timestamps: true })
-export class ModelIkpu {
+@Schema({ collection: 'psics', timestamps: true })
+export class ModelPsic {
   @Prop({ type: String, required: true, unique: true, trim: true })
-  ikpu: string;
+  psic: string;
 
   @Prop({ type: Object })
-  ikpuName: IkpuLangText;
+  psicName: PsicLangText;
 
   @Prop({ type: Object })
-  groupName: IkpuLangText;
+  groupName: PsicLangText;
 
   @Prop({ type: Object })
-  className: IkpuLangText;
+  className: PsicLangText;
 
   @Prop({ type: Object })
-  positionName: IkpuLangText;
+  positionName: PsicLangText;
 
   @Prop({ type: Object })
-  subPositionName: IkpuLangText;
+  subPositionName: PsicLangText;
 
   @Prop({ type: Boolean, default: true })
   isValidForCategory: boolean;
@@ -41,7 +41,7 @@ export class ModelIkpu {
   deleted_at: string;
 }
 
-export const ModelIkpuSchema = SchemaFactory.createForClass(ModelIkpu);
+export const ModelPsicSchema = SchemaFactory.createForClass(ModelPsic);
 
-ModelIkpuSchema.index({ ikpu: 1 }, { unique: true });
-ModelIkpuSchema.index({ is_deleted: 1, is_active: 1 });
+ModelPsicSchema.index({ psic: 1 }, { unique: true });
+ModelPsicSchema.index({ is_deleted: 1, is_active: 1 });

@@ -1,30 +1,30 @@
 import { IsBoolean, IsNotEmpty, IsObject, IsOptional, IsString } from 'class-validator';
-import { IkpuLangText } from '../schemas/ikpu.schema';
+import { PsicLangText } from '../schemas/psic.schema';
 
-export class CreateIkpuDto {
+export class CreatePsicDto {
   @IsNotEmpty()
   @IsString()
-  ikpu: string;
+  psic: string;
 
   @IsOptional()
   @IsObject()
-  ikpuName?: IkpuLangText;
+  psicName?: PsicLangText;
 
   @IsOptional()
   @IsObject()
-  groupName?: IkpuLangText;
+  groupName?: PsicLangText;
 
   @IsOptional()
   @IsObject()
-  className?: IkpuLangText;
+  className?: PsicLangText;
 
   @IsOptional()
   @IsObject()
-  positionName?: IkpuLangText;
+  positionName?: PsicLangText;
 
   @IsOptional()
   @IsObject()
-  subPositionName?: IkpuLangText;
+  subPositionName?: PsicLangText;
 
   @IsOptional()
   @IsBoolean()

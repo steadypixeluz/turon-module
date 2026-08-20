@@ -9,53 +9,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateIkpuDto = void 0;
+exports.CreatePsicDto = void 0;
 const class_validator_1 = require("class-validator");
-class CreateIkpuDto {
+class CreatePsicDto {
 }
-exports.CreateIkpuDto = CreateIkpuDto;
+exports.CreatePsicDto = CreatePsicDto;
 __decorate([
     (0, class_validator_1.IsNotEmpty)(),
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateIkpuDto.prototype, "ikpu", void 0);
+], CreatePsicDto.prototype, "psic", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsObject)(),
     __metadata("design:type", Object)
-], CreateIkpuDto.prototype, "ikpuName", void 0);
+], CreatePsicDto.prototype, "psicName", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsObject)(),
     __metadata("design:type", Object)
-], CreateIkpuDto.prototype, "groupName", void 0);
+], CreatePsicDto.prototype, "groupName", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsObject)(),
     __metadata("design:type", Object)
-], CreateIkpuDto.prototype, "className", void 0);
+], CreatePsicDto.prototype, "className", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsObject)(),
     __metadata("design:type", Object)
-], CreateIkpuDto.prototype, "positionName", void 0);
+], CreatePsicDto.prototype, "positionName", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsObject)(),
     __metadata("design:type", Object)
-], CreateIkpuDto.prototype, "subPositionName", void 0);
+], CreatePsicDto.prototype, "subPositionName", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], CreateIkpuDto.prototype, "isValidForCategory", void 0);
+], CreatePsicDto.prototype, "isValidForCategory", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], CreateIkpuDto.prototype, "isVatRelief", void 0);
+], CreatePsicDto.prototype, "isVatRelief", void 0);
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsBoolean)(),
     __metadata("design:type", Boolean)
-], CreateIkpuDto.prototype, "is_active", void 0);
+], CreatePsicDto.prototype, "is_active", void 0);

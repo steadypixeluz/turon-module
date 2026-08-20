@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelPsicSchema = exports.ModelPsic = exports.UpdatePsicDto = exports.CreatePsicDto = void 0;
+var create_psic_dto_1 = require("./dto/create-psic.dto");
+Object.defineProperty(exports, "CreatePsicDto", { enumerable: true, get: function () { return create_psic_dto_1.CreatePsicDto; } });
+var update_psic_dto_1 = require("./dto/update-psic.dto");
+Object.defineProperty(exports, "UpdatePsicDto", { enumerable: true, get: function () { return update_psic_dto_1.UpdatePsicDto; } });
+var psic_schema_1 = require("./schemas/psic.schema");
+Object.defineProperty(exports, "ModelPsic", { enumerable: true, get: function () { return psic_schema_1.ModelPsic; } });
+Object.defineProperty(exports, "ModelPsicSchema", { enumerable: true, get: function () { return psic_schema_1.ModelPsicSchema; } });
