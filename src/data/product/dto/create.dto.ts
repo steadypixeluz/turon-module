@@ -35,6 +35,10 @@ export class CreateSubProductDto {
   @IsOptional()
   product_info?: string;
 
+  @IsMongoId()
+  @IsOptional()
+  psic?: string;
+
   @IsBoolean()
   @IsOptional()
   is_deleted?: boolean;
@@ -43,5 +47,5 @@ export class CreateSubProductDto {
   @IsOptional()
   is_main?: boolean;
 
-  status:string
+  status: string
 }

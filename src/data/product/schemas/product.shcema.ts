@@ -9,6 +9,8 @@ import { ModelMenu } from '../../menu';
 import { ModelTag } from '../../tag';
 import { ModelVariationSelect } from '../../variation-select';
 import { ModelBrand } from '../../../data';
+import { ModelPsic } from '../../psic';
+
 @Schema({ collection: 'product-info', timestamps: true })
 export class ModelProductInfo {
   @Prop({ unique: true })
@@ -39,9 +41,9 @@ export class ModelProductInfo {
   box_length: number;
   @Prop()
   box_height: number;
-  @Prop()
-  psic: string;
-  @Prop({default:0})
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Psic' })
+  psic: ModelPsic;
+  @Prop({ default: 0 })
   vat_percent: string;
   @Prop()
   package_code: string;
@@ -145,8 +147,8 @@ export class ModelSubProduct {
   sale: number;
   @Prop({ default: 0 })
   sale_price: number;
-  @Prop()
-  psic: string;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Psic' })
+  psic: ModelPsic;
   @Prop()
   vat_percent: string;
   @Prop()

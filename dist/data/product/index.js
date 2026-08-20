@@ -1,12 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelSubProductSchema = exports.ModelSubProduct = exports.ModelProductSchema = exports.ModelProductInfoSchema = exports.ModelProductInfo = exports.ModelProduct = exports.GenerateProductDto = exports.UpdateProductDto = exports.CreateProductDto = void 0;
+exports.ModelSubProductSchema = exports.ModelSubProduct = exports.ModelProductSchema = exports.ModelProductInfoSchema = exports.ModelProductInfo = exports.ModelProduct = exports.UpdateSubProductDto = exports.CreateSubProductDto = exports.GenerateProductDto = exports.UpdateProductDto = exports.CreateProductDto = void 0;
 var create_product_dto_1 = require("./dto/create-product.dto");
 Object.defineProperty(exports, "CreateProductDto", { enumerable: true, get: function () { return create_product_dto_1.CreateProductDto; } });
 var update_product_dto_1 = require("./dto/update-product.dto");
 Object.defineProperty(exports, "UpdateProductDto", { enumerable: true, get: function () { return update_product_dto_1.UpdateProductDto; } });
 var generate_product_dto_1 = require("./dto/generate-product.dto");
 Object.defineProperty(exports, "GenerateProductDto", { enumerable: true, get: function () { return generate_product_dto_1.GenerateProductDto; } });
+var create_dto_1 = require("./dto/create.dto");
+Object.defineProperty(exports, "CreateSubProductDto", { enumerable: true, get: function () { return create_dto_1.CreateSubProductDto; } });
+var update_dto_1 = require("./dto/update.dto");
+Object.defineProperty(exports, "UpdateSubProductDto", { enumerable: true, get: function () { return update_dto_1.UpdateSubProductDto; } });
 var product_shcema_1 = require("./schemas/product.shcema");
 Object.defineProperty(exports, "ModelProduct", { enumerable: true, get: function () { return product_shcema_1.ModelProduct; } });
 Object.defineProperty(exports, "ModelProductInfo", { enumerable: true, get: function () { return product_shcema_1.ModelProductInfo; } });

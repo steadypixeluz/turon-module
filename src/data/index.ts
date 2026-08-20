@@ -180,6 +180,8 @@ export {
 export {
   UpdateProductDto,
   CreateProductDto,
+  CreateSubProductDto,
+  UpdateSubProductDto,
   ModelProduct,
   ModelProductInfo,
   ModelProductInfoSchema,

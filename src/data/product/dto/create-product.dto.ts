@@ -7,7 +7,7 @@ import {
   IsNumber,
   isArray,
 } from 'class-validator';
-import { PRICE_TYPE, UNIT,SaleType } from '../../../enums';
+import { PRICE_TYPE, UNIT, SaleType } from '../../../enums';
 
 export class CreateProductDto {
   @IsObject()
@@ -75,6 +75,10 @@ export class CreateProductDto {
   @IsArray()
   @IsOptional()
   tags: string;
+
+  @IsString()
+  @IsOptional()
+  psic?: string;
 
   //! PRODUCT OPTION DATA
   @IsArray()

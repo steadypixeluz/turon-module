@@ -181,6 +181,8 @@ export {
   CreateCardDto,
   UpdateProductDto,
   CreateProductDto,
+  CreateSubProductDto,
+  UpdateSubProductDto,
   ModelProduct,
   ModelProductInfo,
   ModelProductInfoSchema,

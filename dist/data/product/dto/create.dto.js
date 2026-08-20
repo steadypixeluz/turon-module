@@ -58,6 +58,11 @@ __decorate([
     __metadata("design:type", String)
 ], CreateSubProductDto.prototype, "product_info", void 0);
 __decorate([
+    (0, class_validator_1.IsMongoId)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], CreateSubProductDto.prototype, "psic", void 0);
+__decorate([
     (0, class_validator_1.IsBoolean)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)

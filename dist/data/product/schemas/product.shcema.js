@@ -23,6 +23,7 @@ const menu_1 = require("../../menu");
 const tag_1 = require("../../tag");
 const variation_select_1 = require("../../variation-select");
 const data_1 = require("../../../data");
+const psic_1 = require("../../psic");
 let ModelProductInfo = class ModelProductInfo {
 };
 exports.ModelProductInfo = ModelProductInfo;
@@ -83,8 +84,8 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelProductInfo.prototype, "box_height", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Psic' }),
+    __metadata("design:type", psic_1.ModelPsic)
 ], ModelProductInfo.prototype, "psic", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
@@ -267,8 +268,8 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelSubProduct.prototype, "sale_price", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Psic' }),
+    __metadata("design:type", psic_1.ModelPsic)
 ], ModelSubProduct.prototype, "psic", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
