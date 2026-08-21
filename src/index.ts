@@ -43,7 +43,6 @@ export {
   ModelAsGiftSchema,
   AuthLoginDto,
   ClientForgotPasswordDto,
-  ClientGoogleLoginDto,
   ClientLoginDto,
   ClientRegisterDto,
   AutoIncrement,

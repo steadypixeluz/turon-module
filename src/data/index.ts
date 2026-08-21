@@ -14,7 +14,6 @@ export { ModelAsGift, ModelAsGiftSchema } from "./as-gift";
 export {
   AuthLoginDto,
   ClientForgotPasswordDto,
-  ClientGoogleLoginDto,
   ClientLoginDto,
   ClientRegisterDto,
 } from "./auth";

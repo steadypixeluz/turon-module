@@ -9,33 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClientLoginDto = exports.ClientGoogleLoginDto = void 0;
+exports.ClientLoginDto = void 0;
 const class_validator_1 = require("class-validator");
-class ClientGoogleLoginDto {
-}
-exports.ClientGoogleLoginDto = ClientGoogleLoginDto;
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsEmail)(),
-    __metadata("design:type", String)
-], ClientGoogleLoginDto.prototype, "email", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], ClientGoogleLoginDto.prototype, "fbToken", void 0);
 class ClientLoginDto {
 }
 exports.ClientLoginDto = ClientLoginDto;
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], ClientLoginDto.prototype, "phone_number", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], ClientLoginDto.prototype, "email", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], ClientLoginDto.prototype, "password", void 0);
