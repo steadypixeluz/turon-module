@@ -16,6 +16,8 @@ export class ModelCustomers {
   tesx_balance?: number;
   @Prop()
   phone_number: string;
+  @Prop()
+  phone_number_format: string;
   @Prop({
     unique: true,
     sparse: true,
@@ -32,6 +34,8 @@ export class ModelCustomers {
   wallet: number;
   @Prop()
   email: string;
+  @Prop()
+  country_code: string;
   @Prop({ type: mongoose.Types.ObjectId, ref: "Country" })
   country: ModelCountry;
   @Prop({ type: mongoose.Types.ObjectId, ref: "referrer" })

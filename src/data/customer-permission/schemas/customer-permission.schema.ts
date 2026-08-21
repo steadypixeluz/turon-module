@@ -14,6 +14,4 @@ export class ModelCustomerPermission {
   entered: boolean;
 }
 
-export const ModelCustomerPermissionSchema = SchemaFactory.createForClass(
-  ModelCustomerPermission,
-);
+export const ModelCustomerPermissionSchema = SchemaFactory.createForClass(ModelCustomerPermission);
