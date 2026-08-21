@@ -11,7 +11,7 @@ export class ClientRegisterDto {
   @IsNotEmpty()
   first_name: string;
   @IsString()
-  @IsNotEmpty()
+  @IsOptional()
   last_name: string;
 
   @IsString()

@@ -40,6 +40,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "phone_number", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomers.prototype, "phone_number_format", void 0);
+__decorate([
     (0, mongoose_1.Prop)({
         unique: true,
         sparse: true,
@@ -67,6 +71,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCustomers.prototype, "email", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomers.prototype, "country_code", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Country" }),
     __metadata("design:type", country_1.ModelCountry)

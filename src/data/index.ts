@@ -13,11 +13,8 @@ export {
 export { ModelAsGift, ModelAsGiftSchema } from "./as-gift";
 export {
   AuthLoginDto,
-  ClientAppleRegistorDto,
-  ClientFacebookRegisterDto,
   ClientForgotPasswordDto,
   ClientGoogleLoginDto,
-  ClientGoogleRegistorDto,
   ClientLoginDto,
   ClientRegisterDto,
 } from "./auth";
