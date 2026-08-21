@@ -3,11 +3,11 @@ import { IsEmail, IsOptional, IsString } from 'class-validator';
 export class UpdateCustomerDto {
   @IsString()
   @IsOptional()
-  phone_number: string;
+  last_name: string;
 
   @IsString()
   @IsOptional()
-  full_name: string;
+  first_name: string;
 
   @IsString()
   @IsEmail()
@@ -36,11 +36,8 @@ export class UpdateCustomerDto {
   birth_date: string;
 
   @IsOptional()
-  password: string;
-  @IsOptional()
-  password_length: number;
-  @IsOptional()
   birth_date_format: string;
+
   @IsOptional()
   language: string;
 }
