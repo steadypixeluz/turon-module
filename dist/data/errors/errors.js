@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ORDER_COUNT = exports.INVALID_PHONE_NUMBER = exports.FILE_SIZE = exports.BAD_FILE = exports.LONG_TIME = exports.CODE_NOT_CORRECT = exports.COMPANY_INN_IN_REVIEW = exports.COMPANY_INN_ALREADY_REGISTERED = exports.CLIENT_ON_REDIS_NOT_FOUND = exports.CLIENT_ALREADY_REGISTERED = exports.CLIENT_ALREADY_REGISTERED_EMAIL = exports.CLIENT_ALREADY_REGISTERED_PHONE_NUMBER = exports.INCORRECT_PASSWORD = exports.CLIENT_WITH_PHONE_NUMBER_NOT_FOUND = exports.CLIENT_WITH_EMAIL_NOT_FOUND = exports.CLIENT_NOT_FOUND = void 0;
+exports.ORDER_COUNT = exports.INVALID_PHONE_NUMBER = exports.FILE_SIZE = exports.BAD_FILE = exports.LONG_TIME = exports.CODE_EXPIRED = exports.CODE_NOT_CORRECT = exports.COMPANY_INN_IN_REVIEW = exports.COMPANY_INN_ALREADY_REGISTERED = exports.CLIENT_ON_REDIS_NOT_FOUND = exports.CLIENT_ALREADY_REGISTERED = exports.CLIENT_ALREADY_REGISTERED_EMAIL = exports.CLIENT_ALREADY_REGISTERED_PHONE_NUMBER = exports.INCORRECT_PASSWORD = exports.CLIENT_WITH_PHONE_NUMBER_NOT_FOUND = exports.CLIENT_WITH_EMAIL_NOT_FOUND = exports.CLIENT_NOT_FOUND = void 0;
 exports.CLIENT_NOT_FOUND = {
     uz: 'Bunday elektron pochta yoki telefon raqamiga ega mijoz topilmadi',
     ru: 'Клиент с таким адресом электронной почты или номером телефона не найден',
@@ -56,6 +56,11 @@ exports.CODE_NOT_CORRECT = {
     uz: "Kod noto'g'ri",
     ru: 'Код неверный',
     en: 'Code not correct',
+};
+exports.CODE_EXPIRED = {
+    uz: "Kod muddati tugagan",
+    ru: 'Код истек',
+    en: 'Code expired',
 };
 exports.LONG_TIME = {
     uz: "Siz uzoq vaqtdan beri tizimga kirmadingiz, shuning uchun qayta ro'yxatdan o'ting.",

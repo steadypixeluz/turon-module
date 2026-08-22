@@ -55,6 +55,11 @@ export const CODE_NOT_CORRECT = {
   ru: 'Код неверный',
   en: 'Code not correct',
 };
+export const CODE_EXPIRED = {
+  uz: "Kod muddati tugagan",
+  ru: 'Код истек',
+  en: 'Code expired',
+};
 export const LONG_TIME = {
   uz: "Siz uzoq vaqtdan beri tizimga kirmadingiz, shuning uchun qayta ro'yxatdan o'ting.",
   ru: 'Вы долгое время не заходили в систему, поэтому, пожалуйста, зарегистрируйтесь снова.',
