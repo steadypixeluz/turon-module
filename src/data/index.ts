@@ -238,6 +238,12 @@ export {
   ModelRetailCollection,
   ModelRetailCollectionSchema,
 } from "./retail-collection";
+export {
+  CreateStoreDto,
+  UpdateStoreDto,
+  ModelStore,
+  ModelStoreSchema,
+} from "./store";
 export { ModelTag, ModelTagSchema, UpdateTagDto, CreateTagDto } from "./tag";
 export {
   ModelTranslation,
