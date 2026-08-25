@@ -1,6 +1,6 @@
 export enum CustomerCompanyStatus {
   new = 'new',
-  proccess = 'proccess',
+  process = 'process',
   confirmed = 'confirmed',
   rejected = 'rejected',
 }
