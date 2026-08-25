@@ -86,6 +86,20 @@ export class ModelCustomerCompany {
   director_id_document: string;
   @Prop()
   power_of_attorney: string;
+
+  // StatusFactoryVerified
+  @Prop({ default: false })
+  is_factory: boolean;
+  @Prop()
+  factory_address: string;
+  @Prop()
+  factory_capacity: string;
+  @Prop()
+  factory_staff_count: string;
+  @Prop()
+  factory_certificates: string;
+  @Prop()
+  factory_media: string;
 }
 
 export const ModelCustomerCompanySchema =

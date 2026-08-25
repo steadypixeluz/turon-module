@@ -82,6 +82,36 @@ export class UpdateVerifiedBankAccountDto {
   company_mfo: string;
 }
 
+// Stage 6: StatusFactoryVerified — is_factory arrives as a multipart string ("true"/"false").
+// If false, there's nothing to verify and the stage auto-confirms — the other fields are not
+// required. If true, factory_address/factory_capacity/factory_staff_count/factory_certificates
+// (plain text) and factory_media (a single file, image or PDF, resolved server-side to its
+// stored filename by the controller) are all required.
+export class UpdateFactoryVerifiedDto {
+  @IsBooleanString()
+  is_factory: string;
+
+  @IsString()
+  @IsOptional()
+  factory_address: string;
+
+  @IsString()
+  @IsOptional()
+  factory_capacity: string;
+
+  @IsString()
+  @IsOptional()
+  factory_staff_count: string;
+
+  @IsString()
+  @IsOptional()
+  factory_certificates: string;
+
+  @IsString()
+  @IsOptional()
+  factory_media: string;
+}
+
 export class ModerateCustomerCompanyStageDto {
   @IsEnum(CustomerCompanyStage)
   stage: CustomerCompanyStage;
