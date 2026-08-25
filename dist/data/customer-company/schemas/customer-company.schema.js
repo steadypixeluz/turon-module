@@ -163,6 +163,30 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "power_of_attorney", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelCustomerCompany.prototype, "is_factory", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "factory_address", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "factory_capacity", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "factory_staff_count", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "factory_certificates", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "factory_media", void 0);
 exports.ModelCustomerCompany = ModelCustomerCompany = __decorate([
     (0, mongoose_1.Schema)({ collection: "customers-company", timestamps: true })
 ], ModelCustomerCompany);

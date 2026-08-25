@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModerateCustomerCompanyStageDto = exports.UpdateVerifiedBankAccountDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
+exports.ModerateCustomerCompanyStageDto = exports.UpdateFactoryVerifiedDto = exports.UpdateVerifiedBankAccountDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
 const class_validator_1 = require("class-validator");
 const enums_1 = require("../../../enums");
 // Bank details (company_mfo/company_bank_name/company_bank_id) are NOT part of this stage —
@@ -131,6 +131,43 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateVerifiedBankAccountDto.prototype, "company_mfo", void 0);
+// Stage 6: StatusFactoryVerified — is_factory arrives as a multipart string ("true"/"false").
+// If false, there's nothing to verify and the stage auto-confirms — the other fields are not
+// required. If true, factory_address/factory_capacity/factory_staff_count/factory_certificates
+// (plain text) and factory_media (a single file, image or PDF, resolved server-side to its
+// stored filename by the controller) are all required.
+class UpdateFactoryVerifiedDto {
+}
+exports.UpdateFactoryVerifiedDto = UpdateFactoryVerifiedDto;
+__decorate([
+    (0, class_validator_1.IsBooleanString)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "is_factory", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "factory_address", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "factory_capacity", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "factory_staff_count", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "factory_certificates", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateFactoryVerifiedDto.prototype, "factory_media", void 0);
 class ModerateCustomerCompanyStageDto {
 }
 exports.ModerateCustomerCompanyStageDto = ModerateCustomerCompanyStageDto;
