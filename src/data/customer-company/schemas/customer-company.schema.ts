@@ -5,6 +5,10 @@ import { ModelCountry } from "../../country";
 import { ModelCustomers } from "../../customer/schemas/customer.schema";
 import { ModelDistricts } from "../../district";
 import { ModelRegion } from "../../region";
+import {
+  ModelCustomerCompanyStage,
+  ModelCustomerCompanyStageSchema,
+} from "./customer-company-stage.schema";
 
 @Schema({ collection: "customers-company", timestamps: true })
 export class ModelCustomerCompany {
@@ -64,6 +68,8 @@ export class ModelCustomerCompany {
   is_deleted: boolean;
   @Prop({ default: null })
   deleted_at: string;
+  @Prop({ type: [ModelCustomerCompanyStageSchema], default: [] })
+  stages: ModelCustomerCompanyStage[];
 }
 
 export const ModelCustomerCompanySchema =

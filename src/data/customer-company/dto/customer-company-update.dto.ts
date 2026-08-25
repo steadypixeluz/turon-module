@@ -23,6 +23,9 @@ export class UpdateCustomerCompanyDto {
   region: string;
   @IsString()
   @IsOptional()
+  company_district: string;
+  @IsString()
+  @IsOptional()
   company_email: string;
   @IsString()
   @IsOptional()

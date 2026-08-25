@@ -13,7 +13,11 @@ export {
 export { ModelAsGift, ModelAsGiftSchema } from "./as-gift";
 export {
   AuthLoginDto,
+  ClientAppleRegistorDto,
+  ClientFacebookRegisterDto,
   ClientForgotPasswordDto,
+  ClientGoogleLoginDto,
+  ClientGoogleRegistorDto,
   ClientLoginDto,
   ClientRegisterDto,
 } from "./auth";
@@ -68,8 +72,13 @@ export {
 export {
   UpdateCustomerCompanyDto,
   CreateCustomerCompanyDto,
+  UpdateRegisteredCompanyDto,
+  UpdateContactInfoDto,
+  ModerateCustomerCompanyStageDto,
   ModelCustomerCompany,
   ModelCustomerCompanySchema,
+  ModelCustomerCompanyStage,
+  ModelCustomerCompanyStageSchema,
 } from "./customer-company";
 export { ModelDeviceData, ModelDeviceDataSchema } from "./device-data";
 export {
@@ -87,7 +96,6 @@ export {
   CLIENT_WITH_EMAIL_NOT_FOUND,
   CLIENT_WITH_PHONE_NUMBER_NOT_FOUND,
   CODE_NOT_CORRECT,
-  CODE_EXPIRED,
   COMPANY_INN_ALREADY_REGISTERED,
   COMPANY_INN_IN_REVIEW,
   ORDER_COUNT,

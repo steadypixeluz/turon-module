@@ -14,6 +14,8 @@ export class CreateCustomerCompanyDto {
   @IsString()
   company_region: string;
   @IsString()
+  company_district: string;
+  @IsString()
   company_email: string;
   @IsString()
   company_phone: string;
