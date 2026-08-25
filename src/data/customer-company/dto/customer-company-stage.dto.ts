@@ -71,6 +71,17 @@ export class UpdateVerifiedBusinessDto {
   power_of_attorney: string;
 }
 
+// Stage 5: StatusVerifiedBankAccount — the bank fields deliberately left out of
+// UpdateRegisteredCompanyDto earlier.
+export class UpdateVerifiedBankAccountDto {
+  @IsString()
+  company_bank_name: string;
+  @IsString()
+  company_bank_id: string;
+  @IsString()
+  company_mfo: string;
+}
+
 export class ModerateCustomerCompanyStageDto {
   @IsEnum(CustomerCompanyStage)
   stage: CustomerCompanyStage;

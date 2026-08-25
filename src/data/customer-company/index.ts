@@ -1,5 +1,5 @@
 export {CreateCustomerCompanyDto} from './dto/customer-company-create.dto'
 export {UpdateCustomerCompanyDto} from './dto/customer-company-update.dto'
-export {UpdateRegisteredCompanyDto, UpdateContactInfoDto, UpdateVerifiedBusinessDto, ModerateCustomerCompanyStageDto} from './dto/customer-company-stage.dto'
+export {UpdateRegisteredCompanyDto, UpdateContactInfoDto, UpdateVerifiedBusinessDto, UpdateVerifiedBankAccountDto, ModerateCustomerCompanyStageDto} from './dto/customer-company-stage.dto'
 export {ModelCustomerCompany,ModelCustomerCompanySchema} from './schemas/customer-company.schema'
 export {ModelCustomerCompanyStage,ModelCustomerCompanyStageSchema} from './schemas/customer-company-stage.schema'

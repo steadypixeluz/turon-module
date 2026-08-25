@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModerateCustomerCompanyStageDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
+exports.ModerateCustomerCompanyStageDto = exports.UpdateVerifiedBankAccountDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
 const class_validator_1 = require("class-validator");
 const enums_1 = require("../../../enums");
 // Bank details (company_mfo/company_bank_name/company_bank_id) are NOT part of this stage —
@@ -114,6 +114,23 @@ __decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateVerifiedBusinessDto.prototype, "power_of_attorney", void 0);
+// Stage 5: StatusVerifiedBankAccount — the bank fields deliberately left out of
+// UpdateRegisteredCompanyDto earlier.
+class UpdateVerifiedBankAccountDto {
+}
+exports.UpdateVerifiedBankAccountDto = UpdateVerifiedBankAccountDto;
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBankAccountDto.prototype, "company_bank_name", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBankAccountDto.prototype, "company_bank_id", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBankAccountDto.prototype, "company_mfo", void 0);
 class ModerateCustomerCompanyStageDto {
 }
 exports.ModerateCustomerCompanyStageDto = ModerateCustomerCompanyStageDto;
