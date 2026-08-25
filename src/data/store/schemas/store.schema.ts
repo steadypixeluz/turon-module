@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { ModelCustomerCompany } from "../../customer-company/schemas/customer-company.schema";
+import { Lang } from "src/data/interfaces";
 
 @Schema({ collection: "stores", timestamps: true })
 export class ModelStore {
@@ -8,8 +9,8 @@ export class ModelStore {
   name: string;
   @Prop({ required: true, unique: true })
   slug: string;
-  @Prop()
-  description: string;
+  @Prop({ type: Object })
+  description: Lang;
   @Prop()
   logo: string;
   @Prop()

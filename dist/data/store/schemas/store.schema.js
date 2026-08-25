@@ -28,8 +28,8 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStore.prototype, "slug", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelStore.prototype, "description", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
