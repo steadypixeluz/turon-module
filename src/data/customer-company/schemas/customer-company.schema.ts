@@ -62,8 +62,8 @@ export class ModelCustomerCompany {
   web_site: string;
   @Prop()
   logo: string;
-  @Prop({ default: 0 })
-  balans: number
+  @Prop({default:0})
+  balans:number
   @Prop()
   invoice_logo: string;
   @Prop({ default: false })
@@ -72,6 +72,20 @@ export class ModelCustomerCompany {
   deleted_at: string;
   @Prop({ type: [ModelCustomerCompanyStageSchema], default: [] })
   stages: ModelCustomerCompanyStage[];
+
+  // StatusVerifiedBusiness
+  @Prop({ default: false })
+  is_via_representative: boolean;
+  @Prop()
+  registration_certificate: string;
+  @Prop()
+  business_license: string;
+  @Prop()
+  tax_certificate: string;
+  @Prop()
+  director_id_document: string;
+  @Prop()
+  power_of_attorney: string;
 }
 
 export const ModelCustomerCompanySchema =

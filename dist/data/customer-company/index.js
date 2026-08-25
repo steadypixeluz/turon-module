@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelCustomerCompanyStageSchema = exports.ModelCustomerCompanyStage = exports.ModelCustomerCompanySchema = exports.ModelCustomerCompany = exports.ModerateCustomerCompanyStageDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = exports.UpdateCustomerCompanyDto = exports.CreateCustomerCompanyDto = void 0;
+exports.ModelCustomerCompanyStageSchema = exports.ModelCustomerCompanyStage = exports.ModelCustomerCompanySchema = exports.ModelCustomerCompany = exports.ModerateCustomerCompanyStageDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = exports.UpdateCustomerCompanyDto = exports.CreateCustomerCompanyDto = void 0;
 var customer_company_create_dto_1 = require("./dto/customer-company-create.dto");
 Object.defineProperty(exports, "CreateCustomerCompanyDto", { enumerable: true, get: function () { return customer_company_create_dto_1.CreateCustomerCompanyDto; } });
 var customer_company_update_dto_1 = require("./dto/customer-company-update.dto");
@@ -8,6 +8,7 @@ Object.defineProperty(exports, "UpdateCustomerCompanyDto", { enumerable: true, g
 var customer_company_stage_dto_1 = require("./dto/customer-company-stage.dto");
 Object.defineProperty(exports, "UpdateRegisteredCompanyDto", { enumerable: true, get: function () { return customer_company_stage_dto_1.UpdateRegisteredCompanyDto; } });
 Object.defineProperty(exports, "UpdateContactInfoDto", { enumerable: true, get: function () { return customer_company_stage_dto_1.UpdateContactInfoDto; } });
+Object.defineProperty(exports, "UpdateVerifiedBusinessDto", { enumerable: true, get: function () { return customer_company_stage_dto_1.UpdateVerifiedBusinessDto; } });
 Object.defineProperty(exports, "ModerateCustomerCompanyStageDto", { enumerable: true, get: function () { return customer_company_stage_dto_1.ModerateCustomerCompanyStageDto; } });
 var customer_company_schema_1 = require("./schemas/customer-company.schema");
 Object.defineProperty(exports, "ModelCustomerCompany", { enumerable: true, get: function () { return customer_company_schema_1.ModelCustomerCompany; } });

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModerateCustomerCompanyStageDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
+exports.ModerateCustomerCompanyStageDto = exports.UpdateVerifiedBusinessDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
 const class_validator_1 = require("class-validator");
 const enums_1 = require("../../../enums");
 // Bank details (company_mfo/company_bank_name/company_bank_id) are NOT part of this stage —
@@ -78,6 +78,42 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UpdateContactInfoDto.prototype, "post_code", void 0);
+// Stage 4: StatusVerifiedBusiness — all fields are files, resolved server-side to their stored
+// filename by the controller after upload. registration_certificate/director_id_document are
+// required for now; business_license/tax_certificate are optional. power_of_attorney is required
+// only when is_via_representative is true (arrives as a multipart string, "true"/"false").
+class UpdateVerifiedBusinessDto {
+}
+exports.UpdateVerifiedBusinessDto = UpdateVerifiedBusinessDto;
+__decorate([
+    (0, class_validator_1.IsBooleanString)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "is_via_representative", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "registration_certificate", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "business_license", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "tax_certificate", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "director_id_document", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateVerifiedBusinessDto.prototype, "power_of_attorney", void 0);
 class ModerateCustomerCompanyStageDto {
 }
 exports.ModerateCustomerCompanyStageDto = ModerateCustomerCompanyStageDto;

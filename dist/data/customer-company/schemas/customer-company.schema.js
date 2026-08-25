@@ -139,6 +139,30 @@ __decorate([
     (0, mongoose_1.Prop)({ type: [customer_company_stage_schema_1.ModelCustomerCompanyStageSchema], default: [] }),
     __metadata("design:type", Array)
 ], ModelCustomerCompany.prototype, "stages", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelCustomerCompany.prototype, "is_via_representative", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "registration_certificate", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "business_license", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "tax_certificate", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "director_id_document", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCustomerCompany.prototype, "power_of_attorney", void 0);
 exports.ModelCustomerCompany = ModelCustomerCompany = __decorate([
     (0, mongoose_1.Schema)({ collection: "customers-company", timestamps: true })
 ], ModelCustomerCompany);
