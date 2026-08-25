@@ -1,7 +1,7 @@
 export const CLIENT_NOT_FOUND = {
-  uz: 'Bunday elektron pochta yoki telefon raqamiga ega mijoz topilmadi',
-  ru: 'Клиент с таким адресом электронной почты или номером телефона не найден',
-  en: 'Client with this email address or phone number was not found',
+  uz: 'Bunday telefon raqamiga ega mijoz topilmadi',
+  ru: 'Клиент с таким номером телефона не найден',
+  en: 'Client with this phone number was not found',
 };
 export const CLIENT_WITH_EMAIL_NOT_FOUND = {
   uz: 'Ushbu elektron pochta manziliga ega mijoz topilmadi',

@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ORDER_COUNT = exports.INVALID_PHONE_NUMBER = exports.FILE_SIZE = exports.BAD_FILE = exports.LONG_TIME = exports.CODE_EXPIRED = exports.CODE_NOT_CORRECT = exports.COMPANY_INN_IN_REVIEW = exports.COMPANY_INN_ALREADY_REGISTERED = exports.CLIENT_ON_REDIS_NOT_FOUND = exports.CLIENT_ALREADY_REGISTERED = exports.CLIENT_ALREADY_REGISTERED_EMAIL = exports.CLIENT_ALREADY_REGISTERED_PHONE_NUMBER = exports.INCORRECT_PASSWORD = exports.CLIENT_WITH_PHONE_NUMBER_NOT_FOUND = exports.CLIENT_WITH_EMAIL_NOT_FOUND = exports.CLIENT_NOT_FOUND = void 0;
 exports.CLIENT_NOT_FOUND = {
-    uz: 'Bunday elektron pochta yoki telefon raqamiga ega mijoz topilmadi',
-    ru: 'Клиент с таким адресом электронной почты или номером телефона не найден',
-    en: 'Client with this email address or phone number was not found',
+    uz: 'Bunday telefon raqamiga ega mijoz topilmadi',
+    ru: 'Клиент с таким номером телефона не найден',
+    en: 'Client with this phone number was not found',
 };
 exports.CLIENT_WITH_EMAIL_NOT_FOUND = {
     uz: 'Ushbu elektron pochta manziliga ega mijoz topilmadi',
