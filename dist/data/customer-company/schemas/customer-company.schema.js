@@ -84,6 +84,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "director_name", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
+    __metadata("design:type", Number)
+], ModelCustomerCompany.prototype, "vat_percent", void 0);
+__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "company_mfo", void 0);

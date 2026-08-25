@@ -40,6 +40,7 @@ __decorate([
 ], CreateCustomerCompanyDto.prototype, "company_region", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], CreateCustomerCompanyDto.prototype, "company_district", void 0);
 __decorate([
@@ -70,15 +71,3 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateCustomerCompanyDto.prototype, "director_name", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_mfo", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_bank_name", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_bank_id", void 0);

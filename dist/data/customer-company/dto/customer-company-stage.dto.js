@@ -12,6 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModerateCustomerCompanyStageDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
 const class_validator_1 = require("class-validator");
 const enums_1 = require("../../../enums");
+// Bank details (company_mfo/company_bank_name/company_bank_id) are NOT part of this stage —
+// they belong to StatusVerifiedBankAccount and are collected later.
 class UpdateRegisteredCompanyDto {
 }
 exports.UpdateRegisteredCompanyDto = UpdateRegisteredCompanyDto;
@@ -52,17 +54,10 @@ __decorate([
     __metadata("design:type", String)
 ], UpdateRegisteredCompanyDto.prototype, "director_name", void 0);
 __decorate([
-    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsNumberString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], UpdateRegisteredCompanyDto.prototype, "company_mfo", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], UpdateRegisteredCompanyDto.prototype, "company_bank_name", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], UpdateRegisteredCompanyDto.prototype, "company_bank_id", void 0);
+], UpdateRegisteredCompanyDto.prototype, "vat_percent", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),

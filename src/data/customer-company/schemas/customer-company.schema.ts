@@ -62,8 +62,8 @@ export class ModelCustomerCompany {
   web_site: string;
   @Prop()
   logo: string;
-  @Prop({default:0})
-  balans:number
+  @Prop({ default: 0 })
+  balans: number
   @Prop()
   invoice_logo: string;
   @Prop({ default: false })

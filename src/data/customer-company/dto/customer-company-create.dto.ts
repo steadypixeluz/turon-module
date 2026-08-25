@@ -32,11 +32,4 @@ export class CreateCustomerCompanyDto {
   director_pinfl: string;
   @IsString()
   director_name: string;
-  @IsString()
-  company_mfo: string;
-  @IsString()
-  company_bank_name: string;
-  @IsString()
-  company_bank_id: string; // р/с
-
 }
