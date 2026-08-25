@@ -19,6 +19,7 @@ const enums_1 = require("../../../enums");
 const country_1 = require("../../country");
 const district_1 = require("../../district");
 const region_1 = require("../../region");
+const customer_company_stage_schema_1 = require("./customer-company-stage.schema");
 let ModelCustomerCompany = class ModelCustomerCompany {
 };
 exports.ModelCustomerCompany = ModelCustomerCompany;
@@ -130,6 +131,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: null }),
     __metadata("design:type", String)
 ], ModelCustomerCompany.prototype, "deleted_at", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: [customer_company_stage_schema_1.ModelCustomerCompanyStageSchema], default: [] }),
+    __metadata("design:type", Array)
+], ModelCustomerCompany.prototype, "stages", void 0);
 exports.ModelCustomerCompany = ModelCustomerCompany = __decorate([
     (0, mongoose_1.Schema)({ collection: "customers-company", timestamps: true })
 ], ModelCustomerCompany);

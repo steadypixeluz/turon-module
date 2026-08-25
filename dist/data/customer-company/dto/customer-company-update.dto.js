@@ -49,6 +49,11 @@ __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
+], UpdateCustomerCompanyDto.prototype, "company_district", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
 ], UpdateCustomerCompanyDto.prototype, "company_email", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),

@@ -9,76 +9,93 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateCustomerCompanyDto = void 0;
+exports.ModerateCustomerCompanyStageDto = exports.UpdateContactInfoDto = exports.UpdateRegisteredCompanyDto = void 0;
 const class_validator_1 = require("class-validator");
-class CreateCustomerCompanyDto {
+const enums_1 = require("../../../enums");
+class UpdateRegisteredCompanyDto {
 }
-exports.CreateCustomerCompanyDto = CreateCustomerCompanyDto;
+exports.UpdateRegisteredCompanyDto = UpdateRegisteredCompanyDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_name", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_name", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_inn", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_inn", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_okonx", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_okonx", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_address", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_address", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_country", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_country", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_region", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_region", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_district", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_district", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_email", void 0);
+], UpdateRegisteredCompanyDto.prototype, "director_pinfl", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_phone", void 0);
+], UpdateRegisteredCompanyDto.prototype, "director_name", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "post_code", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_mfo", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "logo", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_bank_name", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "invoice_logo", void 0);
+], UpdateRegisteredCompanyDto.prototype, "company_bank_id", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], UpdateRegisteredCompanyDto.prototype, "logo", void 0);
+class UpdateContactInfoDto {
+}
+exports.UpdateContactInfoDto = UpdateContactInfoDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "director_pinfl", void 0);
+], UpdateContactInfoDto.prototype, "company_email", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "director_name", void 0);
+], UpdateContactInfoDto.prototype, "company_phone", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_mfo", void 0);
+], UpdateContactInfoDto.prototype, "post_code", void 0);
+class ModerateCustomerCompanyStageDto {
+}
+exports.ModerateCustomerCompanyStageDto = ModerateCustomerCompanyStageDto;
+__decorate([
+    (0, class_validator_1.IsEnum)(enums_1.CustomerCompanyStage),
+    __metadata("design:type", String)
+], ModerateCustomerCompanyStageDto.prototype, "stage", void 0);
+__decorate([
+    (0, class_validator_1.IsEnum)(enums_1.CustomerCompanyStatus),
+    __metadata("design:type", String)
+], ModerateCustomerCompanyStageDto.prototype, "status", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_bank_name", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
-], CreateCustomerCompanyDto.prototype, "company_bank_id", void 0);
+], ModerateCustomerCompanyStageDto.prototype, "rejection_reason", void 0);

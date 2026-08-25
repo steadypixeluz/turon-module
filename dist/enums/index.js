@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClickTransactionState = exports.ClickError = exports.ClickAction = exports.VariationType = exports.StatusType = exports.SaleType = exports.Role = exports.UNIT = exports.PRICE_TYPE = exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.OrderInfoStatus = exports.OrderStatus = exports.OptionType = exports.NotificationType = exports.MenuType = exports.ProductType = exports.MenuDataType = exports.FriendInviteStatus = exports.DeviceStatus = exports.CustomerCompanyStatus = exports.CommentStatus = exports.CoinHistoryType = exports.CoinHistoryInReason = exports.Status = void 0;
+exports.ClickTransactionState = exports.ClickError = exports.ClickAction = exports.VariationType = exports.StatusType = exports.SaleType = exports.Role = exports.UNIT = exports.PRICE_TYPE = exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.OrderInfoStatus = exports.OrderStatus = exports.OptionType = exports.NotificationType = exports.MenuType = exports.ProductType = exports.MenuDataType = exports.FriendInviteStatus = exports.DeviceStatus = exports.CustomerCompanyStage = exports.CustomerCompanyStatus = exports.CommentStatus = exports.CoinHistoryType = exports.CoinHistoryInReason = exports.Status = void 0;
 var app_setting_status_enum_1 = require("./app-setting.status.enum");
 Object.defineProperty(exports, "Status", { enumerable: true, get: function () { return app_setting_status_enum_1.Status; } });
 var coin_types_1 = require("./coin-types");
@@ -10,6 +10,7 @@ var comment_enum_1 = require("./comment.enum");
 Object.defineProperty(exports, "CommentStatus", { enumerable: true, get: function () { return comment_enum_1.CommentStatus; } });
 var customer_status_enums_1 = require("./customer-status.enums");
 Object.defineProperty(exports, "CustomerCompanyStatus", { enumerable: true, get: function () { return customer_status_enums_1.CustomerCompanyStatus; } });
+Object.defineProperty(exports, "CustomerCompanyStage", { enumerable: true, get: function () { return customer_status_enums_1.CustomerCompanyStage; } });
 var device_enum_1 = require("./device.enum");
 Object.defineProperty(exports, "DeviceStatus", { enumerable: true, get: function () { return device_enum_1.DeviceStatus; } });
 var friends_enum_1 = require("./friends.enum");

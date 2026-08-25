@@ -47,7 +47,7 @@ export class ModelCustomerCompany {
   @Prop()
   company_bank_name: string;
   @Prop()
-  company_bank_id: string; // р/с
+  company_bank_id: string;
   @Prop({
     type: "string",
     enum: CustomerCompanyStatus,
@@ -60,8 +60,8 @@ export class ModelCustomerCompany {
   web_site: string;
   @Prop()
   logo: string;
-  @Prop({default:0})
-  balans:number
+  @Prop({ default: 0 })
+  balans: number
   @Prop()
   invoice_logo: string;
   @Prop({ default: false })
