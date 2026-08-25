@@ -1,6 +1,8 @@
-import { IsEnum, IsOptional, IsString } from 'class-validator';
+import { IsEnum, IsNumberString, IsOptional, IsString } from 'class-validator';
 import { CustomerCompanyStage, CustomerCompanyStatus } from '../../../enums';
 
+// Bank details (company_mfo/company_bank_name/company_bank_id) are NOT part of this stage —
+// they belong to StatusVerifiedBankAccount and are collected later.
 export class UpdateRegisteredCompanyDto {
   @IsString()
   company_name: string;
@@ -21,12 +23,10 @@ export class UpdateRegisteredCompanyDto {
   director_pinfl: string;
   @IsString()
   director_name: string;
-  @IsString()
-  company_mfo: string;
-  @IsString()
-  company_bank_name: string;
-  @IsString()
-  company_bank_id: string; // р/с
+
+  @IsNumberString()
+  @IsOptional()
+  vat_percent: string;
 
   @IsString()
   @IsOptional()

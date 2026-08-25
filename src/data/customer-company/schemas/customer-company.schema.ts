@@ -42,12 +42,14 @@ export class ModelCustomerCompany {
   director_pinfl: string;
   @Prop()
   director_name: string;
+  @Prop({ type: Number, default: null })
+  vat_percent: number;
   @Prop()
   company_mfo: string;
   @Prop()
   company_bank_name: string;
   @Prop()
-  company_bank_id: string;
+  company_bank_id: string; // р/с
   @Prop({
     type: "string",
     enum: CustomerCompanyStatus,
@@ -60,8 +62,8 @@ export class ModelCustomerCompany {
   web_site: string;
   @Prop()
   logo: string;
-  @Prop({ default: 0 })
-  balans: number
+  @Prop({default:0})
+  balans:number
   @Prop()
   invoice_logo: string;
   @Prop({ default: false })
