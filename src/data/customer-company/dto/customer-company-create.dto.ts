@@ -1,4 +1,4 @@
-import { IsString } from 'class-validator';
+import { IsOptional, IsString } from 'class-validator';
 
 export class CreateCustomerCompanyDto {
   @IsString()
@@ -14,6 +14,7 @@ export class CreateCustomerCompanyDto {
   @IsString()
   company_region: string;
   @IsString()
+  @IsOptional()
   company_district: string;
   @IsString()
   company_email: string;
