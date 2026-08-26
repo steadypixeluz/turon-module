@@ -31,6 +31,7 @@ __decorate([
 ], UpdateRegisteredCompanyDto.prototype, "company_okonx", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateRegisteredCompanyDto.prototype, "company_address", void 0);
 __decorate([
@@ -39,14 +40,17 @@ __decorate([
 ], UpdateRegisteredCompanyDto.prototype, "company_country", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateRegisteredCompanyDto.prototype, "company_region", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateRegisteredCompanyDto.prototype, "company_district", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateRegisteredCompanyDto.prototype, "director_pinfl", void 0);
 __decorate([

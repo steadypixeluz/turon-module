@@ -11,15 +11,19 @@ export class UpdateRegisteredCompanyDto {
   @IsString()
   company_okonx: string;
   @IsString()
+  @IsOptional()
   company_address: string;
   @IsString()
   company_country: string;
   @IsString()
+  @IsOptional()
   company_region: string;
   @IsString()
+  @IsOptional()
   company_district: string;
 
   @IsString()
+  @IsOptional()
   director_pinfl: string;
   @IsString()
   director_name: string;
