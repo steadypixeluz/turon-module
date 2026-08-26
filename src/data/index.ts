@@ -70,6 +70,9 @@ export {
   CreateCustomerCompanyDto,
   UpdateRegisteredCompanyDto,
   UpdateContactInfoDto,
+  UpdateVerifiedBusinessDto,
+  UpdateVerifiedBankAccountDto,
+  UpdateFactoryVerifiedDto,
   ModerateCustomerCompanyStageDto,
   ModelCustomerCompany,
   ModelCustomerCompanySchema,
@@ -244,6 +247,12 @@ export {
   ModelStore,
   ModelStoreSchema,
 } from "./store";
+export {
+  CreateWarehouseDto,
+  UpdateWarehouseDto,
+  ModelWarehouse,
+  ModelWarehouseSchema,
+} from "./warehouse";
 export { ModelTag, ModelTagSchema, UpdateTagDto, CreateTagDto } from "./tag";
 export {
   ModelTranslation,
