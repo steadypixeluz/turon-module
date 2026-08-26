@@ -19,6 +19,10 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelFileStorage.prototype, "file", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: String, default: null }),
+    __metadata("design:type", String)
+], ModelFileStorage.prototype, "entity_id", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelFileStorage.prototype, "is_deleted", void 0);

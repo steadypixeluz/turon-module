@@ -4,6 +4,8 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 export class ModelFileStorage {
   @Prop({ type: Object })
   file: object;
+  @Prop({ type: String, default: null })
+  entity_id: string;
   @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: null })
