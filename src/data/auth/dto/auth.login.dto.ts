@@ -1,12 +1,15 @@
 import {
   IsNotEmpty,
   IsString,
+  IsOptional
 } from 'class-validator';
 export class AuthLoginDto {
   @IsString()
   @IsNotEmpty()
-  phone_number: string;
+  login: string;
   @IsString()
   @IsNotEmpty()
   password: string;
+  @IsOptional()
+  remember: string;
 }
