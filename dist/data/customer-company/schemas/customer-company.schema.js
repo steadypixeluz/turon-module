@@ -140,6 +140,10 @@ __decorate([
     __metadata("design:type", Array)
 ], ModelCustomerCompany.prototype, "stages", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Date, default: null }),
+    __metadata("design:type", Date)
+], ModelCustomerCompany.prototype, "update_date", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelCustomerCompany.prototype, "is_via_representative", void 0);

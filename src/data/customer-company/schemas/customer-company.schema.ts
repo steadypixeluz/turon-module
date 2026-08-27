@@ -73,6 +73,9 @@ export class ModelCustomerCompany {
   @Prop({ type: [ModelCustomerCompanyStageSchema], default: [] })
   stages: ModelCustomerCompanyStage[];
 
+  @Prop({ type: Date, default: null })
+  update_date: Date;
+
   // StatusVerifiedBusiness
   @Prop({ default: false })
   is_via_representative: boolean;
