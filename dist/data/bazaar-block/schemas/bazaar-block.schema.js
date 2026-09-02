@@ -34,6 +34,10 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
+], ModelBazaarBlock.prototype, "is_active", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
 ], ModelBazaarBlock.prototype, "is_deleted", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: null }),

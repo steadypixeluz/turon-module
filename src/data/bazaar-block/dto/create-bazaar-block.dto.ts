@@ -11,4 +11,7 @@ export class CreateBazaarBlockDto {
 
   @IsString()
   bazaar: string;
+
+  @IsOptional()
+  is_active: string;
 }

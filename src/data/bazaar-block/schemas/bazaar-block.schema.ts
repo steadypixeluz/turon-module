@@ -15,6 +15,9 @@ export class ModelBazaarBlock {
   bazaar: ModelBazaar;
 
   @Prop({ default: false })
+  is_active?: boolean;
+
+  @Prop({ default: false })
   is_deleted: boolean;
 
   @Prop({ default: null })
