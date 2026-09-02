@@ -21,6 +21,9 @@ export class ModelBazaar {
   address: Lang;
 
   @Prop({ default: false })
+  is_active?: boolean;
+
+  @Prop({ default: false })
   is_deleted: boolean;
 
   @Prop({ default: null })

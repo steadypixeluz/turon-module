@@ -16,6 +16,9 @@ export class CreateBazaarDto {
   @IsString()
   country: string;
 
+  @IsOptional()
+  is_active: string;
+
   @IsString()
   @IsOptional()
   address: string;
