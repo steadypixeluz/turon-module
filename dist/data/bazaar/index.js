@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelBazaarSchema = exports.ModelBazaar = exports.UpdateBazaarDto = exports.CreateBazaarDto = void 0;
+var create_bazaar_dto_1 = require("./dto/create-bazaar.dto");
+Object.defineProperty(exports, "CreateBazaarDto", { enumerable: true, get: function () { return create_bazaar_dto_1.CreateBazaarDto; } });
+var update_bazaar_dto_1 = require("./dto/update-bazaar.dto");
+Object.defineProperty(exports, "UpdateBazaarDto", { enumerable: true, get: function () { return update_bazaar_dto_1.UpdateBazaarDto; } });
+var bazaar_schema_1 = require("./schemas/bazaar.schema");
+Object.defineProperty(exports, "ModelBazaar", { enumerable: true, get: function () { return bazaar_schema_1.ModelBazaar; } });
+Object.defineProperty(exports, "ModelBazaarSchema", { enumerable: true, get: function () { return bazaar_schema_1.ModelBazaarSchema; } });

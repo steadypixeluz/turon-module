@@ -19,6 +19,18 @@ export {
 } from "./auth";
 export { AutoIncrement, AutoIncrementSchema } from "./auto-increment";
 export { ModelBanner, ModelBannerSchema } from "./banner";
+export {
+  CreateBazaarDto,
+  UpdateBazaarDto,
+  ModelBazaar,
+  ModelBazaarSchema,
+} from "./bazaar";
+export {
+  CreateBazaarBlockDto,
+  UpdateBazaarBlockDto,
+  ModelBazaarBlock,
+  ModelBazaarBlockSchema,
+} from "./bazaar-block";
 export { ModelBrand, ModelParetnerSchema } from "./brand";
 export { ModelBuyCoin, ModelBuyCoinSchema } from "./buy-coin";
 export {
