@@ -24,16 +24,16 @@ __decorate([
     __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "name", void 0);
 __decorate([
-    (0, class_validator_1.IsObject)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", Object)
+    __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "description", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "country", void 0);
 __decorate([
-    (0, class_validator_1.IsObject)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", Object)
+    __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "address", void 0);

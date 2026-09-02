@@ -9,14 +9,14 @@ export class CreateBazaarDto {
   @IsString()
   name: string;
 
-  @IsObject()
+  @IsString()
   @IsOptional()
-  description: Lang;
+  description: string;
 
   @IsString()
   country: string;
 
-  @IsObject()
+  @IsString()
   @IsOptional()
-  address: Lang;
+  address: string;
 }
