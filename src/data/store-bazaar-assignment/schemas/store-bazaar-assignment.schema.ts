@@ -27,6 +27,9 @@ export class ModelStoreBazaarAssignment {
   })
   status: string;
 
+  @Prop({ type: Number })
+  number: number;
+
   @Prop({ type: String, default: null })
   rejection_reason: string;
 

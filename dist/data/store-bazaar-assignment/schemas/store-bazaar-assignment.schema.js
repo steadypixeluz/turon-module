@@ -48,6 +48,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStoreBazaarAssignment.prototype, "status", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Number }),
+    __metadata("design:type", Number)
+], ModelStoreBazaarAssignment.prototype, "number", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: String, default: null }),
     __metadata("design:type", String)
 ], ModelStoreBazaarAssignment.prototype, "rejection_reason", void 0);
