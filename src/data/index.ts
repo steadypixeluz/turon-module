@@ -31,6 +31,12 @@ export {
   ModelBazaarBlock,
   ModelBazaarBlockSchema,
 } from "./bazaar-block";
+export {
+  CreateStoreBazaarAssignmentDto,
+  ModerateStoreBazaarAssignmentDto,
+  ModelStoreBazaarAssignment,
+  ModelStoreBazaarAssignmentSchema,
+} from "./store-bazaar-assignment";
 export { ModelBrand, ModelParetnerSchema } from "./brand";
 export { ModelBuyCoin, ModelBuyCoinSchema } from "./buy-coin";
 export {

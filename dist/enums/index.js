@@ -1,8 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClickTransactionState = exports.ClickError = exports.ClickAction = exports.VariationType = exports.StatusType = exports.SaleType = exports.Role = exports.UNIT = exports.PRICE_TYPE = exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.OrderInfoStatus = exports.OrderStatus = exports.OptionType = exports.NotificationType = exports.MenuType = exports.ProductType = exports.MenuDataType = exports.FriendInviteStatus = exports.DeviceStatus = exports.CustomerCompanyStage = exports.CustomerCompanyStatus = exports.CommentStatus = exports.CoinHistoryType = exports.CoinHistoryInReason = exports.Status = void 0;
+exports.ClickTransactionState = exports.ClickError = exports.ClickAction = exports.VariationType = exports.StatusType = exports.SaleType = exports.Role = exports.UNIT = exports.PRICE_TYPE = exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.OrderInfoStatus = exports.OrderStatus = exports.OptionType = exports.NotificationType = exports.MenuType = exports.ProductType = exports.MenuDataType = exports.FriendInviteStatus = exports.DeviceStatus = exports.CustomerCompanyStage = exports.CustomerCompanyStatus = exports.CommentStatus = exports.CoinHistoryType = exports.CoinHistoryInReason = exports.StoreBazaarAssignmentStatus = exports.Status = void 0;
 var app_setting_status_enum_1 = require("./app-setting.status.enum");
 Object.defineProperty(exports, "Status", { enumerable: true, get: function () { return app_setting_status_enum_1.Status; } });
+var store_bazaar_assignment_status_enum_1 = require("./store-bazaar-assignment-status.enum");
+Object.defineProperty(exports, "StoreBazaarAssignmentStatus", { enumerable: true, get: function () { return store_bazaar_assignment_status_enum_1.StoreBazaarAssignmentStatus; } });
 var coin_types_1 = require("./coin-types");
 Object.defineProperty(exports, "CoinHistoryInReason", { enumerable: true, get: function () { return coin_types_1.CoinHistoryInReason; } });
 Object.defineProperty(exports, "CoinHistoryType", { enumerable: true, get: function () { return coin_types_1.CoinHistoryType; } });

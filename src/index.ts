@@ -1,5 +1,6 @@
 export {
   Status,
+  StoreBazaarAssignmentStatus,
   CoinHistoryInReason,
   CoinHistoryType,
   CommentStatus,
@@ -58,6 +59,10 @@ export {
   UpdateBazaarBlockDto,
   ModelBazaarBlock,
   ModelBazaarBlockSchema,
+  CreateStoreBazaarAssignmentDto,
+  ModerateStoreBazaarAssignmentDto,
+  ModelStoreBazaarAssignment,
+  ModelStoreBazaarAssignmentSchema,
   ModelBrand,
   ModelParetnerSchema,
   ModelBuyCoin,

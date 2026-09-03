@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelStoreBazaarAssignmentSchema = exports.ModelStoreBazaarAssignment = exports.ModerateStoreBazaarAssignmentDto = exports.CreateStoreBazaarAssignmentDto = void 0;
+var create_store_bazaar_assignment_dto_1 = require("./dto/create-store-bazaar-assignment.dto");
+Object.defineProperty(exports, "CreateStoreBazaarAssignmentDto", { enumerable: true, get: function () { return create_store_bazaar_assignment_dto_1.CreateStoreBazaarAssignmentDto; } });
+var moderate_store_bazaar_assignment_dto_1 = require("./dto/moderate-store-bazaar-assignment.dto");
+Object.defineProperty(exports, "ModerateStoreBazaarAssignmentDto", { enumerable: true, get: function () { return moderate_store_bazaar_assignment_dto_1.ModerateStoreBazaarAssignmentDto; } });
+var store_bazaar_assignment_schema_1 = require("./schemas/store-bazaar-assignment.schema");
+Object.defineProperty(exports, "ModelStoreBazaarAssignment", { enumerable: true, get: function () { return store_bazaar_assignment_schema_1.ModelStoreBazaarAssignment; } });
+Object.defineProperty(exports, "ModelStoreBazaarAssignmentSchema", { enumerable: true, get: function () { return store_bazaar_assignment_schema_1.ModelStoreBazaarAssignmentSchema; } });

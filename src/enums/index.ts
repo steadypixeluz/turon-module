@@ -1,4 +1,5 @@
 export {Status} from './app-setting.status.enum';
+export {StoreBazaarAssignmentStatus} from './store-bazaar-assignment-status.enum';
 export {CoinHistoryInReason,CoinHistoryType} from './coin-types';
 export {CommentStatus} from './comment.enum';
 export {CustomerCompanyStatus,CustomerCompanyStage} from './customer-status.enums';
