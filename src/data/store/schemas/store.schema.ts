@@ -16,9 +16,9 @@ export class ModelStore {
   logo: string;
   @Prop()
   banner: string;
-  @Prop({ type: mongoose.Types.ObjectId, ref: "CustomerCompany", required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "CustomerCompany", required: true })
   customer_company: ModelCustomerCompany;
-  @Prop({ type: [mongoose.Types.ObjectId], ref: "Customer", default: [] })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Customer", default: [] })
   customers: ModelCustomers[];
   @Prop({ default: false })
   is_deleted: boolean;
