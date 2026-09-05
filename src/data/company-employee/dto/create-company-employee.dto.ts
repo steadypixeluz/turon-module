@@ -1,11 +1,12 @@
-import { IsString } from 'class-validator';
+import { IsArray, IsString } from 'class-validator';
 
 export class CreateCompanyEmployeeDto {
   @IsString()
   phone_number_format: string;
 
-  @IsString()
-  store: string;
+  @IsArray()
+  @IsString({ each: true })
+  store: string[];
 
   @IsString()
   role: string;
