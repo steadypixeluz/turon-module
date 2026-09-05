@@ -44,6 +44,10 @@ __decorate([
     __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
 ], ModelStore.prototype, "customer_company", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Types.ObjectId], ref: "Customer", default: [] }),
+    __metadata("design:type", Array)
+], ModelStore.prototype, "customers", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelStore.prototype, "is_deleted", void 0);
