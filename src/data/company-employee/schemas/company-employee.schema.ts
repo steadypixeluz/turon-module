@@ -5,10 +5,10 @@ import { ModelStore } from '../../store/schemas/store.schema';
 
 @Schema({ collection: 'company-employee', timestamps: true })
 export class ModelCompanyEmployee {
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Customer', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Customer', required: true })
   customer: ModelCustomers;
 
-  @Prop({ type: [mongoose.Types.ObjectId], ref: 'Store', default: [] })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Store', default: [] })
   store: ModelStore[];
 
   @Prop({ required: true })

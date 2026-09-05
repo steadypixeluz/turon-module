@@ -11,7 +11,7 @@ export class ModelBazaarBlock {
   @Prop({ type: Object })
   description: Lang;
 
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Bazaar', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Bazaar', required: true })
   bazaar: ModelBazaar;
 
   @Prop({ default: false })

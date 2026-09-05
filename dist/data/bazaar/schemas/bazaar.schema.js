@@ -32,7 +32,7 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelBazaar.prototype, "description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Country', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Country', required: true }),
     __metadata("design:type", country_schema_1.ModelCountry)
 ], ModelBazaar.prototype, "country", void 0);
 __decorate([

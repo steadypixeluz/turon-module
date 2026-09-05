@@ -28,7 +28,7 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelBazaarBlock.prototype, "description", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Bazaar', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Bazaar', required: true }),
     __metadata("design:type", bazaar_schema_1.ModelBazaar)
 ], ModelBazaarBlock.prototype, "bazaar", void 0);
 __decorate([
