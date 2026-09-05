@@ -266,6 +266,12 @@ export {
   ModelStoreSchema,
 } from "./store";
 export {
+  CreateCompanyEmployeeDto,
+  UpdateCompanyEmployeeDto,
+  ModelCompanyEmployee,
+  ModelCompanyEmployeeSchema,
+} from "./company-employee";
+export {
   CreateWarehouseDto,
   UpdateWarehouseDto,
   ModelWarehouse,
