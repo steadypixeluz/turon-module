@@ -16,11 +16,5 @@ class UpdateCompanyEmployeeDto {
 exports.UpdateCompanyEmployeeDto = UpdateCompanyEmployeeDto;
 __decorate([
     (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
-    __metadata("design:type", String)
-], UpdateCompanyEmployeeDto.prototype, "store", void 0);
-__decorate([
-    (0, class_validator_1.IsString)(),
-    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], UpdateCompanyEmployeeDto.prototype, "role", void 0);

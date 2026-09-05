@@ -19,8 +19,9 @@ __decorate([
     __metadata("design:type", String)
 ], CreateCompanyEmployeeDto.prototype, "phone_number_format", void 0);
 __decorate([
-    (0, class_validator_1.IsString)(),
-    __metadata("design:type", String)
+    (0, class_validator_1.IsArray)(),
+    (0, class_validator_1.IsString)({ each: true }),
+    __metadata("design:type", Array)
 ], CreateCompanyEmployeeDto.prototype, "store", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),

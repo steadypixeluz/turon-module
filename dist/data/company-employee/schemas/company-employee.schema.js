@@ -16,8 +16,6 @@ exports.ModelCompanyEmployeeSchema = exports.ModelCompanyEmployee = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const customer_schema_1 = require("../../customer/schemas/customer.schema");
-const customer_company_schema_1 = require("../../customer-company/schemas/customer-company.schema");
-const store_schema_1 = require("../../store/schemas/store.schema");
 let ModelCompanyEmployee = class ModelCompanyEmployee {
 };
 exports.ModelCompanyEmployee = ModelCompanyEmployee;
@@ -26,12 +24,8 @@ __decorate([
     __metadata("design:type", customer_schema_1.ModelCustomers)
 ], ModelCompanyEmployee.prototype, "customer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'CustomerCompany', required: true }),
-    __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
-], ModelCompanyEmployee.prototype, "customer_company", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Store', required: true }),
-    __metadata("design:type", store_schema_1.ModelStore)
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Types.ObjectId], ref: 'Store', default: [] }),
+    __metadata("design:type", Array)
 ], ModelCompanyEmployee.prototype, "store", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
