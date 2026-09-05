@@ -17,7 +17,7 @@ exports.CreateCompanyEmployeeDto = CreateCompanyEmployeeDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
-], CreateCompanyEmployeeDto.prototype, "phone_number_format", void 0);
+], CreateCompanyEmployeeDto.prototype, "phone_number", void 0);
 __decorate([
     (0, class_validator_1.IsArray)(),
     (0, class_validator_1.IsString)({ each: true }),
