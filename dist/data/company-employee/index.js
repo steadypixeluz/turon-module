@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelCompanyEmployeeSchema = exports.ModelCompanyEmployee = exports.UpdateCompanyEmployeeDto = exports.CreateCompanyEmployeeDto = void 0;
+var create_company_employee_dto_1 = require("./dto/create-company-employee.dto");
+Object.defineProperty(exports, "CreateCompanyEmployeeDto", { enumerable: true, get: function () { return create_company_employee_dto_1.CreateCompanyEmployeeDto; } });
+var update_company_employee_dto_1 = require("./dto/update-company-employee.dto");
+Object.defineProperty(exports, "UpdateCompanyEmployeeDto", { enumerable: true, get: function () { return update_company_employee_dto_1.UpdateCompanyEmployeeDto; } });
+var company_employee_schema_1 = require("./schemas/company-employee.schema");
+Object.defineProperty(exports, "ModelCompanyEmployee", { enumerable: true, get: function () { return company_employee_schema_1.ModelCompanyEmployee; } });
+Object.defineProperty(exports, "ModelCompanyEmployeeSchema", { enumerable: true, get: function () { return company_employee_schema_1.ModelCompanyEmployeeSchema; } });
