@@ -13,12 +13,6 @@ export class ModelCompanyEmployee {
 
   @Prop({ required: true })
   role: string;
-
-  @Prop({ default: false })
-  is_deleted: boolean;
-
-  @Prop({ default: null })
-  deleted_at: string;
 }
 
 export const ModelCompanyEmployeeSchema = SchemaFactory.createForClass(ModelCompanyEmployee);

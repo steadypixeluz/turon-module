@@ -31,14 +31,6 @@ __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], ModelCompanyEmployee.prototype, "role", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: false }),
-    __metadata("design:type", Boolean)
-], ModelCompanyEmployee.prototype, "is_deleted", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: null }),
-    __metadata("design:type", String)
-], ModelCompanyEmployee.prototype, "deleted_at", void 0);
 exports.ModelCompanyEmployee = ModelCompanyEmployee = __decorate([
     (0, mongoose_1.Schema)({ collection: 'company-employee', timestamps: true })
 ], ModelCompanyEmployee);
