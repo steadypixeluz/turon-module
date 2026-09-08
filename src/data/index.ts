@@ -46,6 +46,10 @@ export {
   UpdateCartDto,
 } from "./cart";
 export { ModelClientDevice, ModelClientDeviceSchema } from "./client-device";
+export {
+  ModelCustomerDevice,
+  ModelCustomerDeviceSchema,
+} from "./customer-device";
 export { ModelCoinHistory, ModelCoinHistorySchema } from "./coin-history";
 export { ModelCoinOrder, ModelCoinOrderSchema } from "./coin-order";
 export {
@@ -83,10 +87,6 @@ export {
   ModelRecommentProducts,
   ModelRecommentProductsSchema,
 } from "./customer";
-export {
-  ModelCustomerDevice,
-  ModelCustomerDeviceSchema,
-} from "./customer-device";
 export {
   UpdateCustomerCompanyDto,
   CreateCustomerCompanyDto,

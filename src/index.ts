@@ -74,6 +74,8 @@ export {
   UpdateCartDto,
   ModelClientDevice,
   ModelClientDeviceSchema,
+  ModelCustomerDevice,
+  ModelCustomerDeviceSchema,
   ModelCoinHistory,
   ModelCoinHistorySchema,
   ModelCoinOrder,
