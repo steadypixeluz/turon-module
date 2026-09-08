@@ -12,10 +12,29 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelMessageSchema = exports.ModelMessage = void 0;
+exports.ModelMessageSchema = exports.ModelMessage = exports.MessageProductSnapshotSchema = exports.MessageProductSnapshot = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const chat_schemas_1 = require("./chat.schemas");
+let MessageProductSnapshot = class MessageProductSnapshot {
+};
+exports.MessageProductSnapshot = MessageProductSnapshot;
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "product_info" }),
+    __metadata("design:type", mongoose_2.default.Schema.Types.ObjectId)
+], MessageProductSnapshot.prototype, "product_info", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], MessageProductSnapshot.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: null }),
+    __metadata("design:type", String)
+], MessageProductSnapshot.prototype, "image", void 0);
+exports.MessageProductSnapshot = MessageProductSnapshot = __decorate([
+    (0, mongoose_1.Schema)({ _id: false })
+], MessageProductSnapshot);
+exports.MessageProductSnapshotSchema = mongoose_1.SchemaFactory.createForClass(MessageProductSnapshot);
 let ModelMessage = class ModelMessage {
 };
 exports.ModelMessage = ModelMessage;
@@ -28,7 +47,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMessage.prototype, "senderId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple", 'audio'], default: "text" }),
+    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple", "audio", "product"], default: "text" }),
     __metadata("design:type", String)
 ], ModelMessage.prototype, "type", void 0);
 __decorate([
@@ -55,6 +74,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Date, default: null }),
     __metadata("design:type", Date)
 ], ModelMessage.prototype, "readAt", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: exports.MessageProductSnapshotSchema, default: null }),
+    __metadata("design:type", MessageProductSnapshot)
+], ModelMessage.prototype, "product", void 0);
 exports.ModelMessage = ModelMessage = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], ModelMessage);
