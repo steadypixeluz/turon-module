@@ -13,7 +13,7 @@ export class ModelChat {
   @Prop({
     type: String,
     required: true,
-    enum: ['cargos', 'vehicle'],
+    enum: ['cargos', 'vehicle', 'product'],
     index: true,
   })
   entity_type: string;
