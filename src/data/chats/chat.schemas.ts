@@ -24,6 +24,9 @@ export class ModelChat {
   @Prop({ type: mongoose.Schema.Types.ObjectId, required: true })
   buyerId: Types.ObjectId;
 
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customer_company', default: null })
+  customer_company: Types.ObjectId;
+
   @Prop({ type: mongoose.Schema.Types.ObjectId })
   lastMessage: Types.ObjectId;
 }

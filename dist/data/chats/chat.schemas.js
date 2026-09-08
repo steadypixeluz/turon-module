@@ -74,6 +74,10 @@ __decorate([
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], ModelChat.prototype, "buyerId", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customer_company', default: null }),
+    __metadata("design:type", mongoose_2.Types.ObjectId)
+], ModelChat.prototype, "customer_company", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId }),
     __metadata("design:type", mongoose_2.Types.ObjectId)
 ], ModelChat.prototype, "lastMessage", void 0);
