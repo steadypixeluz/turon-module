@@ -84,6 +84,10 @@ export {
   ModelRecommentProductsSchema,
 } from "./customer";
 export {
+  ModelCustomerDevice,
+  ModelCustomerDeviceSchema,
+} from "./customer-device";
+export {
   UpdateCustomerCompanyDto,
   CreateCustomerCompanyDto,
   UpdateRegisteredCompanyDto,
