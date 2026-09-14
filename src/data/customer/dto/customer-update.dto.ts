@@ -40,4 +40,9 @@ export class UpdateCustomerDto {
 
   @IsOptional()
   language: string;
+
+  @IsOptional()
+  sms_notification: string;
+  @IsOptional()
+  email_notification: string;
 }
