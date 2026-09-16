@@ -157,6 +157,10 @@ __decorate([
     __metadata("design:type", customer_company_1.ModelCustomerCompany)
 ], ModelProductInfo.prototype, "customer_company", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'stores' }),
+    __metadata("design:type", data_1.ModelStore)
+], ModelProductInfo.prototype, "store", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelProductInfo.prototype, "is_deleted", void 0);
