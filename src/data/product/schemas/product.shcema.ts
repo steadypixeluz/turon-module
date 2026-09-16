@@ -8,7 +8,7 @@ import { Lang } from '../../interfaces';
 import { ModelMenu } from '../../menu';
 import { ModelTag } from '../../tag';
 import { ModelVariationSelect } from '../../variation-select';
-import { ModelBrand, ModelStore } from '../../../data';
+import { ModelBrand, ModelStore, ModelWarehouse } from '../../../data';
 import { ModelPsic } from '../../psic';
 import { ModelPriceTier, ModelPriceTierSchema } from './price-tier.schema';
 
@@ -80,6 +80,8 @@ export class ModelProductInfo {
   customer_company: ModelCustomerCompany;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
   store: ModelStore;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'warehouses' })
+  warehouses: ModelWarehouse;
   @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: null })
