@@ -81,7 +81,7 @@ export class ModelProductInfo {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
   store: ModelStore;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'warehouses' })
-  warehouses: ModelWarehouse;
+  warehouse: ModelWarehouse;
   @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: null })

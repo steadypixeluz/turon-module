@@ -163,7 +163,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'warehouses' }),
     __metadata("design:type", data_1.ModelWarehouse)
-], ModelProductInfo.prototype, "warehouses", void 0);
+], ModelProductInfo.prototype, "warehouse", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
