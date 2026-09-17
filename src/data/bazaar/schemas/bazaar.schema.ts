@@ -14,6 +14,9 @@ export class ModelBazaar {
   @Prop({ type: Object })
   description: Lang;
 
+  @Prop()
+  color: string;
+
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Country', required: true })
   country: ModelCountry;
 

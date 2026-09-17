@@ -16,6 +16,10 @@ export class CreateBazaarDto {
   @IsString()
   country: string;
 
+  @IsString()
+  @IsOptional()
+  color: string;
+
   @IsOptional()
   is_active: string;
 
