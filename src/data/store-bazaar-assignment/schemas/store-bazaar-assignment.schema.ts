@@ -8,16 +8,16 @@ import { StoreBazaarAssignmentStatus } from '../../../enums';
 
 @Schema({ collection: 'store-bazaar-assignment', timestamps: true })
 export class ModelStoreBazaarAssignment {
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Bazaar', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Bazaar', required: true })
   bazaar: ModelBazaar;
 
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'BazaarBlock', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'BazaarBlock', required: true })
   bazaar_block: ModelBazaarBlock;
 
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'Store', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Store', required: true })
   store: ModelStore;
 
-  @Prop({ type: mongoose.Types.ObjectId, ref: 'CustomerCompany', required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'CustomerCompany', required: true })
   customer_company: ModelCustomerCompany;
 
   @Prop({
@@ -27,8 +27,8 @@ export class ModelStoreBazaarAssignment {
   })
   status: string;
 
-  @Prop({ type: Number })
-  number: number;
+  @Prop({ type: String })
+  number: string;
 
   @Prop({ type: String, default: null })
   rejection_reason: string;

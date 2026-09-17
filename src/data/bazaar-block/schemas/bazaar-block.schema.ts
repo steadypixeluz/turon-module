@@ -5,8 +5,8 @@ import { Lang } from '../../interfaces';
 
 @Schema({ collection: 'bazaar-block', timestamps: true })
 export class ModelBazaarBlock {
-  @Prop({ required: true })
-  name: string;
+  @Prop({ type: Object, required: true })
+  name: Lang;
 
   @Prop({ type: Object })
   description: Lang;

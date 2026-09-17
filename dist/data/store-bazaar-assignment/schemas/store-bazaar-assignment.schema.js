@@ -24,19 +24,19 @@ let ModelStoreBazaarAssignment = class ModelStoreBazaarAssignment {
 };
 exports.ModelStoreBazaarAssignment = ModelStoreBazaarAssignment;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Bazaar', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Bazaar', required: true }),
     __metadata("design:type", bazaar_schema_1.ModelBazaar)
 ], ModelStoreBazaarAssignment.prototype, "bazaar", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'BazaarBlock', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'BazaarBlock', required: true }),
     __metadata("design:type", bazaar_block_schema_1.ModelBazaarBlock)
 ], ModelStoreBazaarAssignment.prototype, "bazaar_block", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'Store', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Store', required: true }),
     __metadata("design:type", store_schema_1.ModelStore)
 ], ModelStoreBazaarAssignment.prototype, "store", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: 'CustomerCompany', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'CustomerCompany', required: true }),
     __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
 ], ModelStoreBazaarAssignment.prototype, "customer_company", void 0);
 __decorate([
@@ -48,8 +48,8 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStoreBazaarAssignment.prototype, "status", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: Number }),
-    __metadata("design:type", Number)
+    (0, mongoose_1.Prop)({ type: String }),
+    __metadata("design:type", String)
 ], ModelStoreBazaarAssignment.prototype, "number", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: null }),

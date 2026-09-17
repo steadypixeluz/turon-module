@@ -52,7 +52,7 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelWarehouse.prototype, "is_active", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "CustomerCompany", required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "CustomerCompany", required: true }),
     __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
 ], ModelWarehouse.prototype, "customer_company", void 0);
 __decorate([

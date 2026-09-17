@@ -20,7 +20,7 @@ export class ModelWarehouse {
   longitude: number;
   @Prop({ default: true })
   is_active: boolean;
-  @Prop({ type: mongoose.Types.ObjectId, ref: "CustomerCompany", required: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "CustomerCompany", required: true })
   customer_company: ModelCustomerCompany;
 
   @Prop({ default: false })

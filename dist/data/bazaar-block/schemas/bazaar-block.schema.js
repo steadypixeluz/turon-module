@@ -20,8 +20,8 @@ let ModelBazaarBlock = class ModelBazaarBlock {
 };
 exports.ModelBazaarBlock = ModelBazaarBlock;
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object, required: true }),
+    __metadata("design:type", Object)
 ], ModelBazaarBlock.prototype, "name", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
