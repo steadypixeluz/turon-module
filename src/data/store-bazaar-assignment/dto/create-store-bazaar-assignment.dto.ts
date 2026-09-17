@@ -10,6 +10,6 @@ export class CreateStoreBazaarAssignmentDto {
   @IsString()
   store: string;
 
-  @IsNumber()
-  number: number;
+  @IsString()
+  number: string;
 }
