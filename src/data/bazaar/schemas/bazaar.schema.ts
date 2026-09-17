@@ -23,6 +23,11 @@ export class ModelBazaar {
   @Prop({ type: Object })
   address: Lang;
 
+  @Prop({ type: Number, default: null })
+  latitude: number;
+  @Prop({ type: Number, default: null })
+  longitude: number;
+
   @Prop({ default: false })
   is_active?: boolean;
 

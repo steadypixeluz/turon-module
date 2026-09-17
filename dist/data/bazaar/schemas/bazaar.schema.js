@@ -44,6 +44,14 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelBazaar.prototype, "address", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
+    __metadata("design:type", Number)
+], ModelBazaar.prototype, "latitude", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
+    __metadata("design:type", Number)
+], ModelBazaar.prototype, "longitude", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelBazaar.prototype, "is_active", void 0);

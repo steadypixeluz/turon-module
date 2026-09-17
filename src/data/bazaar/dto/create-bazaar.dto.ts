@@ -19,6 +19,12 @@ export class CreateBazaarDto {
   @IsString()
   @IsOptional()
   color: string;
+  @IsString()
+  @IsOptional()
+  latitude: string;
+  @IsString()
+  @IsOptional()
+  longitude: string;
 
   @IsOptional()
   is_active: string;

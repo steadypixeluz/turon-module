@@ -38,6 +38,16 @@ __decorate([
     __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "color", void 0);
 __decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], CreateBazaarDto.prototype, "latitude", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", String)
+], CreateBazaarDto.prototype, "longitude", void 0);
+__decorate([
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", String)
 ], CreateBazaarDto.prototype, "is_active", void 0);
