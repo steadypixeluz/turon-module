@@ -18,14 +18,14 @@ export class ModelStore {
   banner: string;
   @Prop()
   manufacturer: boolean;
-  @Prop()
-  about: string;
+  @Prop({ type: Object })
+  about: Lang;
   @Prop()
   email: string;
   @Prop()
   phone: string;
-  @Prop()
-  adress: string;
+  @Prop({ type: Object })
+  address: Lang;
   @Prop()
   floor_space: number;
   @Prop()
