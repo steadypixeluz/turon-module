@@ -44,8 +44,8 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelStore.prototype, "manufacturer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelStore.prototype, "about", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
@@ -56,9 +56,9 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStore.prototype, "phone", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], ModelStore.prototype, "adress", void 0);
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelStore.prototype, "address", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
