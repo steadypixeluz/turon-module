@@ -40,11 +40,55 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStore.prototype, "banner", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "CustomerCompany", required: true }),
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Boolean)
+], ModelStore.prototype, "manufacturer", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelStore.prototype, "about", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelStore.prototype, "email", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelStore.prototype, "phone", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelStore.prototype, "adress", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelStore.prototype, "floor_space", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelStore.prototype, "self_owned", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelStore.prototype, "production_machinery", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelStore.prototype, "max_capacity", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: mongoose_2.default.Schema.Types.ObjectId,
+        ref: "CustomerCompany",
+        required: true,
+    }),
     __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
 ], ModelStore.prototype, "customer_company", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Customer", default: [] }),
+    (0, mongoose_1.Prop)({
+        type: [mongoose_2.default.Schema.Types.ObjectId],
+        ref: "Customer",
+        default: [],
+    }),
     __metadata("design:type", Array)
 ], ModelStore.prototype, "customers", void 0);
 __decorate([

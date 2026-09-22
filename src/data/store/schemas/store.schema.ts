@@ -16,9 +16,35 @@ export class ModelStore {
   logo: string;
   @Prop()
   banner: string;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "CustomerCompany", required: true })
+  @Prop()
+  manufacturer: boolean;
+  @Prop()
+  about: string;
+  @Prop()
+  email: string;
+  @Prop()
+  phone: string;
+  @Prop()
+  adress: string;
+  @Prop()
+  floor_space: number;
+  @Prop()
+  self_owned: number;
+  @Prop()
+  production_machinery: number;
+  @Prop()
+  max_capacity: number;
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "CustomerCompany",
+    required: true,
+  })
   customer_company: ModelCustomerCompany;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Customer", default: [] })
+  @Prop({
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "Customer",
+    default: [],
+  })
   customers: ModelCustomers[];
   @Prop({ default: false })
   is_deleted: boolean;
