@@ -1,0 +1,1 @@
+export {ModelStoreImage,ModelStoreImageSchema} from './schema/store-image.schema'

@@ -1,0 +1,1 @@
+export {ModelStoreVideo,ModelStoreVideoSchema} from "./schema/store-video.schema"

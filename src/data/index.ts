@@ -289,6 +289,8 @@ export {
   UpdateTranslationDto,
 } from "./translation";
 export { ModelVariation, ModelVariationSchema } from "./variation";
+export { ModelStoreImage, ModelStoreImageSchema } from "./store-image";
+export { ModelStoreVideo, ModelStoreVideoSchema } from "./store-video";
 export {
   ModelVariationSelect,
   ModelVariationSelectSchema,
@@ -331,15 +333,49 @@ export { CreatePostCategoryDto, UpdatePostCategoryDto } from "./post-category";
 export { CreatePostDocumentDto, UpdatePostDocumentDto } from "./post-document";
 export { CreatePostImageDto, UpdatePostImageDto } from "./post-image";
 export { CreatePostVideoDto, UpdatePostVideoDto } from "./post-video";
-export { ModelCustomerPermission, ModelCustomerPermissionSchema } from './customer-permission'
-export { ModelMenuVariationSchema, ModelMenuVariation } from "./menu-variation/schema/menu-variation.schema";
-export { Vehicle, VehicleSchema, BodyDimensionsDto, RateDto, RouteDto, CompanyDto, CreateVehicleDto, UpdateVehicleDto, SearchVehicleDto } from './vehicle'
-export { ModelChat, ModelChatSchema, ModelMessage, ModelMessageSchema, SendMessageDto, CreateChatDto } from './chats'
-export { ModelCargo, ModelCargoSchema, GetCargosDto } from './cargo'
-export { ModelCargoCountry, ModelCargoCountrySchema } from './cargo-country'
-export { ModelCargoRegion, ModelCargoRegionSchema } from './cargo-region'
-export { Dictionary, DictionarySchema, CreateDictionaryDto, DICTIONARY_SEED } from './dictionary'
+export {
+  ModelCustomerPermission,
+  ModelCustomerPermissionSchema,
+} from "./customer-permission";
+export {
+  ModelMenuVariationSchema,
+  ModelMenuVariation,
+} from "./menu-variation/schema/menu-variation.schema";
+export {
+  Vehicle,
+  VehicleSchema,
+  BodyDimensionsDto,
+  RateDto,
+  RouteDto,
+  CompanyDto,
+  CreateVehicleDto,
+  UpdateVehicleDto,
+  SearchVehicleDto,
+} from "./vehicle";
+export {
+  ModelChat,
+  ModelChatSchema,
+  ModelMessage,
+  ModelMessageSchema,
+  SendMessageDto,
+  CreateChatDto,
+} from "./chats";
+export { ModelCargo, ModelCargoSchema, GetCargosDto } from "./cargo";
+export { ModelCargoCountry, ModelCargoCountrySchema } from "./cargo-country";
+export { ModelCargoRegion, ModelCargoRegionSchema } from "./cargo-region";
+export {
+  Dictionary,
+  DictionarySchema,
+  CreateDictionaryDto,
+  DICTIONARY_SEED,
+} from "./dictionary";
 
-export { ModelOffer, ModelOfferSchema } from './offer'
+export { ModelOffer, ModelOfferSchema } from "./offer";
 
-export { ModelPsic, ModelPsicSchema, CreatePsicDto, UpdatePsicDto, PsicLangText } from './psic'
+export {
+  ModelPsic,
+  ModelPsicSchema,
+  CreatePsicDto,
+  UpdatePsicDto,
+  PsicLangText,
+} from "./psic";
