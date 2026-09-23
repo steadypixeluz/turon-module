@@ -13,9 +13,13 @@ export class ModelStoreCollection {
     type: "string",
     enum: ["carousel", "hero", "circle", "overlay", "split", "solid"],
   })
+  view_type: string;
   @Prop({ type: "string", enum: ["collection", "product"] })
   type: string;
-  view_type: string;
+  @Prop()
+  title_view:boolean
+   @Prop()
+  photo?: string;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "StoreCollection" })
   collection: ModelStoreCollection;
   @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Product" })
