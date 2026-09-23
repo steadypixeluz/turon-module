@@ -1,5 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { Types } from 'mongoose';
+import { ModelCustomerCompany } from '../customer-company';
+import { ModelStore } from '../store';
 
 @Schema({ collection: 'chats', timestamps: true })
 export class ModelChat {
@@ -25,10 +27,10 @@ export class ModelChat {
   buyerId: Types.ObjectId;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customer_company', default: null })
-  customer_company: Types.ObjectId;
+  customer_company: ModelCustomerCompany;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
-  store: Types.ObjectId;
+  store: ModelStore;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId })
   lastMessage: Types.ObjectId;
