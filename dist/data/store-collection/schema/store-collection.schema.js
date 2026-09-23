@@ -33,6 +33,18 @@ __decorate([
     __metadata("design:type", String)
 ], ModelStoreCollection.prototype, "view_type", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: "string", enum: ["collection", "product"] }),
+    __metadata("design:type", String)
+], ModelStoreCollection.prototype, "type", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Boolean)
+], ModelStoreCollection.prototype, "title_view", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelStoreCollection.prototype, "photo", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "StoreCollection" }),
     __metadata("design:type", ModelStoreCollection)
 ], ModelStoreCollection.prototype, "collection", void 0);
