@@ -339,4 +339,6 @@ export {
   ModelStoreImageSchema,
   ModelStoreVideo,
   ModelStoreVideoSchema,
+  ModelStoreCertificate,
+  ModelStoreCertificateSchema,
 } from "./data";

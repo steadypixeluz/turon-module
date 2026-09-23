@@ -1,0 +1,1 @@
+export {ModelStoreCertificate, ModelStoreCertificateSchema} from './schema/store-certificate.schema'

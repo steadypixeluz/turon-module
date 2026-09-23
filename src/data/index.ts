@@ -296,6 +296,10 @@ export {
   ModelVariationSelectSchema,
 } from "./variation-select";
 export {
+  ModelStoreCertificate,
+  ModelStoreCertificateSchema,
+} from "./store-certificate";
+export {
   ModelWholesaleCollection,
   ModelWholesaleCollectionSchema,
 } from "./wholesale-collection";
