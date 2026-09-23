@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { Lang } from "../../interfaces";
 import { ModelProduct } from "../../product";
 import { ProductType } from "../../../enums";
+import { ModelStore } from "../../store";
 
 @Schema({ collection: "store-collections", timestamps: true })
 export class ModelStoreCollection {
@@ -23,6 +24,8 @@ export class ModelStoreCollection {
   is_active?: boolean;
   @Prop({ type: "string", enum: ProductType, default: ProductType.retail })
   showcase: string;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "Store" })
+  store: ModelStore;
 }
 
 export const ModelStoreCollectionSchema =

@@ -17,6 +17,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const product_1 = require("../../product");
 const enums_1 = require("../../../enums");
+const store_1 = require("../../store");
 let ModelStoreCollection = class ModelStoreCollection {
 };
 exports.ModelStoreCollection = ModelStoreCollection;
@@ -51,6 +52,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: "string", enum: enums_1.ProductType, default: enums_1.ProductType.retail }),
     __metadata("design:type", String)
 ], ModelStoreCollection.prototype, "showcase", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Store" }),
+    __metadata("design:type", store_1.ModelStore)
+], ModelStoreCollection.prototype, "store", void 0);
 exports.ModelStoreCollection = ModelStoreCollection = __decorate([
     (0, mongoose_1.Schema)({ collection: "store-collections", timestamps: true })
 ], ModelStoreCollection);
