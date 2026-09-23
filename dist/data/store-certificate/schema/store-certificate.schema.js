@@ -16,6 +16,7 @@ exports.ModelStoreCertificateSchema = exports.ModelStoreCertificate = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const store_1 = require("../../store");
+const enums_1 = require("../../../enums");
 let ModelStoreCertificate = class ModelStoreCertificate {
 };
 exports.ModelStoreCertificate = ModelStoreCertificate;
@@ -43,6 +44,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Store" }),
     __metadata("design:type", store_1.ModelStore)
 ], ModelStoreCertificate.prototype, "store", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.ProductType, default: enums_1.ProductType.retail }),
+    __metadata("design:type", String)
+], ModelStoreCertificate.prototype, "showcase", void 0);
 exports.ModelStoreCertificate = ModelStoreCertificate = __decorate([
     (0, mongoose_1.Schema)({ collection: "store-certificate", timestamps: true })
 ], ModelStoreCertificate);

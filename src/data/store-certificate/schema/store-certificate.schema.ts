@@ -2,6 +2,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { Lang } from "../../interfaces";
 import { ModelStore } from "../../store";
+import { ProductType } from "../../../enums";
 
 @Schema({ collection: "store-certificate", timestamps: true })
 export class ModelStoreCertificate {
@@ -17,6 +18,8 @@ export class ModelStoreCertificate {
   position: number;
   @Prop({ type: mongoose.Types.ObjectId, ref: "Store" })
   store: ModelStore;
+    @Prop({ type: 'string', enum: ProductType, default: ProductType.retail })
+    showcase: string;
 }
 
 export const ModelStoreCertificateSchema = SchemaFactory.createForClass(
