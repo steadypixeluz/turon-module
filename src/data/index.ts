@@ -292,6 +292,11 @@ export { ModelVariation, ModelVariationSchema } from "./variation";
 export { ModelStoreImage, ModelStoreImageSchema } from "./store-image";
 export { ModelStoreVideo, ModelStoreVideoSchema } from "./store-video";
 export {
+  ModelStoreCollection,
+  ModelStoreCollectionSchema,
+} from "./store-collection";
+
+export {
   ModelVariationSelect,
   ModelVariationSelectSchema,
 } from "./variation-select";

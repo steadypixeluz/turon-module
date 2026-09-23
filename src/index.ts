@@ -341,4 +341,6 @@ export {
   ModelStoreVideoSchema,
   ModelStoreCertificate,
   ModelStoreCertificateSchema,
+  ModelStoreCollection,
+  ModelStoreCollectionSchema,
 } from "./data";
