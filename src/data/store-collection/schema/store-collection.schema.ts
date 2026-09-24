@@ -11,7 +11,7 @@ export class ModelStoreCollection {
   title: Lang;
   @Prop({
     type: "string",
-    enum: ["carousel", "hero", "circle", "overlay", "split", "solid"],
+    enum: ["carousel", "hero", "about","circle", "overlay", "split", "solid"],
   })
   view_type: string;
   @Prop({ type: "string", enum: ["collection", "product"] })

@@ -28,7 +28,7 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({
         type: "string",
-        enum: ["carousel", "hero", "circle", "overlay", "split", "solid"],
+        enum: ["carousel", "hero", "about", "circle", "overlay", "split", "solid"],
     }),
     __metadata("design:type", String)
 ], ModelStoreCollection.prototype, "view_type", void 0);
