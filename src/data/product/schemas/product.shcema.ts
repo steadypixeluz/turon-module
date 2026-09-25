@@ -97,6 +97,8 @@ ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase:
 export class ModelProduct {
   @Prop({ unique: true })
   uid: number;
+    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
+  store: ModelStore;
   @Prop()
   images: string[];
   @Prop()
@@ -151,6 +153,8 @@ export class ModelSubProduct {
   @Prop({ default: 0 })
   price: number;
   // Уровни цены по количеству — см. комментарий у ModelProduct.price_tiers выше.
+    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
+  store: ModelStore;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
   @Prop({ default: 0 })
