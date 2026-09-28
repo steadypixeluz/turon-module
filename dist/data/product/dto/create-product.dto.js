@@ -64,6 +64,11 @@ __decorate([
     __metadata("design:type", Array)
 ], CreateProductDto.prototype, "price_tiers", void 0);
 __decorate([
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
+    __metadata("design:type", Boolean)
+], CreateProductDto.prototype, "use_price_tiers", void 0);
+__decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)

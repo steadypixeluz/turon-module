@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PriceTierDto = void 0;
 const class_validator_1 = require("class-validator");
+const enums_1 = require("../../../enums");
 class PriceTierDto {
 }
 exports.PriceTierDto = PriceTierDto;
@@ -30,3 +31,14 @@ __decorate([
     (0, class_validator_1.Min)(0),
     __metadata("design:type", Number)
 ], PriceTierDto.prototype, "price", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.Min)(0),
+    __metadata("design:type", Number)
+], PriceTierDto.prototype, "sale", void 0);
+__decorate([
+    (0, class_validator_1.IsOptional)(),
+    (0, class_validator_1.IsEnum)(enums_1.SaleType),
+    __metadata("design:type", String)
+], PriceTierDto.prototype, "sale_type", void 0);
