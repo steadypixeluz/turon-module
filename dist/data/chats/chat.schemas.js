@@ -45,8 +45,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelChatSchema = exports.ModelChat = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importStar(require("mongoose"));
-const customer_company_1 = require("../customer-company");
-const store_1 = require("../store");
+const customer_company_schema_1 = require("../customer-company/schemas/customer-company.schema");
 let ModelChat = class ModelChat {
 };
 exports.ModelChat = ModelChat;
@@ -77,12 +76,8 @@ __decorate([
 ], ModelChat.prototype, "buyerId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customer_company', default: null }),
-    __metadata("design:type", customer_company_1.ModelCustomerCompany)
+    __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
 ], ModelChat.prototype, "customer_company", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'stores' }),
-    __metadata("design:type", store_1.ModelStore)
-], ModelChat.prototype, "store", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId }),
     __metadata("design:type", mongoose_2.Types.ObjectId)

@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelPriceTierSchema = exports.ModelPriceTier = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
+const enums_1 = require("../../../enums");
 let ModelPriceTier = class ModelPriceTier {
 };
 exports.ModelPriceTier = ModelPriceTier;
@@ -26,6 +27,18 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Number, required: true }),
     __metadata("design:type", Number)
 ], ModelPriceTier.prototype, "price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
+    __metadata("design:type", Number)
+], ModelPriceTier.prototype, "sale", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.SaleType }),
+    __metadata("design:type", String)
+], ModelPriceTier.prototype, "sale_type", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Number, default: null }),
+    __metadata("design:type", Number)
+], ModelPriceTier.prototype, "sale_price", void 0);
 exports.ModelPriceTier = ModelPriceTier = __decorate([
     (0, mongoose_1.Schema)({ _id: false })
 ], ModelPriceTier);
