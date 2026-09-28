@@ -5,6 +5,7 @@ import {
   IsEnum,
   IsObject,
   IsNumber,
+  IsBoolean,
   isArray,
   ValidateNested,
 } from 'class-validator';
@@ -44,13 +45,15 @@ export class CreateProductDto {
   @IsOptional()
   price: number;
 
-  // Уровни цены по количеству. Если передан — бэкенд сам пересчитывает price
-  // как максимальное price среди price_tiers, любой присланный price игнорируется.
   @IsArray()
   @IsOptional()
   @ValidateNested({ each: true })
   @Type(() => PriceTierDto)
   price_tiers?: PriceTierDto[];
+
+  @IsBoolean()
+  @IsOptional()
+  use_price_tiers?: boolean;
 
   @IsNumber()
   @IsOptional()

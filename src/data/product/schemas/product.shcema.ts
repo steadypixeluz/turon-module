@@ -105,6 +105,8 @@ export class ModelProduct {
   price: number;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
+  @Prop({ default: false })
+  use_price_tiers: boolean;
   @Prop({ default: 0 })
   sale_price: number;
   @Prop({ default: 0 })
@@ -156,6 +158,8 @@ export class ModelSubProduct {
   store: ModelStore;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
+  @Prop({ default: false })
+  use_price_tiers: boolean;
   @Prop({ default: 0 })
   sale: number;
   @Prop({ default: 0 })

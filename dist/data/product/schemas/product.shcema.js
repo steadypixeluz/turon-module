@@ -201,6 +201,10 @@ __decorate([
     __metadata("design:type", Array)
 ], ModelProduct.prototype, "price_tiers", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelProduct.prototype, "use_price_tiers", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
 ], ModelProduct.prototype, "sale_price", void 0);
@@ -284,6 +288,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: [price_tier_schema_1.ModelPriceTierSchema], default: [] }),
     __metadata("design:type", Array)
 ], ModelSubProduct.prototype, "price_tiers", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelSubProduct.prototype, "use_price_tiers", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
