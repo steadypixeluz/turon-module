@@ -49,6 +49,10 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
+], ModelOrderInfo.prototype, "wallet", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
 ], ModelOrderInfo.prototype, "payable", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),

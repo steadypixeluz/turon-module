@@ -16,6 +16,7 @@ export class ModelOrder {
   order_info_id: ModelOrderInfo;
   @Prop()
   order_id: string;
+  
   @Prop()
   origin_type: string
   @Prop({ type: Object })

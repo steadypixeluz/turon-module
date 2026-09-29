@@ -19,6 +19,8 @@ export class ModelOrderInfo {
   sale_price: number;
   @Prop()
   coin_count: number;
+    @Prop()
+  wallet: number;
   @Prop()
   payable:number
   @Prop()
