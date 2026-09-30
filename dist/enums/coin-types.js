@@ -14,4 +14,5 @@ var CoinHistoryInReason;
     CoinHistoryInReason["REGISTER"] = "register";
     CoinHistoryInReason["GIFT"] = "gift";
     CoinHistoryInReason["GIFT_PRODUCT"] = "gift_product";
+    CoinHistoryInReason["RETURN"] = "return";
 })(CoinHistoryInReason || (exports.CoinHistoryInReason = CoinHistoryInReason = {}));

@@ -9,5 +9,6 @@ export enum CoinHistoryInReason {
   DONATION='donation',
   REGISTER='register',
   GIFT='gift',
-  GIFT_PRODUCT='gift_product'
+  GIFT_PRODUCT='gift_product',
+  RETURN='return'
 }

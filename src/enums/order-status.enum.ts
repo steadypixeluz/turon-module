@@ -13,6 +13,7 @@ export enum OrderStatus {
 export enum OrderInfoStatus {
   draft = 'draft',
   completed = 'completed',
+  cancelled='cancelled'
 }
 
 export enum OrderWholesaleStatus {

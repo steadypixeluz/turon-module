@@ -17,6 +17,7 @@ var OrderInfoStatus;
 (function (OrderInfoStatus) {
     OrderInfoStatus["draft"] = "draft";
     OrderInfoStatus["completed"] = "completed";
+    OrderInfoStatus["cancelled"] = "cancelled";
 })(OrderInfoStatus || (exports.OrderInfoStatus = OrderInfoStatus = {}));
 var OrderWholesaleStatus;
 (function (OrderWholesaleStatus) {
