@@ -70,6 +70,8 @@ export class ModelProductInfo {
   colors: ModelColor;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'country' })
   country: ModelCountry;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'country' })
+  company_country: ModelCountry;
   @Prop()
   menu_uid: string;
   @Prop({ type: 'string', enum: ['external', 'internal'], default: 'internal' })
@@ -92,6 +94,13 @@ export const ModelProductInfoSchema =
   SchemaFactory.createForClass(ModelProductInfo);
 
 ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase: 1 });
+ModelProductInfoSchema.index({
+  company_country: 1,
+  is_deleted: 1,
+  is_active: 1,
+  status: 1,
+  menu: 1,
+});
 
 @Schema({ collection: 'product', timestamps: true })
 export class ModelProduct {
