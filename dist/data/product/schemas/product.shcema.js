@@ -188,6 +188,13 @@ exports.ModelProductInfoSchema.index({
     status: 1,
     menu: 1,
 });
+exports.ModelProductInfoSchema.index({
+    company_country: 1,
+    store: 1,
+    is_deleted: 1,
+    is_active: 1,
+    status: 1,
+});
 let ModelProduct = class ModelProduct {
 };
 exports.ModelProduct = ModelProduct;
