@@ -7,6 +7,10 @@ export class CreateBazaarDto {
   logo: string;
 
   @IsString()
+  @IsOptional()
+  banner: string;
+
+  @IsString()
   name: string;
 
   @IsString()
@@ -32,4 +36,8 @@ export class CreateBazaarDto {
   @IsString()
   @IsOptional()
   address: string;
+
+  @IsString()
+  @IsOptional()
+  delivery_date: string;
 }
