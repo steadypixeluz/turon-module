@@ -24,6 +24,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "logo", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBazaar.prototype, "banner", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "name", void 0);
@@ -31,6 +35,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], ModelBazaar.prototype, "description", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBazaar.prototype, "delivery_date", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)

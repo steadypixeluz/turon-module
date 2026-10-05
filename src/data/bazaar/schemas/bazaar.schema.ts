@@ -8,11 +8,17 @@ export class ModelBazaar {
   @Prop()
   logo: string;
 
+  @Prop()
+  banner: string;
+
   @Prop({ required: true })
   name: string;
 
   @Prop({ type: Object })
   description: Lang;
+
+  @Prop({ type: Object })
+  delivery_date: Lang;
 
   @Prop()
   color: string;

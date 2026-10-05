@@ -104,6 +104,10 @@ __decorate([
     __metadata("design:type", order_wholesale_1.ModelOrderWholesale)
 ], ModelOrderProduct.prototype, "order_wholesale", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: [product_1.ModelPriceTierSchema], default: [] }),
+    __metadata("design:type", Array)
+], ModelOrderProduct.prototype, "price_tiers", void 0);
+__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelOrderProduct.prototype, "sale_price", void 0);

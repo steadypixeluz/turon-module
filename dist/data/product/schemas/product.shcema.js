@@ -141,6 +141,10 @@ __decorate([
     __metadata("design:type", country_1.ModelCountry)
 ], ModelProductInfo.prototype, "country", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'country' }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelProductInfo.prototype, "company_country", void 0);
+__decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelProductInfo.prototype, "menu_uid", void 0);
@@ -177,6 +181,20 @@ exports.ModelProductInfo = ModelProductInfo = __decorate([
 ], ModelProductInfo);
 exports.ModelProductInfoSchema = mongoose_1.SchemaFactory.createForClass(ModelProductInfo);
 exports.ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase: 1 });
+exports.ModelProductInfoSchema.index({
+    company_country: 1,
+    is_deleted: 1,
+    is_active: 1,
+    status: 1,
+    menu: 1,
+});
+exports.ModelProductInfoSchema.index({
+    company_country: 1,
+    store: 1,
+    is_deleted: 1,
+    is_active: 1,
+    status: 1,
+});
 let ModelProduct = class ModelProduct {
 };
 exports.ModelProduct = ModelProduct;

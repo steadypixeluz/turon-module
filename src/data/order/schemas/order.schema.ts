@@ -6,7 +6,7 @@ import { ModelCustomerCompany } from '../../customer-company';
 import { Lang } from '../../interfaces';
 import { ModelOrderInfo } from '../../order-info';
 import { ModelOrderWholesale } from '../../order-wholesale';
-import { ModelSubProduct } from '../../product';
+import { ModelPriceTier, ModelPriceTierSchema, ModelSubProduct } from '../../product';
 
 @Schema({ collection: 'orders', timestamps: true })
 export class ModelOrder {
@@ -55,6 +55,8 @@ export class ModelOrderProduct {
   order: ModelOrder;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order-wholesale' })
   order_wholesale: ModelOrderWholesale;
+  @Prop({ type: [ModelPriceTierSchema], default: [] })
+  price_tiers: ModelPriceTier[];
   @Prop()
   sale_price: number;
   @Prop()
