@@ -1,0 +1,1 @@
+export { ModelComplaint, ModelComplaintSchema } from './schemas/complaint.schema';

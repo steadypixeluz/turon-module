@@ -380,6 +380,7 @@ export {
 } from "./dictionary";
 
 export { ModelOffer, ModelOfferSchema } from "./offer";
+export { ModelComplaint, ModelComplaintSchema } from './complaint';
 
 export {
   ModelPsic,

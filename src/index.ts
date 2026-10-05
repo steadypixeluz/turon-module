@@ -343,4 +343,5 @@ export {
   ModelStoreCertificateSchema,
   ModelStoreCollection,
   ModelStoreCollectionSchema,
+  ModelComplaint, ModelComplaintSchema
 } from "./data";
