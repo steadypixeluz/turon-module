@@ -19,6 +19,8 @@ const customer_1 = require("../../customer");
 const product_1 = require("../../product");
 const complaint_status_enum_1 = require("../../../enums/complaint.status.enum");
 const order_1 = require("../../../data/order");
+const store_1 = require("../../../data/store");
+const customer_company_schema_1 = require("../../../data/customer-company/schemas/customer-company.schema");
 let ModelComplaint = class ModelComplaint {
 };
 exports.ModelComplaint = ModelComplaint;
@@ -35,13 +37,21 @@ __decorate([
     __metadata("design:type", order_1.ModelOrder)
 ], ModelComplaint.prototype, "order", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "sub-product" }),
-    __metadata("design:type", product_1.ModelSubProduct)
-], ModelComplaint.prototype, "sub_product", void 0);
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Store" }),
+    __metadata("design:type", store_1.ModelStore)
+], ModelComplaint.prototype, "store", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "product_info" }),
     __metadata("design:type", product_1.ModelProductInfo)
 ], ModelComplaint.prototype, "product_info", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: mongoose_2.default.Schema.Types.ObjectId,
+        ref: "customer_company",
+        default: null,
+    }),
+    __metadata("design:type", customer_company_schema_1.ModelCustomerCompany)
+], ModelComplaint.prototype, "customer_company", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Array, default: [] }),
     __metadata("design:type", Array)
