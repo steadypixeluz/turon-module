@@ -1,18 +1,25 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { ModelCustomers } from '../../customer/schemas/customer.schema';
-import { ModelStore } from '../../store/schemas/store.schema';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { ModelCustomers } from "../../customer/schemas/customer.schema";
+import { ModelStore } from "../../store/schemas/store.schema";
 
-@Schema({ collection: 'company-employee', timestamps: true })
+@Schema({ collection: "company-employee", timestamps: true })
 export class ModelCompanyEmployee {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Customer', required: true })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Customer",
+    required: true,
+  })
   customer: ModelCustomers;
 
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Store', default: [] })
-  store: ModelStore[];
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Store", default: null })
+  store: ModelStore | null;
 
   @Prop({ required: true })
   role: string;
+  @Prop({ default: false })
+  is_main: boolean;
 }
 
-export const ModelCompanyEmployeeSchema = SchemaFactory.createForClass(ModelCompanyEmployee);
+export const ModelCompanyEmployeeSchema =
+  SchemaFactory.createForClass(ModelCompanyEmployee);

@@ -20,18 +20,26 @@ let ModelCompanyEmployee = class ModelCompanyEmployee {
 };
 exports.ModelCompanyEmployee = ModelCompanyEmployee;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Customer', required: true }),
+    (0, mongoose_1.Prop)({
+        type: mongoose_2.default.Schema.Types.ObjectId,
+        ref: "Customer",
+        required: true,
+    }),
     __metadata("design:type", customer_schema_1.ModelCustomers)
 ], ModelCompanyEmployee.prototype, "customer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Store', default: [] }),
-    __metadata("design:type", Array)
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "Store", default: null }),
+    __metadata("design:type", Object)
 ], ModelCompanyEmployee.prototype, "store", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], ModelCompanyEmployee.prototype, "role", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelCompanyEmployee.prototype, "is_main", void 0);
 exports.ModelCompanyEmployee = ModelCompanyEmployee = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'company-employee', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "company-employee", timestamps: true })
 ], ModelCompanyEmployee);
 exports.ModelCompanyEmployeeSchema = mongoose_1.SchemaFactory.createForClass(ModelCompanyEmployee);

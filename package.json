@@ -1,6 +1,6 @@
 {
   "name": "@pixel/turon-module",
-  "version": "2.1.24",
+  "version": "2.1.25",
   "private": false,
   "description": "",
   "main": "dist/index.js",
