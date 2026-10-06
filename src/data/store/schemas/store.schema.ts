@@ -46,6 +46,11 @@ export class ModelStore {
     default: [],
   })
   customers: ModelCustomers[];
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Customer",
+  })
+  main_employee: ModelCustomers;
   @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: null })
