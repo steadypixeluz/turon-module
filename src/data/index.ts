@@ -202,7 +202,7 @@ export {
   ClickTransaction,
   ClickTransactionSchema,
   CreateCardDto,
-  ModelCamcelPayments,ModelCamcelPaymentsSchema
+  ModelCancelPayments,ModelCancelPaymentsSchema
 } from "./payment";
 export {
   UpdateProductDto,

@@ -344,5 +344,5 @@ export {
   ModelStoreCollection,
   ModelStoreCollectionSchema,
   ModelComplaint, ModelComplaintSchema,
-  ModelCamcelPayments,ModelCamcelPaymentsSchema
+  ModelCancelPayments,ModelCancelPaymentsSchema
 } from "./data";

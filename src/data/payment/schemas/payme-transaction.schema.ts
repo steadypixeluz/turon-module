@@ -83,7 +83,7 @@ export const ClickTransactionSchema =
   SchemaFactory.createForClass(ClickTransaction);
 
 @Schema({ collection: "cancel-payments", timestamps: true })
-export class ModelCamcelPayments {
+export class ModelCancelPayments {
   @Prop()
   order_uid?: string;
   @Prop()
@@ -98,5 +98,5 @@ export class ModelCamcelPayments {
   cancel_time: number;
 }
 
-export const ModelCamcelPaymentsSchema =
-  SchemaFactory.createForClass(ModelCamcelPayments);
+export const ModelCancelPaymentsSchema =
+  SchemaFactory.createForClass(ModelCancelPayments);
