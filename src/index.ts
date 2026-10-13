@@ -343,5 +343,6 @@ export {
   ModelStoreCertificateSchema,
   ModelStoreCollection,
   ModelStoreCollectionSchema,
-  ModelComplaint, ModelComplaintSchema
+  ModelComplaint, ModelComplaintSchema,
+  ModelCamcelPayments,ModelCamcelPaymentsSchema
 } from "./data";

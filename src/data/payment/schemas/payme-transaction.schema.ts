@@ -1,5 +1,5 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { ClickTransactionState } from '../../../enums';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { ClickTransactionState } from "../../../enums";
 export enum PaymeStatus {
   paid = 2,
   cancel = -1,
@@ -12,7 +12,7 @@ export enum Payment {
 }
 // 1 = oplata kutulyapti  2 = oplata tolandi  -1 = oplata otmen boldi  -2 = oplata tolangandan kegin otmen boldi
 
-@Schema({ collection: 'payme-transaction', timestamps: true })
+@Schema({ collection: "payme-transaction", timestamps: true })
 export class ModelPayme {
   @Prop({ default: false })
   check: boolean;
@@ -22,9 +22,9 @@ export class ModelPayme {
   amount?: number;
   @Prop()
   transaction_id: string;
-  @Prop({ type: 'number', enum: PaymeStatus, default: PaymeStatus.new })
+  @Prop({ type: "number", enum: PaymeStatus, default: PaymeStatus.new })
   status: number;
-  @Prop({ type: 'number', enum: Payment })
+  @Prop({ type: "number", enum: Payment })
   payment: number;
 
   @Prop()
@@ -45,7 +45,7 @@ export class ModelPayme {
 
 export const ModelPaymeSchema = SchemaFactory.createForClass(ModelPayme);
 
-@Schema({ collection: 'click-transaction', timestamps: true })
+@Schema({ collection: "click-transaction", timestamps: true })
 export class ClickTransaction {
   @Prop({ default: false })
   check: boolean;
@@ -55,7 +55,7 @@ export class ClickTransaction {
   click_paydoc_id: string;
   @Prop()
   order_info_id: string;
-  @Prop({ type: 'number', enum: Payment })
+  @Prop({ type: "number", enum: Payment })
   payment: number;
   @Prop({ type: Number, enum: ClickTransactionState })
   state: number;
@@ -81,3 +81,22 @@ export class ClickTransaction {
 
 export const ClickTransactionSchema =
   SchemaFactory.createForClass(ClickTransaction);
+
+@Schema({ collection: "cancel-payments", timestamps: true })
+export class ModelCamcelPayments {
+  @Prop()
+  order_uid?: string;
+  @Prop()
+  amount?: number;
+  @Prop()
+  transaction_id: string;
+  @Prop({ type: "number", enum: [1, 2], default: 1 })
+  status: number;
+  @Prop()
+  deleted_at: string;
+  @Prop({ default: 0 })
+  cancel_time: number;
+}
+
+export const ModelCamcelPaymentsSchema =
+  SchemaFactory.createForClass(ModelCamcelPayments);

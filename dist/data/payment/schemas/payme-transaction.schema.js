@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ClickTransactionSchema = exports.ClickTransaction = exports.ModelPaymeSchema = exports.ModelPayme = exports.Payment = exports.PaymeStatus = void 0;
+exports.ModelCamcelPaymentsSchema = exports.ModelCamcelPayments = exports.ClickTransactionSchema = exports.ClickTransaction = exports.ModelPaymeSchema = exports.ModelPayme = exports.Payment = exports.PaymeStatus = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const enums_1 = require("../../../enums");
 var PaymeStatus;
@@ -45,11 +45,11 @@ __decorate([
     __metadata("design:type", String)
 ], ModelPayme.prototype, "transaction_id", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'number', enum: PaymeStatus, default: PaymeStatus.new }),
+    (0, mongoose_1.Prop)({ type: "number", enum: PaymeStatus, default: PaymeStatus.new }),
     __metadata("design:type", Number)
 ], ModelPayme.prototype, "status", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'number', enum: Payment }),
+    (0, mongoose_1.Prop)({ type: "number", enum: Payment }),
     __metadata("design:type", Number)
 ], ModelPayme.prototype, "payment", void 0);
 __decorate([
@@ -81,7 +81,7 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelPayme.prototype, "reason", void 0);
 exports.ModelPayme = ModelPayme = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'payme-transaction', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "payme-transaction", timestamps: true })
 ], ModelPayme);
 exports.ModelPaymeSchema = mongoose_1.SchemaFactory.createForClass(ModelPayme);
 let ClickTransaction = class ClickTransaction {
@@ -104,7 +104,7 @@ __decorate([
     __metadata("design:type", String)
 ], ClickTransaction.prototype, "order_info_id", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'number', enum: Payment }),
+    (0, mongoose_1.Prop)({ type: "number", enum: Payment }),
     __metadata("design:type", Number)
 ], ClickTransaction.prototype, "payment", void 0);
 __decorate([
@@ -136,6 +136,37 @@ __decorate([
     __metadata("design:type", String)
 ], ClickTransaction.prototype, "prepare_id", void 0);
 exports.ClickTransaction = ClickTransaction = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'click-transaction', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "click-transaction", timestamps: true })
 ], ClickTransaction);
 exports.ClickTransactionSchema = mongoose_1.SchemaFactory.createForClass(ClickTransaction);
+let ModelCamcelPayments = class ModelCamcelPayments {
+};
+exports.ModelCamcelPayments = ModelCamcelPayments;
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCamcelPayments.prototype, "order_uid", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelCamcelPayments.prototype, "amount", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCamcelPayments.prototype, "transaction_id", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: "number", enum: [1, 2], default: 1 }),
+    __metadata("design:type", Number)
+], ModelCamcelPayments.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCamcelPayments.prototype, "deleted_at", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: 0 }),
+    __metadata("design:type", Number)
+], ModelCamcelPayments.prototype, "cancel_time", void 0);
+exports.ModelCamcelPayments = ModelCamcelPayments = __decorate([
+    (0, mongoose_1.Schema)({ collection: "cancel-payments", timestamps: true })
+], ModelCamcelPayments);
+exports.ModelCamcelPaymentsSchema = mongoose_1.SchemaFactory.createForClass(ModelCamcelPayments);
