@@ -2,6 +2,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { ModelChat } from "./chat.schemas";
 import { Lang } from "../interfaces";
+import { ModelOrderWholesale } from "../order-wholesale/schemas/order-wholesale.schema";
 @Schema({ _id: false })
 export class MessageProductSnapshot {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "product_info" })
@@ -21,7 +22,10 @@ export class ModelMessage {
   chatId: ModelChat;
   @Prop({ type: mongoose.Schema.Types.ObjectId, required: true })
   senderId: string; // Customer ID
-  @Prop({ enum: ["text", "image", "multiple", "audio", "product"], default: "text" })
+  @Prop({
+    enum: ["text", "image", "multiple", "audio", "product","order"],
+    default: "text",
+  })
   type: string;
   @Prop({ default: "" })
   content: string;
@@ -37,6 +41,8 @@ export class ModelMessage {
   readAt: Date;
   @Prop({ type: MessageProductSnapshotSchema, default: null })
   product?: MessageProductSnapshot;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order" })
+  order_wholesale: ModelOrderWholesale;
 }
 
 export const ModelMessageSchema = SchemaFactory.createForClass(ModelMessage);

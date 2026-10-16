@@ -16,6 +16,7 @@ exports.ModelMessageSchema = exports.ModelMessage = exports.MessageProductSnapsh
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const chat_schemas_1 = require("./chat.schemas");
+const order_wholesale_schema_1 = require("../order-wholesale/schemas/order-wholesale.schema");
 let MessageProductSnapshot = class MessageProductSnapshot {
 };
 exports.MessageProductSnapshot = MessageProductSnapshot;
@@ -47,7 +48,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMessage.prototype, "senderId", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ enum: ["text", "image", "multiple", "audio", "product"], default: "text" }),
+    (0, mongoose_1.Prop)({
+        enum: ["text", "image", "multiple", "audio", "product", "order"],
+        default: "text",
+    }),
     __metadata("design:type", String)
 ], ModelMessage.prototype, "type", void 0);
 __decorate([
@@ -78,6 +82,10 @@ __decorate([
     (0, mongoose_1.Prop)({ type: exports.MessageProductSnapshotSchema, default: null }),
     __metadata("design:type", MessageProductSnapshot)
 ], ModelMessage.prototype, "product", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "order" }),
+    __metadata("design:type", order_wholesale_schema_1.ModelOrderWholesale)
+], ModelMessage.prototype, "order_wholesale", void 0);
 exports.ModelMessage = ModelMessage = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], ModelMessage);
