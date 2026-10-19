@@ -23,7 +23,7 @@ export class ModelMessage {
   @Prop({ type: mongoose.Schema.Types.ObjectId, required: true })
   senderId: string; // Customer ID
   @Prop({
-    enum: ["text", "image", "multiple", "audio", "product","order"],
+    enum: ["text", "image", "multiple", "audio", "product","order",'mock_order'],
     default: "text",
   })
   type: string;

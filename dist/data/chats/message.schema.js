@@ -49,7 +49,7 @@ __decorate([
 ], ModelMessage.prototype, "senderId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        enum: ["text", "image", "multiple", "audio", "product", "order"],
+        enum: ["text", "image", "multiple", "audio", "product", "order", 'mock_order'],
         default: "text",
     }),
     __metadata("design:type", String)

@@ -62,7 +62,7 @@ __decorate([
     (0, mongoose_1.Prop)({
         type: String,
         required: true,
-        enum: ['cargos', 'vehicle', 'product', 'store'],
+        enum: ['cargos', 'vehicle', 'product', 'store', "mock_order"],
         index: true,
     }),
     __metadata("design:type", String)
