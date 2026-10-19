@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { ModelChat } from "./chat.schemas";
 import { Lang } from "../interfaces";
 import { ModelOrderWholesale } from "../order-wholesale/schemas/order-wholesale.schema";
+import { ModelSubProduct } from "../product";
 @Schema({ _id: false })
 export class MessageProductSnapshot {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "product_info" })
@@ -43,6 +44,10 @@ export class ModelMessage {
   product?: MessageProductSnapshot;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order" })
   order_wholesale: ModelOrderWholesale;
+
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "sub_product" })
+  products: ModelSubProduct;
+  
 }
 
 export const ModelMessageSchema = SchemaFactory.createForClass(ModelMessage);
