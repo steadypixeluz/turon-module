@@ -87,7 +87,7 @@ __decorate([
     __metadata("design:type", order_wholesale_schema_1.ModelOrderWholesale)
 ], ModelMessage.prototype, "order_wholesale", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "sub_product" }),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Array)
 ], ModelMessage.prototype, "products", void 0);
 exports.ModelMessage = ModelMessage = __decorate([
