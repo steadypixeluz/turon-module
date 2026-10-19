@@ -45,8 +45,8 @@ export class ModelMessage {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order" })
   order_wholesale: ModelOrderWholesale;
 
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "sub_product" })
-  products: [ModelSubProduct];
+  @Prop()
+  products: [];
   
 }
 
