@@ -17,7 +17,6 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const chat_schemas_1 = require("./chat.schemas");
 const order_wholesale_schema_1 = require("../order-wholesale/schemas/order-wholesale.schema");
-const product_1 = require("../product");
 let MessageProductSnapshot = class MessageProductSnapshot {
 };
 exports.MessageProductSnapshot = MessageProductSnapshot;
@@ -88,8 +87,8 @@ __decorate([
     __metadata("design:type", order_wholesale_schema_1.ModelOrderWholesale)
 ], ModelMessage.prototype, "order_wholesale", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "sub_product" }),
-    __metadata("design:type", product_1.ModelSubProduct)
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "sub_product" }),
+    __metadata("design:type", Array)
 ], ModelMessage.prototype, "products", void 0);
 exports.ModelMessage = ModelMessage = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
