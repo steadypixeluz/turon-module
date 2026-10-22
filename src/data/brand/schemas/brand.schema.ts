@@ -16,19 +16,6 @@ export class ModelBrandType {
 export const ModelBrandTypeSchema =
   SchemaFactory.createForClass(ModelBrandType);
 
-export class ModelBrandHistory {
-  @Prop({ type: Object })
-  title: Lang;
-  @Prop({ type: Object })
-  subtitle: Lang;
-  @Prop()
-  position: number;
-  @Prop({ default: true })
-  is_active?: boolean;
-}
-export const ModelBrandHistorySchema =
-  SchemaFactory.createForClass(ModelBrandHistory);
-
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
   @Prop()
@@ -72,10 +59,25 @@ export class ModelBrandImage {
   @Prop()
   position: number;
   @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
-  post: ModelBrand;
+  brand: ModelBrand;
   @Prop({ default: false })
   is_main?: boolean;
 }
 
 export const ModelBrandImageSchema =
   SchemaFactory.createForClass(ModelBrandImage);
+
+export class ModelBrandHistory {
+  @Prop({ type: Object })
+  title: Lang;
+  @Prop({ type: Object })
+  subtitle: Lang;
+  @Prop()
+  position: number;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
+  brand: ModelBrand;
+  @Prop({ default: true })
+  is_active?: boolean;
+}
+export const ModelBrandHistorySchema =
+  SchemaFactory.createForClass(ModelBrandHistory);
