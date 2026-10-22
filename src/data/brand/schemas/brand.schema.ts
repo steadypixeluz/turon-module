@@ -66,7 +66,7 @@ export class ModelBrandImage {
 
 export const ModelBrandImageSchema =
   SchemaFactory.createForClass(ModelBrandImage);
-
+@Schema({ collection: "brand-history", timestamps: true })
 export class ModelBrandHistory {
   @Prop({ type: Object })
   title: Lang;
