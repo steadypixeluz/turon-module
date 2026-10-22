@@ -20,8 +20,8 @@ let ModelBrandType = class ModelBrandType {
 };
 exports.ModelBrandType = ModelBrandType;
 __decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
 ], ModelBrandType.prototype, "title", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),

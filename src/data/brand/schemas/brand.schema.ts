@@ -4,8 +4,8 @@ import { ModelCountry } from "../../../data/country";
 import { Lang } from "../../../data/interfaces/lang";
 @Schema({ collection: "brand-type", timestamps: true })
 export class ModelBrandType {
-  @Prop()
-  title: string;
+  @Prop({ type: Object })
+  title: Lang;
   @Prop()
   position: number;
   @Prop({ default: true })
@@ -13,9 +13,8 @@ export class ModelBrandType {
   @Prop()
   color: string;
 }
-export const ModelBrandTypeSchema =SchemaFactory.createForClass(ModelBrandType);
-
-
+export const ModelBrandTypeSchema =
+  SchemaFactory.createForClass(ModelBrandType);
 
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
@@ -50,8 +49,6 @@ export class ModelBrand {
 }
 
 export const ModelParetnerSchema = SchemaFactory.createForClass(ModelBrand);
-
-
 
 @Schema({ collection: "brand-image", timestamps: true })
 export class ModelBrandImage {
