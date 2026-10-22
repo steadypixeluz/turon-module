@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
+exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const country_1 = require("../../../data/country");
@@ -39,6 +39,26 @@ exports.ModelBrandType = ModelBrandType = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand-type", timestamps: true })
 ], ModelBrandType);
 exports.ModelBrandTypeSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandType);
+class ModelBrandHistory {
+}
+exports.ModelBrandHistory = ModelBrandHistory;
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBrandHistory.prototype, "title", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBrandHistory.prototype, "subtitle", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelBrandHistory.prototype, "position", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: true }),
+    __metadata("design:type", Boolean)
+], ModelBrandHistory.prototype, "is_active", void 0);
+exports.ModelBrandHistorySchema = mongoose_1.SchemaFactory.createForClass(ModelBrandHistory);
 let ModelBrand = class ModelBrand {
 };
 exports.ModelBrand = ModelBrand;

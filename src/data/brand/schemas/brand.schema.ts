@@ -16,6 +16,19 @@ export class ModelBrandType {
 export const ModelBrandTypeSchema =
   SchemaFactory.createForClass(ModelBrandType);
 
+export class ModelBrandHistory {
+  @Prop({ type: Object })
+  title: Lang;
+  @Prop({ type: Object })
+  subtitle: Lang;
+  @Prop()
+  position: number;
+  @Prop({ default: true })
+  is_active?: boolean;
+}
+export const ModelBrandHistorySchema =
+  SchemaFactory.createForClass(ModelBrandHistory);
+
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
   @Prop()

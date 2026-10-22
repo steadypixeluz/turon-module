@@ -65,7 +65,7 @@ export {
   ModelStoreBazaarAssignmentSchema,
   ModelBrand,
   ModelParetnerSchema,
-  ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,
+  ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,ModelBrandHistory,ModelBrandHistorySchema,
   ModelBuyCoin,
   ModelBuyCoinSchema,
   ModelCart,
