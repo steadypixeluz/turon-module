@@ -129,8 +129,8 @@ exports.ModelBrandImage = ModelBrandImage = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand-image", timestamps: true })
 ], ModelBrandImage);
 exports.ModelBrandImageSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandImage);
-class ModelBrandHistory {
-}
+let ModelBrandHistory = class ModelBrandHistory {
+};
 exports.ModelBrandHistory = ModelBrandHistory;
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
@@ -152,4 +152,7 @@ __decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
 ], ModelBrandHistory.prototype, "is_active", void 0);
+exports.ModelBrandHistory = ModelBrandHistory = __decorate([
+    (0, mongoose_1.Schema)({ collection: "brand-history", timestamps: true })
+], ModelBrandHistory);
 exports.ModelBrandHistorySchema = mongoose_1.SchemaFactory.createForClass(ModelBrandHistory);
