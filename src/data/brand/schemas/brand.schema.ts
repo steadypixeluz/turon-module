@@ -1,11 +1,30 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { ModelCountry } from "src/data/country";
+import { Lang } from "src/data/interfaces/lang";
 
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
   @Prop()
   photo?: string;
   @Prop()
+  logo?: string;
+  @Prop()
   title: string;
+  @Prop({ type: Object })
+  subtitle: Lang;
+  @Prop({ type: Object })
+  about: Lang;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "type", index: true })
+  type: ModelBrandType;
+  @Prop({ default: true })
+  official_brand?: boolean;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "country" })
+  country: ModelCountry;
+  @Prop()
+  founded: string;
+  @Prop()
+  website: string;
   @Prop()
   position: number;
   @Prop({ default: true })
@@ -17,3 +36,34 @@ export class ModelBrand {
 }
 
 export const ModelParetnerSchema = SchemaFactory.createForClass(ModelBrand);
+
+@Schema({ collection: "brand-type", timestamps: true })
+export class ModelBrandType {
+  @Prop()
+  title: string;
+  @Prop()
+  position: number;
+  @Prop({ default: true })
+  is_active?: boolean;
+  @Prop()
+  color: string;
+}
+export const ModelBrandTypeSchema =SchemaFactory.createForClass(ModelBrandType);
+
+
+@Schema({ collection: "brand-image", timestamps: true })
+export class ModelBrandImage {
+  @Prop()
+  photo?: string;
+  @Prop({ type: Object })
+  image_data?: Object;
+  @Prop()
+  position: number;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
+  post: ModelBrand;
+  @Prop({ default: false })
+  is_main?: boolean;
+}
+
+export const ModelBrandImageSchema =
+  SchemaFactory.createForClass(ModelBrandImage);

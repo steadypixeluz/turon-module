@@ -37,7 +37,10 @@ export {
   ModelStoreBazaarAssignment,
   ModelStoreBazaarAssignmentSchema,
 } from "./store-bazaar-assignment";
-export { ModelBrand, ModelParetnerSchema } from "./brand";
+export { ModelBrand, ModelParetnerSchema,
+
+  ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema
+ } from "./brand";
 export { ModelBuyCoin, ModelBuyCoinSchema } from "./buy-coin";
 export {
   ModelCart,
