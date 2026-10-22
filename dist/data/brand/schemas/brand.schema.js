@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
+exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const country_1 = require("../../../data/country");
@@ -39,33 +39,6 @@ exports.ModelBrandType = ModelBrandType = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand-type", timestamps: true })
 ], ModelBrandType);
 exports.ModelBrandTypeSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandType);
-let ModelBrandImage = class ModelBrandImage {
-};
-exports.ModelBrandImage = ModelBrandImage;
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", String)
-], ModelBrandImage.prototype, "photo", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: Object }),
-    __metadata("design:type", Object)
-], ModelBrandImage.prototype, "image_data", void 0);
-__decorate([
-    (0, mongoose_1.Prop)(),
-    __metadata("design:type", Number)
-], ModelBrandImage.prototype, "position", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "brand" }),
-    __metadata("design:type", ModelBrand)
-], ModelBrandImage.prototype, "post", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ default: false }),
-    __metadata("design:type", Boolean)
-], ModelBrandImage.prototype, "is_main", void 0);
-exports.ModelBrandImage = ModelBrandImage = __decorate([
-    (0, mongoose_1.Schema)({ collection: "brand-image", timestamps: true })
-], ModelBrandImage);
-exports.ModelBrandImageSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandImage);
 let ModelBrand = class ModelBrand {
 };
 exports.ModelBrand = ModelBrand;
@@ -129,3 +102,30 @@ exports.ModelBrand = ModelBrand = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand", timestamps: true })
 ], ModelBrand);
 exports.ModelParetnerSchema = mongoose_1.SchemaFactory.createForClass(ModelBrand);
+let ModelBrandImage = class ModelBrandImage {
+};
+exports.ModelBrandImage = ModelBrandImage;
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandImage.prototype, "photo", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBrandImage.prototype, "image_data", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelBrandImage.prototype, "position", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "brand" }),
+    __metadata("design:type", ModelBrand)
+], ModelBrandImage.prototype, "post", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelBrandImage.prototype, "is_main", void 0);
+exports.ModelBrandImage = ModelBrandImage = __decorate([
+    (0, mongoose_1.Schema)({ collection: "brand-image", timestamps: true })
+], ModelBrandImage);
+exports.ModelBrandImageSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandImage);

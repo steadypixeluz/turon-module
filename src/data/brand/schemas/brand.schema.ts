@@ -17,23 +17,6 @@ export const ModelBrandTypeSchema =SchemaFactory.createForClass(ModelBrandType);
 
 
 
-@Schema({ collection: "brand-image", timestamps: true })
-export class ModelBrandImage {
-  @Prop()
-  photo?: string;
-  @Prop({ type: Object })
-  image_data?: Object;
-  @Prop()
-  position: number;
-  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
-  post: ModelBrand;
-  @Prop({ default: false })
-  is_main?: boolean;
-}
-
-export const ModelBrandImageSchema =
-  SchemaFactory.createForClass(ModelBrandImage);
-
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
   @Prop()
@@ -69,3 +52,20 @@ export class ModelBrand {
 export const ModelParetnerSchema = SchemaFactory.createForClass(ModelBrand);
 
 
+
+@Schema({ collection: "brand-image", timestamps: true })
+export class ModelBrandImage {
+  @Prop()
+  photo?: string;
+  @Prop({ type: Object })
+  image_data?: Object;
+  @Prop()
+  position: number;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
+  post: ModelBrand;
+  @Prop({ default: false })
+  is_main?: boolean;
+}
+
+export const ModelBrandImageSchema =
+  SchemaFactory.createForClass(ModelBrandImage);
