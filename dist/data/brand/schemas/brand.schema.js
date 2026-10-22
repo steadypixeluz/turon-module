@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelBrandTypeSchema = exports.ModelBrandType = exports.ModelParetnerSchema = exports.ModelBrand = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
-const country_1 = require("src/data/country");
+const country_1 = require("../../../data/country");
 let ModelBrand = class ModelBrand {
 };
 exports.ModelBrand = ModelBrand;
