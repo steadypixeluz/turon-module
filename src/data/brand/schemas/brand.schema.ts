@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
-import { ModelCountry } from "src/data/country";
-import { Lang } from "src/data/interfaces/lang";
+import { ModelCountry } from "../../../data/country";
+import { Lang } from "../../../data/interfaces/lang";
 
 @Schema({ collection: "brand", timestamps: true })
 export class ModelBrand {
