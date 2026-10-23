@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
+exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandVideoSchema = exports.ModelBrandVideo = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const country_1 = require("../../../data/country");
@@ -129,6 +129,49 @@ exports.ModelBrandImage = ModelBrandImage = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand-image", timestamps: true })
 ], ModelBrandImage);
 exports.ModelBrandImageSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandImage);
+let ModelBrandVideo = class ModelBrandVideo {
+};
+exports.ModelBrandVideo = ModelBrandVideo;
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVideo.prototype, "file", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVideo.prototype, "poster", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVideo.prototype, "link", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVideo.prototype, "iframe", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBrandVideo.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: Object }),
+    __metadata("design:type", Object)
+], ModelBrandVideo.prototype, "file_data", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelBrandVideo.prototype, "position", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "brand" }),
+    __metadata("design:type", ModelBrand)
+], ModelBrandVideo.prototype, "brand", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelBrandVideo.prototype, "is_main", void 0);
+exports.ModelBrandVideo = ModelBrandVideo = __decorate([
+    (0, mongoose_1.Schema)({ collection: "brand-video", timestamps: true })
+], ModelBrandVideo);
+exports.ModelBrandVideoSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandVideo);
 let ModelBrandHistory = class ModelBrandHistory {
 };
 exports.ModelBrandHistory = ModelBrandHistory;

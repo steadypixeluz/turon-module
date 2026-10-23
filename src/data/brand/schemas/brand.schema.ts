@@ -66,6 +66,32 @@ export class ModelBrandImage {
 
 export const ModelBrandImageSchema =
   SchemaFactory.createForClass(ModelBrandImage);
+
+@Schema({ collection: "brand-video", timestamps: true })
+export class ModelBrandVideo {
+  @Prop()
+  file?: string;
+  @Prop()
+  poster?: string;
+  @Prop()
+  link?: string;
+  @Prop()
+  iframe?: string;
+  @Prop({ type: Object })
+  name?: Lang;
+  @Prop({ type: Object })
+  file_data?: Object;
+  @Prop()
+  position: number;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
+  brand: ModelBrand;
+  @Prop({ default: false })
+  is_main?: boolean;
+}
+
+export const ModelBrandVideoSchema =
+  SchemaFactory.createForClass(ModelBrandVideo);
+
 @Schema({ collection: "brand-history", timestamps: true })
 export class ModelBrandHistory {
   @Prop({ type: Object })

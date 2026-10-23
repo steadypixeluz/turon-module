@@ -38,7 +38,7 @@ export {
   ModelStoreBazaarAssignmentSchema,
 } from "./store-bazaar-assignment";
 export { ModelBrand, ModelParetnerSchema,
-ModelBrandHistory,ModelBrandHistorySchema,
+ModelBrandHistory,ModelBrandHistorySchema,ModelBrandVideo,ModelBrandVideoSchema,
   ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema
  } from "./brand";
 export { ModelBuyCoin, ModelBuyCoinSchema } from "./buy-coin";
