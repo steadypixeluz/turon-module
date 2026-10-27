@@ -39,7 +39,7 @@ export {
 } from "./store-bazaar-assignment";
 export { ModelBrand, ModelParetnerSchema,
 ModelBrandHistory,ModelBrandHistorySchema,ModelBrandVideo,ModelBrandVideoSchema,
-  ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema
+  ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,ModelBrandVerification,ModelBrandVerificationSchema
  } from "./brand";
 export { ModelBuyCoin, ModelBuyCoinSchema } from "./buy-coin";
 export {

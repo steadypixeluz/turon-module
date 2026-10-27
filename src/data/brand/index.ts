@@ -1,1 +1,1 @@
-export {ModelBrand,ModelParetnerSchema,ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,ModelBrandHistory,ModelBrandHistorySchema,ModelBrandVideo,ModelBrandVideoSchema} from './schemas/brand.schema'
+export {ModelBrand,ModelParetnerSchema,ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,ModelBrandHistory,ModelBrandHistorySchema,ModelBrandVideo,ModelBrandVideoSchema,ModelBrandVerification,ModelBrandVerificationSchema} from './schemas/brand.schema'

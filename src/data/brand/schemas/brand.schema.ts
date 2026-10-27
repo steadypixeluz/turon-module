@@ -2,6 +2,8 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { ModelCountry } from "../../../data/country";
 import { Lang } from "../../../data/interfaces/lang";
+import { BrandStatus } from "../../../enums/order-status.enum";
+import { ModelStore } from "../../../data/store";
 @Schema({ collection: "brand-type", timestamps: true })
 export class ModelBrandType {
   @Prop({ type: Object })
@@ -107,3 +109,25 @@ export class ModelBrandHistory {
 }
 export const ModelBrandHistorySchema =
   SchemaFactory.createForClass(ModelBrandHistory);
+
+@Schema({ collection: "brand-verification", timestamps: true })
+export class ModelBrandVerification {
+  @Prop()
+  file?: string;
+  @Prop()
+  description: string;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "brand" })
+  brand: ModelBrand;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "store" })
+  store: ModelStore;
+  @Prop({
+    type: String,
+    enum: BrandStatus,
+    default: BrandStatus.new,
+  })
+  status: BrandStatus;
+  @Prop({type:String, enum:['official_supplier','dealer','distributors','manufacturer'] })
+  type:string
+}
+export const ModelBrandVerificationSchema =
+  SchemaFactory.createForClass(ModelBrandVerification);

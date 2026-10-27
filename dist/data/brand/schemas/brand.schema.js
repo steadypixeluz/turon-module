@@ -12,10 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandVideoSchema = exports.ModelBrandVideo = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
+exports.ModelBrandVerificationSchema = exports.ModelBrandVerification = exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandVideoSchema = exports.ModelBrandVideo = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelParetnerSchema = exports.ModelBrand = exports.ModelBrandTypeSchema = exports.ModelBrandType = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const country_1 = require("../../../data/country");
+const order_status_enum_1 = require("../../../enums/order-status.enum");
+const store_1 = require("../../../data/store");
 let ModelBrandType = class ModelBrandType {
 };
 exports.ModelBrandType = ModelBrandType;
@@ -199,3 +201,38 @@ exports.ModelBrandHistory = ModelBrandHistory = __decorate([
     (0, mongoose_1.Schema)({ collection: "brand-history", timestamps: true })
 ], ModelBrandHistory);
 exports.ModelBrandHistorySchema = mongoose_1.SchemaFactory.createForClass(ModelBrandHistory);
+let ModelBrandVerification = class ModelBrandVerification {
+};
+exports.ModelBrandVerification = ModelBrandVerification;
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVerification.prototype, "file", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelBrandVerification.prototype, "description", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "brand" }),
+    __metadata("design:type", ModelBrand)
+], ModelBrandVerification.prototype, "brand", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "store" }),
+    __metadata("design:type", store_1.ModelStore)
+], ModelBrandVerification.prototype, "store", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: String,
+        enum: order_status_enum_1.BrandStatus,
+        default: order_status_enum_1.BrandStatus.new,
+    }),
+    __metadata("design:type", String)
+], ModelBrandVerification.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: String, enum: ['official_supplier', 'dealer', 'distributors', 'manufacturer'] }),
+    __metadata("design:type", String)
+], ModelBrandVerification.prototype, "type", void 0);
+exports.ModelBrandVerification = ModelBrandVerification = __decorate([
+    (0, mongoose_1.Schema)({ collection: "brand-verification", timestamps: true })
+], ModelBrandVerification);
+exports.ModelBrandVerificationSchema = mongoose_1.SchemaFactory.createForClass(ModelBrandVerification);

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.OrderInfoStatus = exports.OrderStatus = void 0;
+exports.OrderProductStatus = exports.OrderWholesaleStatus = exports.BrandStatus = exports.OrderInfoStatus = exports.OrderStatus = void 0;
 var OrderStatus;
 (function (OrderStatus) {
     OrderStatus["draft"] = "draft";
@@ -19,6 +19,12 @@ var OrderInfoStatus;
     OrderInfoStatus["completed"] = "completed";
     OrderInfoStatus["cancelled"] = "cancelled";
 })(OrderInfoStatus || (exports.OrderInfoStatus = OrderInfoStatus = {}));
+var BrandStatus;
+(function (BrandStatus) {
+    BrandStatus["new"] = "new";
+    BrandStatus["completed"] = "completed";
+    BrandStatus["rejected"] = "rejected";
+})(BrandStatus || (exports.BrandStatus = BrandStatus = {}));
 var OrderWholesaleStatus;
 (function (OrderWholesaleStatus) {
     OrderWholesaleStatus["draft"] = "draft";

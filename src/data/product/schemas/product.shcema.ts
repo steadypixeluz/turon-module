@@ -1,18 +1,18 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { PRICE_TYPE, ProductType, StatusType, SaleType } from '../../../enums';
-import { ModelColor } from '../../color';
-import { ModelCountry } from '../../country';
-import { ModelCustomerCompany } from '../../customer-company';
-import { Lang } from '../../interfaces';
-import { ModelMenu } from '../../menu';
-import { ModelTag } from '../../tag';
-import { ModelVariationSelect } from '../../variation-select';
-import { ModelBrand, ModelStore, ModelWarehouse } from '../../../data';
-import { ModelPsic } from '../../psic';
-import { ModelPriceTier, ModelPriceTierSchema } from './price-tier.schema';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { PRICE_TYPE, ProductType, StatusType, SaleType } from "../../../enums";
+import { ModelColor } from "../../color";
+import { ModelCountry } from "../../country";
+import { ModelCustomerCompany } from "../../customer-company";
+import { Lang } from "../../interfaces";
+import { ModelMenu } from "../../menu";
+import { ModelTag } from "../../tag";
+import { ModelVariationSelect } from "../../variation-select";
+import { ModelBrand, ModelStore, ModelWarehouse } from "../../../data";
+import { ModelPsic } from "../../psic";
+import { ModelPriceTier, ModelPriceTierSchema } from "./price-tier.schema";
 
-@Schema({ collection: 'product-info', timestamps: true })
+@Schema({ collection: "product-info", timestamps: true })
 export class ModelProductInfo {
   @Prop({ unique: true })
   uid: number;
@@ -30,7 +30,7 @@ export class ModelProductInfo {
   comment_count: number;
   @Prop({ default: 5 })
   rating: number;
-  @Prop({ type: 'string', enum: PRICE_TYPE })
+  @Prop({ type: "string", enum: PRICE_TYPE })
   price_type: string;
   @Prop()
   min_unit: number;
@@ -42,7 +42,7 @@ export class ModelProductInfo {
   box_length: number;
   @Prop()
   box_height: number;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Psic' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Psic" })
   psic: ModelPsic;
   @Prop({ default: 0 })
   vat_percent: string;
@@ -50,9 +50,9 @@ export class ModelProductInfo {
   package_code: string;
   @Prop()
   status_description: string;
-  @Prop({ type: 'string', enum: StatusType })
+  @Prop({ type: "string", enum: StatusType })
   status: string;
-  @Prop({ type: 'string', enum: ProductType, default: ProductType.retail })
+  @Prop({ type: "string", enum: ProductType, default: ProductType.retail })
   showcase: string;
   @Prop({ default: null })
   position: number;
@@ -60,29 +60,29 @@ export class ModelProductInfo {
   views: number;
   @Prop({ type: Array, default: [] })
   images: string[];
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Menu" })
   menu: ModelMenu;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Brand' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Brand" })
   brand: ModelBrand;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Tag' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Tag" })
   tags: ModelTag;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Color' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Color" })
   colors: ModelColor;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'country' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "country" })
   country: ModelCountry;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'country' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "country" })
   company_country: ModelCountry;
   @Prop()
   menu_uid: string;
-  @Prop({ type: 'string', enum: ['external', 'internal'], default: 'internal' })
+  @Prop({ type: "string", enum: ["external", "internal"], default: "internal" })
   delivery_origin_type: string;
   @Prop({ default: true })
   is_active: boolean;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customer_company' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customer_company" })
   customer_company: ModelCustomerCompany;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "stores" })
   store: ModelStore;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'warehouses' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "warehouses" })
   warehouse: ModelWarehouse;
   @Prop({ default: false })
   is_deleted: boolean;
@@ -93,7 +93,12 @@ export class ModelProductInfo {
 export const ModelProductInfoSchema =
   SchemaFactory.createForClass(ModelProductInfo);
 
-ModelProductInfoSchema.index({ is_deleted: 1, is_active: 1, status: 1, showcase: 1 });
+ModelProductInfoSchema.index({
+  is_deleted: 1,
+  is_active: 1,
+  status: 1,
+  showcase: 1,
+});
 ModelProductInfoSchema.index({
   company_country: 1,
   is_deleted: 1,
@@ -109,11 +114,11 @@ ModelProductInfoSchema.index({
   status: 1,
 });
 
-@Schema({ collection: 'product', timestamps: true })
+@Schema({ collection: "product", timestamps: true })
 export class ModelProduct {
   @Prop({ unique: true })
   uid: number;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "stores" })
   store: ModelStore;
   @Prop()
   images: string[];
@@ -127,19 +132,19 @@ export class ModelProduct {
   sale_price: number;
   @Prop({ default: 0 })
   sale: number;
-  @Prop({ type: 'string', enum: SaleType })
+  @Prop({ type: "string", enum: SaleType })
   sale_type: string;
   @Prop({ default: true })
   is_active: boolean;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Menu" })
   menu: ModelMenu;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Color' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Color" })
   color: ModelColor;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'product_info' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "product_info" })
   product_info: ModelProductInfo;
-  @Prop({ type: 'string', enum: StatusType })
+  @Prop({ type: "string", enum: StatusType })
   status: string;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'country' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "country" })
   country: ModelCountry;
 
   @Prop({ default: false })
@@ -160,9 +165,14 @@ ModelProductSchema.index({
   is_main: 1,
   createdAt: -1,
 });
-ModelProductSchema.index({ is_deleted: 1, is_active: 1, status: 1, product_info: 1 });
+ModelProductSchema.index({
+  is_deleted: 1,
+  is_active: 1,
+  status: 1,
+  product_info: 1,
+});
 
-@Schema({ collection: 'sub-product', timestamps: true })
+@Schema({ collection: "sub-product", timestamps: true })
 export class ModelSubProduct {
   @Prop({ unique: true })
   uid: number;
@@ -170,7 +180,7 @@ export class ModelSubProduct {
   count: number;
   @Prop({ default: 0 })
   price: number;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'stores' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "stores" })
   store: ModelStore;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
@@ -180,13 +190,13 @@ export class ModelSubProduct {
   sale: number;
   @Prop({ default: 0 })
   sale_price: number;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Psic' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Psic" })
   psic: ModelPsic;
   @Prop()
   vat_percent: string;
   @Prop()
   package_code: string;
-  @Prop({ type: 'string', enum: SaleType })
+  @Prop({ type: "string", enum: SaleType })
   sale_type: string;
   @Prop({ default: true })
   is_active: boolean;
@@ -198,11 +208,11 @@ export class ModelSubProduct {
   box_length: number;
   @Prop()
   box_height: number;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Product' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Product" })
   product: ModelProduct;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'variations' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "variations" })
   variations: ModelVariationSelect;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'product_info' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "product_info" })
   product_info: ModelProductInfo;
   @Prop({ default: false })
   is_deleted: boolean;

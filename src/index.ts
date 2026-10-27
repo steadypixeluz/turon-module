@@ -66,6 +66,7 @@ export {
   ModelBrand,
   ModelParetnerSchema,
   ModelBrandType,ModelBrandTypeSchema,ModelBrandImage,ModelBrandImageSchema,ModelBrandHistory,ModelBrandHistorySchema,ModelBrandVideo,ModelBrandVideoSchema,
+  ModelBrandVerification,ModelBrandVerificationSchema,
   ModelBuyCoin,
   ModelBuyCoinSchema,
   ModelCart,

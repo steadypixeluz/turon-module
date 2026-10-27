@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ModelBrandVideoSchema = exports.ModelBrandVideo = exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelBrandTypeSchema = exports.ModelBrandType = exports.ModelParetnerSchema = exports.ModelBrand = void 0;
+exports.ModelBrandVerificationSchema = exports.ModelBrandVerification = exports.ModelBrandVideoSchema = exports.ModelBrandVideo = exports.ModelBrandHistorySchema = exports.ModelBrandHistory = exports.ModelBrandImageSchema = exports.ModelBrandImage = exports.ModelBrandTypeSchema = exports.ModelBrandType = exports.ModelParetnerSchema = exports.ModelBrand = void 0;
 var brand_schema_1 = require("./schemas/brand.schema");
 Object.defineProperty(exports, "ModelBrand", { enumerable: true, get: function () { return brand_schema_1.ModelBrand; } });
 Object.defineProperty(exports, "ModelParetnerSchema", { enumerable: true, get: function () { return brand_schema_1.ModelParetnerSchema; } });
@@ -12,3 +12,5 @@ Object.defineProperty(exports, "ModelBrandHistory", { enumerable: true, get: fun
 Object.defineProperty(exports, "ModelBrandHistorySchema", { enumerable: true, get: function () { return brand_schema_1.ModelBrandHistorySchema; } });
 Object.defineProperty(exports, "ModelBrandVideo", { enumerable: true, get: function () { return brand_schema_1.ModelBrandVideo; } });
 Object.defineProperty(exports, "ModelBrandVideoSchema", { enumerable: true, get: function () { return brand_schema_1.ModelBrandVideoSchema; } });
+Object.defineProperty(exports, "ModelBrandVerification", { enumerable: true, get: function () { return brand_schema_1.ModelBrandVerification; } });
+Object.defineProperty(exports, "ModelBrandVerificationSchema", { enumerable: true, get: function () { return brand_schema_1.ModelBrandVerificationSchema; } });

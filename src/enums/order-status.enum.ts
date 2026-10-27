@@ -15,7 +15,11 @@ export enum OrderInfoStatus {
   completed = 'completed',
   cancelled='cancelled'
 }
-
+export enum BrandStatus {
+  new = 'new',
+  completed = 'completed',
+  rejected='rejected'
+}
 export enum OrderWholesaleStatus {
   draft = 'draft',                     // Черновик
   new = 'new',                       // Новый
