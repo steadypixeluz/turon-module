@@ -28,8 +28,8 @@ __decorate([
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "banner", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
-    __metadata("design:type", String)
+    (0, mongoose_1.Prop)({ type: Object, required: true }),
+    __metadata("design:type", Object)
 ], ModelBazaar.prototype, "name", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object }),
@@ -44,7 +44,11 @@ __decorate([
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "color", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Country', required: true }),
+    (0, mongoose_1.Prop)({
+        type: mongoose_2.default.Schema.Types.ObjectId,
+        ref: "Country",
+        required: true,
+    }),
     __metadata("design:type", country_schema_1.ModelCountry)
 ], ModelBazaar.prototype, "country", void 0);
 __decorate([
@@ -72,6 +76,6 @@ __decorate([
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "deleted_at", void 0);
 exports.ModelBazaar = ModelBazaar = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'bazaar', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "bazaar", timestamps: true })
 ], ModelBazaar);
 exports.ModelBazaarSchema = mongoose_1.SchemaFactory.createForClass(ModelBazaar);

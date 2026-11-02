@@ -1,9 +1,9 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { ModelCountry } from '../../country/schemas/country.schema';
-import { Lang } from '../../interfaces';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { ModelCountry } from "../../country/schemas/country.schema";
+import { Lang } from "../../interfaces";
 
-@Schema({ collection: 'bazaar', timestamps: true })
+@Schema({ collection: "bazaar", timestamps: true })
 export class ModelBazaar {
   @Prop()
   logo: string;
@@ -11,8 +11,8 @@ export class ModelBazaar {
   @Prop()
   banner: string;
 
-  @Prop({ required: true })
-  name: string;
+  @Prop({ type: Object, required: true })
+  name: Lang;
 
   @Prop({ type: Object })
   description: Lang;
@@ -23,7 +23,11 @@ export class ModelBazaar {
   @Prop()
   color: string;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Country', required: true })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Country",
+    required: true,
+  })
   country: ModelCountry;
 
   @Prop({ type: Object })
