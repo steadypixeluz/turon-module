@@ -1,5 +1,13 @@
-import { IsObject, IsOptional, IsString } from 'class-validator';
-import { Lang } from '../../interfaces';
+import {
+  ArrayUnique,
+  IsArray,
+  IsEnum,
+  IsObject,
+  IsOptional,
+  IsString,
+} from "class-validator";
+import { Lang } from "../../interfaces";
+import { ProductType } from "../../../enums";
 
 export class CreateBazaarDto {
   @IsString()
@@ -9,7 +17,10 @@ export class CreateBazaarDto {
   @IsString()
   @IsOptional()
   banner: string;
-
+  @IsArray()
+  @IsEnum(ProductType, { each: true })
+  @ArrayUnique()
+  showcase: ProductType[];
   @IsString()
   name: string;
 

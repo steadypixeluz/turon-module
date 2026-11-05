@@ -16,6 +16,7 @@ exports.ModelBazaarSchema = exports.ModelBazaar = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const country_schema_1 = require("../../country/schemas/country.schema");
+const enums_1 = require("../../../enums");
 let ModelBazaar = class ModelBazaar {
 };
 exports.ModelBazaar = ModelBazaar;
@@ -27,6 +28,13 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelBazaar.prototype, "banner", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        type: [{ type: String, enum: Object.values(enums_1.ProductType) }],
+        default: [],
+    }),
+    __metadata("design:type", Array)
+], ModelBazaar.prototype, "showcase", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: Object, required: true }),
     __metadata("design:type", Object)

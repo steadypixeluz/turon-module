@@ -2,6 +2,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { ModelCountry } from "../../country/schemas/country.schema";
 import { Lang } from "../../interfaces";
+import { ProductType } from "../../../enums";
 
 @Schema({ collection: "bazaar", timestamps: true })
 export class ModelBazaar {
@@ -10,7 +11,11 @@ export class ModelBazaar {
 
   @Prop()
   banner: string;
-
+  @Prop({
+    type: [{ type: String, enum: Object.values(ProductType) }],
+    default: [],
+  })
+  showcase: ProductType[];
   @Prop({ type: Object, required: true })
   name: Lang;
 
