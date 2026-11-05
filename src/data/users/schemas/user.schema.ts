@@ -1,7 +1,9 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Role } from '../../../enums';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Role } from "../../../enums";
+import mongoose from "mongoose";
+import { ModelCountry } from "../../../data/country";
 
-@Schema({ collection: 'users', timestamps: true })
+@Schema({ collection: "users", timestamps: true })
 export class ModelUser {
   @Prop({ required: true })
   password?: string;
@@ -13,6 +15,8 @@ export class ModelUser {
   full_name: string;
   @Prop({ default: Role.admin })
   role: Role;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "Country" })
+  country: ModelCountry;
   @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: true })

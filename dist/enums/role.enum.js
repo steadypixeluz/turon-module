@@ -6,4 +6,5 @@ var Role;
     Role["admin"] = "admin";
     Role["moderator"] = "moderator";
     Role["super-admin"] = "super-admin";
+    Role["representative"] = "representative";
 })(Role || (exports.Role = Role = {}));

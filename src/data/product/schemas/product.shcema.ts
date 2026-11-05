@@ -85,6 +85,8 @@ export class ModelProductInfo {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "warehouses" })
   warehouse: ModelWarehouse;
   @Prop({ default: false })
+  foreign: boolean;
+  @Prop({ default: false })
   is_deleted: boolean;
   @Prop({ default: null })
   deleted_at: string;
@@ -124,6 +126,8 @@ export class ModelProduct {
   images: string[];
   @Prop()
   price: number;
+    @Prop({ default: false })
+  foreign: boolean;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
   @Prop({ default: false })
@@ -180,6 +184,8 @@ export class ModelSubProduct {
   count: number;
   @Prop({ default: 0 })
   price: number;
+    @Prop({ default: false })
+  foreign: boolean;
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "stores" })
   store: ModelStore;
   @Prop({ type: [ModelPriceTierSchema], default: [] })

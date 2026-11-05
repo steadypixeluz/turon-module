@@ -8,10 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ModelUserSchema = exports.ModelUser = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const enums_1 = require("../../../enums");
+const mongoose_2 = __importDefault(require("mongoose"));
+const country_1 = require("../../../data/country");
 let ModelUser = class ModelUser {
 };
 exports.ModelUser = ModelUser;
@@ -36,6 +41,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelUser.prototype, "role", void 0);
 __decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "Country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelUser.prototype, "country", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], ModelUser.prototype, "is_deleted", void 0);
@@ -44,6 +53,6 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelUser.prototype, "is_active", void 0);
 exports.ModelUser = ModelUser = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'users', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "users", timestamps: true })
 ], ModelUser);
 exports.ModelUserSchema = mongoose_1.SchemaFactory.createForClass(ModelUser);

@@ -171,6 +171,10 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
+], ModelProductInfo.prototype, "foreign", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
 ], ModelProductInfo.prototype, "is_deleted", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: null }),
@@ -219,6 +223,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelProduct.prototype, "price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelProduct.prototype, "foreign", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: [price_tier_schema_1.ModelPriceTierSchema], default: [] }),
     __metadata("design:type", Array)
@@ -308,6 +316,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: 0 }),
     __metadata("design:type", Number)
 ], ModelSubProduct.prototype, "price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelSubProduct.prototype, "foreign", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "stores" }),
     __metadata("design:type", data_1.ModelStore)
