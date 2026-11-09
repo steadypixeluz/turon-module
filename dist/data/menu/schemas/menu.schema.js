@@ -24,6 +24,10 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelMenu.prototype, "uid", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelMenu.prototype, "state_duty", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ type: Object }),
     __metadata("design:type", Object)
 ], ModelMenu.prototype, "title", void 0);
@@ -48,7 +52,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMenu.prototype, "svg_icon", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: enums_1.MenuType }),
+    (0, mongoose_1.Prop)({ type: "string", enum: enums_1.MenuType }),
     __metadata("design:type", String)
 ], ModelMenu.prototype, "type", void 0);
 __decorate([
@@ -60,7 +64,7 @@ __decorate([
     __metadata("design:type", String)
 ], ModelMenu.prototype, "group", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Menu', index: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "Menu", index: true }),
     __metadata("design:type", ModelMenu)
 ], ModelMenu.prototype, "menu", void 0);
 __decorate([
@@ -100,6 +104,6 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelMenu.prototype, "is_deleted", void 0);
 exports.ModelMenu = ModelMenu = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'menu', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "menu", timestamps: true })
 ], ModelMenu);
 exports.ModelMenuSchema = mongoose_1.SchemaFactory.createForClass(ModelMenu);

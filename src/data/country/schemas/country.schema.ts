@@ -5,7 +5,10 @@ import { Lang } from '../../interfaces';
 export class ModelCountry {
   @Prop({ type: Object })
   name: Lang;
-
+  @Prop()
+  min_delivery_day:number
+  @Prop()
+  max_delivery_day:number
   @Prop()
   photo: string;
   @Prop({ default: true })

@@ -20,6 +20,14 @@ __decorate([
 ], ModelCountry.prototype, "name", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelCountry.prototype, "min_delivery_day", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelCountry.prototype, "max_delivery_day", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelCountry.prototype, "photo", void 0);
 __decorate([

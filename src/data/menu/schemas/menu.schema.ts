@@ -1,14 +1,16 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { MenuType, MenuDataType } from '../../../enums';
-import { Lang } from '../../interfaces';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { MenuType, MenuDataType } from "../../../enums";
+import { Lang } from "../../interfaces";
 
-@Schema({ collection: 'menu', timestamps: true })
+@Schema({ collection: "menu", timestamps: true })
 export class ModelMenu {
   _id: string;
 
   @Prop({ unique: true })
   uid: number;
+  @Prop()
+  state_duty: number;
 
   @Prop({ type: Object })
   title: Lang;
@@ -22,13 +24,13 @@ export class ModelMenu {
   link: string;
   @Prop()
   svg_icon: string;
-  @Prop({ type: 'string', enum: MenuType })
+  @Prop({ type: "string", enum: MenuType })
   type: string;
   @Prop({ type: [String], enum: MenuDataType, index: true })
   datatype: MenuDataType[];
   @Prop()
   group: string;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Menu', index: true })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Menu", index: true })
   menu: ModelMenu;
   @Prop()
   photo: string;
