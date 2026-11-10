@@ -1,17 +1,17 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { OrderInfoStatus } from '../../../enums';
-import { ModelAddress } from '../../address';
-import { ModelCustomers } from '../../customer';
-import { ModelPickupPoint } from '../../pickup-point';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { OrderInfoStatus } from "../../../enums";
+import { ModelAddress } from "../../address";
+import { ModelCustomers } from "../../customer";
+import { ModelPickupPoint } from "../../pickup-point";
 
-@Schema({ collection: 'order-info', timestamps: true })
+@Schema({ collection: "order-info", timestamps: true })
 export class ModelOrderInfo {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })
   customer: ModelCustomers;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'pickup_point' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "pickup_point" })
   pickup_point: ModelPickupPoint;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'address' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "address" })
   address: ModelAddress;
   @Prop()
   address_name: string;
@@ -19,22 +19,26 @@ export class ModelOrderInfo {
   sale_price: number;
   @Prop()
   coin_count: number;
-    @Prop()
+  @Prop()
   wallet: number;
   @Prop()
-  payable:number
-    @Prop()
-  state_duty:number
+  payable: number;
   @Prop()
-  share:number
+  state_duty: number;
+  @Prop()
+  receiver_passport_number: string;
+  @Prop()
+  receiver_passport_id: string;
+  @Prop()
+  share: number;
   @Prop()
   carts: [string];
   @Prop()
   order_id: number;
   @Prop({
-    type: 'string',
-    enum: ['cash', 'payme', 'click', 'coin'],
-    default: 'cash',
+    type: "string",
+    enum: ["cash", "payme", "click", "coin"],
+    default: "cash",
   })
   payment_type: string;
   @Prop()
@@ -45,18 +49,18 @@ export class ModelOrderInfo {
   date: string;
   @Prop()
   delivery_price: number;
-  @Prop({default: false})
-  foreign:boolean
+  @Prop({ default: false })
+  foreign: boolean;
   @Prop()
   delivery_pickup_point_price: number;
   @Prop({
-    type: 'string',
-    enum: ['pickup-point', 'courier'],
-    default: 'pickup-point',
+    type: "string",
+    enum: ["pickup-point", "courier"],
+    default: "pickup-point",
   })
   delivery_type: string;
   @Prop({
-    type: 'string',
+    type: "string",
     enum: OrderInfoStatus,
     default: OrderInfoStatus.draft,
   })

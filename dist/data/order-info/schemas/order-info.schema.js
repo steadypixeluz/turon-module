@@ -23,15 +23,15 @@ let ModelOrderInfo = class ModelOrderInfo {
 };
 exports.ModelOrderInfo = ModelOrderInfo;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers" }),
     __metadata("design:type", customer_1.ModelCustomers)
 ], ModelOrderInfo.prototype, "customer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'pickup_point' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "pickup_point" }),
     __metadata("design:type", pickup_point_1.ModelPickupPoint)
 ], ModelOrderInfo.prototype, "pickup_point", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'address' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "address" }),
     __metadata("design:type", address_1.ModelAddress)
 ], ModelOrderInfo.prototype, "address", void 0);
 __decorate([
@@ -60,6 +60,14 @@ __decorate([
 ], ModelOrderInfo.prototype, "state_duty", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelOrderInfo.prototype, "receiver_passport_number", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelOrderInfo.prototype, "receiver_passport_id", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelOrderInfo.prototype, "share", void 0);
 __decorate([
@@ -72,9 +80,9 @@ __decorate([
 ], ModelOrderInfo.prototype, "order_id", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: 'string',
-        enum: ['cash', 'payme', 'click', 'coin'],
-        default: 'cash',
+        type: "string",
+        enum: ["cash", "payme", "click", "coin"],
+        default: "cash",
     }),
     __metadata("design:type", String)
 ], ModelOrderInfo.prototype, "payment_type", void 0);
@@ -104,15 +112,15 @@ __decorate([
 ], ModelOrderInfo.prototype, "delivery_pickup_point_price", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: 'string',
-        enum: ['pickup-point', 'courier'],
-        default: 'pickup-point',
+        type: "string",
+        enum: ["pickup-point", "courier"],
+        default: "pickup-point",
     }),
     __metadata("design:type", String)
 ], ModelOrderInfo.prototype, "delivery_type", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: 'string',
+        type: "string",
         enum: enums_1.OrderInfoStatus,
         default: enums_1.OrderInfoStatus.draft,
     }),
@@ -127,6 +135,6 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ModelOrderInfo.prototype, "is_deleted", void 0);
 exports.ModelOrderInfo = ModelOrderInfo = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'order-info', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "order-info", timestamps: true })
 ], ModelOrderInfo);
 exports.ModelOrderInfoSchema = mongoose_1.SchemaFactory.createForClass(ModelOrderInfo);
