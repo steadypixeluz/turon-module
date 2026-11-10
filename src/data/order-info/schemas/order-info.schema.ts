@@ -20,6 +20,8 @@ export class ModelOrderInfo {
   @Prop()
   coin_count: number;
   @Prop()
+  international_delivery_price:number
+  @Prop()
   wallet: number;
   @Prop()
   payable: number;
