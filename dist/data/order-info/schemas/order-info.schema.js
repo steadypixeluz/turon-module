@@ -57,6 +57,10 @@ __decorate([
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
+], ModelOrderInfo.prototype, "state_duty", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
 ], ModelOrderInfo.prototype, "share", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
@@ -90,6 +94,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelOrderInfo.prototype, "delivery_price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: false }),
+    __metadata("design:type", Boolean)
+], ModelOrderInfo.prototype, "foreign", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)

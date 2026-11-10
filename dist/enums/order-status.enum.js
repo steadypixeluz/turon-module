@@ -6,6 +6,8 @@ var OrderStatus;
     OrderStatus["draft"] = "draft";
     OrderStatus["new"] = "new";
     OrderStatus["preparing"] = "preparing";
+    OrderStatus["international_delivery"] = "international_delivery";
+    OrderStatus["delivered_uzbekistan"] = "delivered_uzbekistan";
     OrderStatus["shipped"] = "shipped";
     OrderStatus["arrived_pvz"] = "arrived_pvz";
     OrderStatus["courier_on_way"] = "courier_on_way";

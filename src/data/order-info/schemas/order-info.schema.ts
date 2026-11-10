@@ -23,6 +23,8 @@ export class ModelOrderInfo {
   wallet: number;
   @Prop()
   payable:number
+    @Prop()
+  state_duty:number
   @Prop()
   share:number
   @Prop()
@@ -43,6 +45,8 @@ export class ModelOrderInfo {
   date: string;
   @Prop()
   delivery_price: number;
+  @Prop({default: false})
+  foreign:boolean
   @Prop()
   delivery_pickup_point_price: number;
   @Prop({
