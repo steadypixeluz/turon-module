@@ -51,12 +51,11 @@ export class ModelOrderProduct {
   customer_company: ModelCustomerCompany;
   @Prop({ type: Object })
   product_name: Lang;
-  @Prop({ type: String, default: "retail" })
   @Prop()
   international_delivery_price: number;
   @Prop()
   state_duty: number;
-  @Prop()
+  @Prop({ type: String, default: "retail" })
   showcase: string;
   @Prop()
   product_image: string;

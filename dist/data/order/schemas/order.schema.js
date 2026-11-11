@@ -88,7 +88,6 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelOrderProduct.prototype, "product_name", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: String, default: "retail" }),
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelOrderProduct.prototype, "international_delivery_price", void 0);
@@ -97,7 +96,7 @@ __decorate([
     __metadata("design:type", Number)
 ], ModelOrderProduct.prototype, "state_duty", void 0);
 __decorate([
-    (0, mongoose_1.Prop)(),
+    (0, mongoose_1.Prop)({ type: String, default: "retail" }),
     __metadata("design:type", String)
 ], ModelOrderProduct.prototype, "showcase", void 0);
 __decorate([
