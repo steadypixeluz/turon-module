@@ -19,6 +19,7 @@ const enums_1 = require("../../../enums");
 const address_1 = require("../../address");
 const customer_1 = require("../../customer");
 const pickup_point_1 = require("../../pickup-point");
+const country_1 = require("../../../data/country");
 let ModelOrderInfo = class ModelOrderInfo {
 };
 exports.ModelOrderInfo = ModelOrderInfo;
@@ -50,6 +51,10 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], ModelOrderInfo.prototype, "international_delivery_price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelOrderInfo.prototype, "country", void 0);
 __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)

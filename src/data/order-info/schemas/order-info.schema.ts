@@ -4,6 +4,7 @@ import { OrderInfoStatus } from "../../../enums";
 import { ModelAddress } from "../../address";
 import { ModelCustomers } from "../../customer";
 import { ModelPickupPoint } from "../../pickup-point";
+import { ModelCountry } from "../../../data/country";
 
 @Schema({ collection: "order-info", timestamps: true })
 export class ModelOrderInfo {
@@ -20,7 +21,9 @@ export class ModelOrderInfo {
   @Prop()
   coin_count: number;
   @Prop()
-  international_delivery_price:number
+  international_delivery_price: number;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "country" })
+  country: ModelCountry;
   @Prop()
   wallet: number;
   @Prop()
