@@ -1,24 +1,28 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { OrderStatus, OrderProductStatus } from '../../../enums';
-import { ModelCustomers } from '../../customer';
-import { ModelCustomerCompany } from '../../customer-company';
-import { Lang } from '../../interfaces';
-import { ModelOrderInfo } from '../../order-info';
-import { ModelOrderWholesale } from '../../order-wholesale';
-import { ModelPriceTier, ModelPriceTierSchema, ModelSubProduct } from '../../product';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { OrderStatus, OrderProductStatus } from "../../../enums";
+import { ModelCustomers } from "../../customer";
+import { ModelCustomerCompany } from "../../customer-company";
+import { Lang } from "../../interfaces";
+import { ModelOrderInfo } from "../../order-info";
+import { ModelOrderWholesale } from "../../order-wholesale";
+import {
+  ModelPriceTier,
+  ModelPriceTierSchema,
+  ModelSubProduct,
+} from "../../product";
 
-@Schema({ collection: 'orders', timestamps: true })
+@Schema({ collection: "orders", timestamps: true })
 export class ModelOrder {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })
   customer: ModelCustomers;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order_info' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order_info" })
   order_info_id: ModelOrderInfo;
   @Prop()
   order_id: string;
-  
+
   @Prop()
-  origin_type: string
+  origin_type: string;
   @Prop({ type: Object })
   emu_order_id: {};
   @Prop()
@@ -28,7 +32,7 @@ export class ModelOrder {
   @Prop({ type: Object })
   delivery_office_days: {};
   @Prop({
-    type: 'string',
+    type: "string",
     enum: OrderStatus,
     default: OrderStatus.draft,
   })
@@ -37,23 +41,28 @@ export class ModelOrder {
 
 export const ModelOrderSchema = SchemaFactory.createForClass(ModelOrder);
 
-@Schema({ collection: 'order-product', timestamps: true })
+@Schema({ collection: "order-product", timestamps: true })
 export class ModelOrderProduct {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers" })
   customer: ModelCustomers;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'sub-product' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "sub-product" })
   sub_product: ModelSubProduct;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'customers-company' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "customers-company" })
   customer_company: ModelCustomerCompany;
   @Prop({ type: Object })
   product_name: Lang;
   @Prop({ type: String, default: "retail" })
+  @Prop()
+  international_delivery_price: number;
+  @Prop()
+  state_duty: number;
+  @Prop()
   showcase: string;
   @Prop()
   product_image: string;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order" })
   order: ModelOrder;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'order-wholesale' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "order-wholesale" })
   order_wholesale: ModelOrderWholesale;
   @Prop({ type: [ModelPriceTierSchema], default: [] })
   price_tiers: ModelPriceTier[];
@@ -66,7 +75,7 @@ export class ModelOrderProduct {
   @Prop({ default: false })
   is_comment: boolean;
   @Prop({
-    type: 'string',
+    type: "string",
     enum: OrderProductStatus,
     default: OrderProductStatus.draft,
   })

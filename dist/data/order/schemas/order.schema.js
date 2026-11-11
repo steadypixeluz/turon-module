@@ -25,11 +25,11 @@ let ModelOrder = class ModelOrder {
 };
 exports.ModelOrder = ModelOrder;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers" }),
     __metadata("design:type", customer_1.ModelCustomers)
 ], ModelOrder.prototype, "customer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'order_info' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "order_info" }),
     __metadata("design:type", order_info_1.ModelOrderInfo)
 ], ModelOrder.prototype, "order_info_id", void 0);
 __decorate([
@@ -58,29 +58,29 @@ __decorate([
 ], ModelOrder.prototype, "delivery_office_days", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: 'string',
+        type: "string",
         enum: enums_1.OrderStatus,
         default: enums_1.OrderStatus.draft,
     }),
     __metadata("design:type", String)
 ], ModelOrder.prototype, "status", void 0);
 exports.ModelOrder = ModelOrder = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'orders', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "orders", timestamps: true })
 ], ModelOrder);
 exports.ModelOrderSchema = mongoose_1.SchemaFactory.createForClass(ModelOrder);
 let ModelOrderProduct = class ModelOrderProduct {
 };
 exports.ModelOrderProduct = ModelOrderProduct;
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers" }),
     __metadata("design:type", customer_1.ModelCustomers)
 ], ModelOrderProduct.prototype, "customer", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'sub-product' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "sub-product" }),
     __metadata("design:type", product_1.ModelSubProduct)
 ], ModelOrderProduct.prototype, "sub_product", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'customers-company' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "customers-company" }),
     __metadata("design:type", customer_company_1.ModelCustomerCompany)
 ], ModelOrderProduct.prototype, "customer_company", void 0);
 __decorate([
@@ -89,6 +89,15 @@ __decorate([
 ], ModelOrderProduct.prototype, "product_name", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "retail" }),
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelOrderProduct.prototype, "international_delivery_price", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", Number)
+], ModelOrderProduct.prototype, "state_duty", void 0);
+__decorate([
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], ModelOrderProduct.prototype, "showcase", void 0);
 __decorate([
@@ -96,11 +105,11 @@ __decorate([
     __metadata("design:type", String)
 ], ModelOrderProduct.prototype, "product_image", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'order' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "order" }),
     __metadata("design:type", ModelOrder)
 ], ModelOrderProduct.prototype, "order", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'order-wholesale' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: "order-wholesale" }),
     __metadata("design:type", order_wholesale_1.ModelOrderWholesale)
 ], ModelOrderProduct.prototype, "order_wholesale", void 0);
 __decorate([
@@ -125,13 +134,13 @@ __decorate([
 ], ModelOrderProduct.prototype, "is_comment", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
-        type: 'string',
+        type: "string",
         enum: enums_1.OrderProductStatus,
         default: enums_1.OrderProductStatus.draft,
     }),
     __metadata("design:type", String)
 ], ModelOrderProduct.prototype, "status", void 0);
 exports.ModelOrderProduct = ModelOrderProduct = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'order-product', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "order-product", timestamps: true })
 ], ModelOrderProduct);
 exports.ModelOrderProductSchema = mongoose_1.SchemaFactory.createForClass(ModelOrderProduct);
