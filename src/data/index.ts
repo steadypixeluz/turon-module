@@ -393,3 +393,6 @@ export {
   UpdatePsicDto,
   PsicLangText,
 } from "./psic";
+export {
+  ModelCountryCollection,ModelCountryCollectionSchema
+} from './country-collection'
