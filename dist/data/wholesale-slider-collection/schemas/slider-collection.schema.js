@@ -17,6 +17,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const menu_1 = require("../../menu");
 const product_1 = require("../../product");
+const country_1 = require("../../../data/country");
 let ModelWholesaleSliderCollection = class ModelWholesaleSliderCollection {
 };
 exports.ModelWholesaleSliderCollection = ModelWholesaleSliderCollection;
@@ -48,6 +49,10 @@ __decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
 ], ModelWholesaleSliderCollection.prototype, "is_active", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelWholesaleSliderCollection.prototype, "country", void 0);
 exports.ModelWholesaleSliderCollection = ModelWholesaleSliderCollection = __decorate([
     (0, mongoose_1.Schema)({ collection: 'wholesale-slider-collections', timestamps: true })
 ], ModelWholesaleSliderCollection);

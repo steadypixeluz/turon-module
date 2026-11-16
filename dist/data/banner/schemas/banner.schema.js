@@ -18,9 +18,14 @@ const mongoose_2 = __importDefault(require("mongoose"));
 const menu_1 = require("../../menu");
 const product_1 = require("../../product");
 const enums_1 = require("../../../enums");
+const country_1 = require("../../../data/country");
 let ModelBanner = class ModelBanner {
 };
 exports.ModelBanner = ModelBanner;
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelBanner.prototype, "country", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ unique: true }),
     __metadata("design:type", Number)

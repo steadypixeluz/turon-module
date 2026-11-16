@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import { Lang } from '../../interfaces';
 import { ModelMenu } from '../../menu';
 import { ModelProduct } from '../../product';
+import { ModelCountry } from '../../../data/country';
 
 @Schema({ collection: 'retail-collections', timestamps: true })
 export class ModelRetailCollection {
@@ -18,6 +19,8 @@ export class ModelRetailCollection {
   products: ModelProduct;
   @Prop()
   position: number;
+      @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
+      country: ModelCountry;
   @Prop({ default: true })
   is_active?: boolean;
 }

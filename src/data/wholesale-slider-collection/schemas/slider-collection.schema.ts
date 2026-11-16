@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import { Lang } from '../../interfaces';
 import { ModelMenu } from '../../menu';
 import { ModelProduct } from '../../product';
+import { ModelCountry } from '../../../data/country';
 
 @Schema({ collection: 'wholesale-slider-collections', timestamps: true })
 export class ModelWholesaleSliderCollection {
@@ -20,6 +21,8 @@ export class ModelWholesaleSliderCollection {
   photo: string;
   @Prop({ default: true })
   is_active?: boolean;
+      @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
+      country: ModelCountry;
 }
 
 export const ModelWholesaleSliderCollectionSchema = SchemaFactory.createForClass(

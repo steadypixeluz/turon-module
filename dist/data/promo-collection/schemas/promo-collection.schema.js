@@ -17,6 +17,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = __importDefault(require("mongoose"));
 const menu_1 = require("../..//menu");
 const product_1 = require("../..//product");
+const country_1 = require("../../../data/country");
 let ModelPromoCollection = class ModelPromoCollection {
 };
 exports.ModelPromoCollection = ModelPromoCollection;
@@ -25,15 +26,15 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelPromoCollection.prototype, "title", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: ['feed', 'category'], default: 'feed' }),
+    (0, mongoose_1.Prop)({ type: "string", enum: ["feed", "category"], default: "feed" }),
     __metadata("design:type", String)
 ], ModelPromoCollection.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Menu' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Menu" }),
     __metadata("design:type", menu_1.ModelMenu)
 ], ModelPromoCollection.prototype, "menu", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Product' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Product" }),
     __metadata("design:type", product_1.ModelProduct)
 ], ModelPromoCollection.prototype, "products", void 0);
 __decorate([
@@ -44,8 +45,12 @@ __decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
 ], ModelPromoCollection.prototype, "is_active", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelPromoCollection.prototype, "country", void 0);
 exports.ModelPromoCollection = ModelPromoCollection = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'promo-collections', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "promo-collections", timestamps: true })
 ], ModelPromoCollection);
 exports.ModelPromoCollectionSchema = mongoose_1.SchemaFactory.createForClass(ModelPromoCollection);
 let ModelPromoWholeSaleCollection = class ModelPromoWholeSaleCollection {
@@ -56,15 +61,15 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelPromoWholeSaleCollection.prototype, "title", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: ['feed', 'category'], default: 'feed' }),
+    (0, mongoose_1.Prop)({ type: "string", enum: ["feed", "category"], default: "feed" }),
     __metadata("design:type", String)
 ], ModelPromoWholeSaleCollection.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Menu' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Menu" }),
     __metadata("design:type", menu_1.ModelMenu)
 ], ModelPromoWholeSaleCollection.prototype, "menu", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Product' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Product" }),
     __metadata("design:type", product_1.ModelProduct)
 ], ModelPromoWholeSaleCollection.prototype, "products", void 0);
 __decorate([
@@ -75,7 +80,11 @@ __decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
 ], ModelPromoWholeSaleCollection.prototype, "is_active", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ type: mongoose_2.default.Types.ObjectId, ref: "country" }),
+    __metadata("design:type", country_1.ModelCountry)
+], ModelPromoWholeSaleCollection.prototype, "country", void 0);
 exports.ModelPromoWholeSaleCollection = ModelPromoWholeSaleCollection = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'promo-wholesale-collections', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "promo-wholesale-collections", timestamps: true })
 ], ModelPromoWholeSaleCollection);
 exports.ModelPromoWholeSaleCollectionSchema = mongoose_1.SchemaFactory.createForClass(ModelPromoWholeSaleCollection);

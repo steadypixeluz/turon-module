@@ -4,9 +4,12 @@ import { Lang } from '../../interfaces';
 import { ModelMenu } from '../../menu';
 import { ModelProduct } from '../../product';
 import { ProductType } from '../../../enums';
+import { ModelCountry } from '../../../data/country';
 
 @Schema({ collection: 'banner', timestamps: true })
 export class ModelBanner {
+    @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
+    country: ModelCountry;
   @Prop({ unique: true })
   uid: number;
   @Prop({ type: Object })
