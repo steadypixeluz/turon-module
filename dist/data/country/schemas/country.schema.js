@@ -31,6 +31,10 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCountry.prototype, "photo", void 0);
 __decorate([
+    (0, mongoose_1.Prop)(),
+    __metadata("design:type", String)
+], ModelCountry.prototype, "code", void 0);
+__decorate([
     (0, mongoose_1.Prop)({ default: true }),
     __metadata("design:type", Boolean)
 ], ModelCountry.prototype, "is_active", void 0);
@@ -43,6 +47,6 @@ __decorate([
     __metadata("design:type", String)
 ], ModelCountry.prototype, "deleted_at", void 0);
 exports.ModelCountry = ModelCountry = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'country', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "country", timestamps: true })
 ], ModelCountry);
 exports.ModelCountrySchema = mongoose_1.SchemaFactory.createForClass(ModelCountry);
