@@ -1,16 +1,18 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Lang } from '../../interfaces';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Lang } from "../../interfaces";
 
-@Schema({ collection: 'country', timestamps: true })
+@Schema({ collection: "country", timestamps: true })
 export class ModelCountry {
   @Prop({ type: Object })
   name: Lang;
   @Prop()
-  min_delivery_day:number
+  min_delivery_day: number;
   @Prop()
-  max_delivery_day:number
+  max_delivery_day: number;
   @Prop()
   photo: string;
+  @Prop()
+  code: string;
   @Prop({ default: true })
   is_active: boolean;
   @Prop({ default: false })
