@@ -26,15 +26,15 @@ __decorate([
     __metadata("design:type", Object)
 ], ModelWholesaleSliderCollection.prototype, "title", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: 'string', enum: ['feed', 'category'], default: 'feed' }),
+    (0, mongoose_1.Prop)({ type: "string", enum: ["feed", "category"], default: "feed" }),
     __metadata("design:type", String)
 ], ModelWholesaleSliderCollection.prototype, "type", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Menu' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Menu" }),
     __metadata("design:type", menu_1.ModelMenu)
 ], ModelWholesaleSliderCollection.prototype, "menu", void 0);
 __decorate([
-    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: 'Product' }),
+    (0, mongoose_1.Prop)({ type: [mongoose_2.default.Schema.Types.ObjectId], ref: "Product" }),
     __metadata("design:type", product_1.ModelProduct)
 ], ModelWholesaleSliderCollection.prototype, "products", void 0);
 __decorate([
@@ -54,6 +54,6 @@ __decorate([
     __metadata("design:type", country_1.ModelCountry)
 ], ModelWholesaleSliderCollection.prototype, "country", void 0);
 exports.ModelWholesaleSliderCollection = ModelWholesaleSliderCollection = __decorate([
-    (0, mongoose_1.Schema)({ collection: 'wholesale-slider-collections', timestamps: true })
+    (0, mongoose_1.Schema)({ collection: "wholesale-slider-collections", timestamps: true })
 ], ModelWholesaleSliderCollection);
 exports.ModelWholesaleSliderCollectionSchema = mongoose_1.SchemaFactory.createForClass(ModelWholesaleSliderCollection);

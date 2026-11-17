@@ -1,19 +1,19 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { Lang } from '../../interfaces';
-import { ModelMenu } from '../../menu';
-import { ModelProduct } from '../../product';
-import { ModelCountry } from '../../../data/country';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose from "mongoose";
+import { Lang } from "../../interfaces";
+import { ModelMenu } from "../../menu";
+import { ModelProduct } from "../../product";
+import { ModelCountry } from "../../../data/country";
 
-@Schema({ collection: 'wholesale-slider-collections', timestamps: true })
+@Schema({ collection: "wholesale-slider-collections", timestamps: true })
 export class ModelWholesaleSliderCollection {
   @Prop({ type: Object })
   title: Lang;
-  @Prop({ type: 'string', enum: ['feed', 'category'], default: 'feed' })
+  @Prop({ type: "string", enum: ["feed", "category"], default: "feed" })
   type: string;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Menu' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Menu" })
   menu: ModelMenu;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Product' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Product" })
   products: ModelProduct;
   @Prop()
   position: number;
@@ -21,10 +21,9 @@ export class ModelWholesaleSliderCollection {
   photo: string;
   @Prop({ default: true })
   is_active?: boolean;
-      @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
-      country: ModelCountry;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
+  country: ModelCountry;
 }
 
-export const ModelWholesaleSliderCollectionSchema = SchemaFactory.createForClass(
-  ModelWholesaleSliderCollection,
-);
+export const ModelWholesaleSliderCollectionSchema =
+  SchemaFactory.createForClass(ModelWholesaleSliderCollection);

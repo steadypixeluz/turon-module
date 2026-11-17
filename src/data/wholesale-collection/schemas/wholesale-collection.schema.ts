@@ -1,30 +1,32 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose from 'mongoose';
-import { Lang } from '../../interfaces';
-import { ModelMenu } from '../../menu';
-import { ModelProduct } from '../../product';
-import { ModelCountry } from '../../../data/country';
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import mongoose, { Types } from "mongoose";
+import { Lang } from "../../interfaces";
+import { ModelMenu } from "../../menu";
+import { ModelProduct } from "../../product";
+import { ModelCountry } from "../../../data/country";
 
-@Schema({ collection: 'wholesale-collections', timestamps: true })
+@Schema({ collection: "wholesale-collections", timestamps: true })
 export class ModelWholesaleCollection {
   @Prop({ type: Object })
   title: Lang;
-  @Prop({ type: 'string', enum: ['slider', 'column'], default: 'slider' })
+  @Prop({ type: "string", enum: ["slider", "column"], default: "slider" })
   view_type: string;
-  @Prop({ type: 'string', enum: ['feed', 'category'], default: 'feed' })
+  @Prop({ type: "string", enum: ["feed", "category"], default: "feed" })
   type: string;
-  @Prop({ type: 'string', enum: ['mobile', 'site'], default: 'site' })
+  @Prop({ type: "string", enum: ["mobile", "site"], default: "site" })
   device: string;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Menu' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Menu" })
   menu: ModelMenu;
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Promo' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId})
+  group: Types.ObjectId;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: "Promo" })
   promo: ModelWholesaleCollection;
-  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: 'Product' })
+  @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: "Product" })
   products: ModelProduct;
   @Prop()
   position: number;
-      @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
-      country: ModelCountry;
+  @Prop({ type: mongoose.Types.ObjectId, ref: "country" })
+  country: ModelCountry;
   @Prop({ default: true })
   is_active?: boolean;
 }
@@ -40,4 +42,3 @@ ModelWholesaleCollectionSchema.index({
   createdAt: -1,
 });
 ModelWholesaleCollectionSchema.index({ group: 1, position: 1, createdAt: -1 });
-
